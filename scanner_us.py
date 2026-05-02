@@ -308,7 +308,9 @@ def score_ticker(df, bench_df, ticker):
         "ATR%": f"{round(atr_pct, 2)}%",
         "Vol Ratio": round(vol_ratio, 2),
         "RS vs SPY": round(rs_vs_bench, 2),
-        "Trigger Distance": f"{round(trigger_distance_pct, 2)}%",
+                "Trigger Distance": f"{round(trigger_distance_pct, 2)}%",
+        "Earnings": "Clear",
+        "Earnings Date": "",
         "Qty": qty,
         "Trade Value": f"${round(trade_value, 0):,.0f}",
         "Entry Rule": entry_rule,
@@ -536,7 +538,7 @@ h1 {{
       <b>88+</b> Highest Priority ·
 <b>83–87</b> Medium Priority ·
 <b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation.
+      Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
     </p>
   </div>
 
@@ -588,6 +590,12 @@ def main():
         if ticker == BENCHMARK:
             continue
 
+        earnings = get_earnings_risk(ticker)
+
+        # Avoid US stocks with earnings too close to the swing-trade window.
+        if earnings["skip"]:
+            continue
+
         df = get_single_df(data, ticker)
         result = score_ticker(df, bench_df, ticker)
 
@@ -605,6 +613,9 @@ def main():
             if market["bias"] == "Mixed" and result["Conviction"] < 90:
                 continue
 
+            result["Earnings"] = earnings["status"]
+            result["Earnings Date"] = earnings["date"]
+
             rows.append(result)
 
     rows = sorted(rows, key=lambda x: x["Conviction"], reverse=True)
@@ -613,7 +624,6 @@ def main():
     render_html(rows, market, perf_log)
 
     print(f"Generated {OUTPUT_HTML} with {len(rows)} candidates.")
-
 
 if __name__ == "__main__":
     main()
