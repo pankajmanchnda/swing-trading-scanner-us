@@ -1,0 +1,837 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USA Swing Trading Scanner</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 18px 60px;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 6px;
+}
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.stat, .market, .setup, .section {
+  background: #111827;
+  border: 1px solid #243041;
+  border-radius: 18px;
+  padding: 18px;
+}
+.stat span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+}
+.stat b {
+  font-size: 26px;
+}
+.market {
+  margin-bottom: 22px;
+}
+.market-grid, .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.market-grid div, .grid div {
+  background: #0b1220;
+  border: 1px solid #243041;
+  border-radius: 12px;
+  padding: 10px;
+  color: #94a3b8;
+}
+.market-grid b, .grid b {
+  color: #e5e7eb;
+}
+.setup-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.section {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1000px;
+  font-size: 14px;
+}
+.data-table th, .data-table td {
+  border-bottom: 1px solid #243041;
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+.data-table th {
+  background: #0b1220;
+}
+.disclaimer {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 24px;
+}
+@media (max-width: 900px) {
+  .stats, .setup-wrap, .market-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>USA Swing Trading Scanner</h1>
+  <div class="subtitle">Generated on 02 May 2026, 06:06 AM · US large-cap watchlist</div>
+
+  <div class="stats">
+    <div class="stat"><span>Total Candidates</span><b>27</b></div>
+    <div class="stat"><span>Highest Priority</span><b>17</b></div>
+    <div class="stat"><span>Medium Priority</span><b>10</b></div>
+    <div class="stat"><span>Low Priority</span><b>0</b></div>
+    <div class="stat"><span>Best Conviction</span><b>95</b></div>
+  </div>
+
+  <div class="market">
+    <h2>SPY Bias: Bullish</h2>
+    <p>US market trend is supportive. Prefer high-conviction long setups.</p>
+    <div class="market-grid">
+      <div>SPY Close<br><b>720.65</b></div>
+      <div>EMA 20<br><b>700.38</b></div>
+      <div>EMA 50<br><b>687.78</b></div>
+      <div>5-Day Change<br><b>0.94%</b></div>
+    </div>
+  </div>
+
+  <h2>Top 3 Setups</h2>
+  <div class="setup-wrap">
+        <div class="setup">
+          <h3>MA — SELL</h3>
+          <p><b>Highest Priority</b> · Score 95</p>
+          <div class="grid">
+            <div>Entry<br><b>491.17</b></div>
+            <div>Stop<br><b>507.75</b></div>
+            <div>Target<br><b>449.7</b></div>
+            <div>Qty<br><b>40</b></div>
+            <div>Value<br><b>$19,647</b></div>
+            <div>RR<br><b>2.5</b></div>
+          </div>
+          <p>Enter only below trigger · Downtrend · Weak relative strength · Tradable volatility · Strong volume</p>
+        </div>
+        
+        <div class="setup">
+          <h3>HD — SELL</h3>
+          <p><b>Highest Priority</b> · Score 91</p>
+          <div class="grid">
+            <div>Entry<br><b>322.71</b></div>
+            <div>Stop<br><b>332.79</b></div>
+            <div>Target<br><b>297.52</b></div>
+            <div>Qty<br><b>61</b></div>
+            <div>Value<br><b>$19,686</b></div>
+            <div>RR<br><b>2.5</b></div>
+          </div>
+          <p>Enter only below trigger · Downtrend · Weak relative strength · Tradable volatility · Normal volume</p>
+        </div>
+        
+        <div class="setup">
+          <h3>MCD — SELL</h3>
+          <p><b>Highest Priority</b> · Score 91</p>
+          <div class="grid">
+            <div>Entry<br><b>285.79</b></div>
+            <div>Stop<br><b>292.59</b></div>
+            <div>Target<br><b>268.79</b></div>
+            <div>Qty<br><b>69</b></div>
+            <div>Value<br><b>$19,719</b></div>
+            <div>RR<br><b>2.5</b></div>
+          </div>
+          <p>Enter only below trigger · Downtrend · Weak relative strength · Tradable volatility · Normal volume</p>
+        </div>
+        </div>
+
+  <div class="section">
+    <h2>Suggested Investment Criteria</h2>
+    <p>
+      <b>85+</b> Highest Priority ·
+      <b>80–84</b> Medium Priority ·
+      <b>75–79</b> Low Priority.
+      Entry should only be considered if the trigger level breaks with confirmation.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Scanner Table</h2>
+    <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Grade</th>
+      <th>Close</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>RSI</th>
+      <th>ATR%</th>
+      <th>Vol Ratio</th>
+      <th>RS vs SPY</th>
+      <th>Qty</th>
+      <th>Trade Value</th>
+      <th>Entry Rule</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Highest Priority</td>
+      <td>MA</td>
+      <td>SELL</td>
+      <td>95</td>
+      <td>A</td>
+      <td>495.46</td>
+      <td>491.17</td>
+      <td>507.75</td>
+      <td>449.70</td>
+      <td>2.5</td>
+      <td>42.5</td>
+      <td>2.48%</td>
+      <td>1.34</td>
+      <td>-9.21</td>
+      <td>40</td>
+      <td>$19,647</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility · Strong volume</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>HD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>A</td>
+      <td>323.88</td>
+      <td>322.71</td>
+      <td>332.79</td>
+      <td>297.52</td>
+      <td>2.5</td>
+      <td>35.9</td>
+      <td>2.31%</td>
+      <td>1.09</td>
+      <td>-11.71</td>
+      <td>61</td>
+      <td>$19,686</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>MCD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>A</td>
+      <td>286.64</td>
+      <td>285.79</td>
+      <td>292.59</td>
+      <td>268.79</td>
+      <td>2.5</td>
+      <td>32.3</td>
+      <td>1.76%</td>
+      <td>1.19</td>
+      <td>-16.70</td>
+      <td>69</td>
+      <td>$19,719</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>MRK</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>A</td>
+      <td>112.16</td>
+      <td>111.66</td>
+      <td>115.98</td>
+      <td>100.84</td>
+      <td>2.5</td>
+      <td>35.3</td>
+      <td>2.86%</td>
+      <td>1.22</td>
+      <td>-17.17</td>
+      <td>179</td>
+      <td>$19,986</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>AAPL</td>
+      <td>BUY</td>
+      <td>88</td>
+      <td>A</td>
+      <td>280.14</td>
+      <td>287.79</td>
+      <td>278.65</td>
+      <td>310.65</td>
+      <td>2.5</td>
+      <td>69.3</td>
+      <td>2.42%</td>
+      <td>1.74</td>
+      <td>-0.39</td>
+      <td>69</td>
+      <td>$19,858</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility · Strong volume</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>AVGO</td>
+      <td>BUY</td>
+      <td>88</td>
+      <td>A</td>
+      <td>421.28</td>
+      <td>424.02</td>
+      <td>407.55</td>
+      <td>465.19</td>
+      <td>2.5</td>
+      <td>69.5</td>
+      <td>2.9%</td>
+      <td>0.54</td>
+      <td>24.40</td>
+      <td>47</td>
+      <td>$19,929</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Strong relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>GE</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>286.51</td>
+      <td>285.67</td>
+      <td>299.97</td>
+      <td>249.92</td>
+      <td>2.5</td>
+      <td>35.6</td>
+      <td>3.7%</td>
+      <td>0.55</td>
+      <td>-12.09</td>
+      <td>69</td>
+      <td>$19,711</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>IBM</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>232.20</td>
+      <td>231.29</td>
+      <td>241.82</td>
+      <td>204.95</td>
+      <td>2.5</td>
+      <td>45.6</td>
+      <td>3.36%</td>
+      <td>0.55</td>
+      <td>-14.48</td>
+      <td>86</td>
+      <td>$19,891</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>ISRG</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>457.78</td>
+      <td>455.45</td>
+      <td>475.49</td>
+      <td>405.33</td>
+      <td>2.5</td>
+      <td>49.5</td>
+      <td>3.24%</td>
+      <td>0.67</td>
+      <td>-11.42</td>
+      <td>43</td>
+      <td>$19,584</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>JNJ</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>227.19</td>
+      <td>226.57</td>
+      <td>233.00</td>
+      <td>210.48</td>
+      <td>2.5</td>
+      <td>34.2</td>
+      <td>2.1%</td>
+      <td>0.89</td>
+      <td>-16.92</td>
+      <td>88</td>
+      <td>$19,938</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>LOW</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>233.33</td>
+      <td>232.60</td>
+      <td>241.10</td>
+      <td>211.36</td>
+      <td>2.5</td>
+      <td>36.6</td>
+      <td>2.7%</td>
+      <td>0.77</td>
+      <td>-11.11</td>
+      <td>85</td>
+      <td>$19,771</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>MS</td>
+      <td>BUY</td>
+      <td>88</td>
+      <td>A</td>
+      <td>190.17</td>
+      <td>193.89</td>
+      <td>187.58</td>
+      <td>209.66</td>
+      <td>2.5</td>
+      <td>63.4</td>
+      <td>2.46%</td>
+      <td>0.83</td>
+      <td>4.46</td>
+      <td>103</td>
+      <td>$19,970</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Strong relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>ORCL</td>
+      <td>BUY</td>
+      <td>88</td>
+      <td>A</td>
+      <td>171.83</td>
+      <td>174.65</td>
+      <td>161.97</td>
+      <td>206.35</td>
+      <td>2.5</td>
+      <td>60.8</td>
+      <td>5.47%</td>
+      <td>0.82</td>
+      <td>8.33</td>
+      <td>78</td>
+      <td>$13,623</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Strong relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>PFE</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>26.33</td>
+      <td>26.24</td>
+      <td>26.95</td>
+      <td>24.47</td>
+      <td>2.5</td>
+      <td>35.4</td>
+      <td>1.99%</td>
+      <td>0.87</td>
+      <td>-17.76</td>
+      <td>762</td>
+      <td>$19,993</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>SCHW</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>91.54</td>
+      <td>91.09</td>
+      <td>94.84</td>
+      <td>81.71</td>
+      <td>2.5</td>
+      <td>37.0</td>
+      <td>3.04%</td>
+      <td>0.71</td>
+      <td>-10.87</td>
+      <td>219</td>
+      <td>$19,948</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>TMO</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>469.21</td>
+      <td>467.16</td>
+      <td>489.44</td>
+      <td>411.48</td>
+      <td>2.5</td>
+      <td>33.6</td>
+      <td>3.52%</td>
+      <td>0.71</td>
+      <td>-15.10</td>
+      <td>42</td>
+      <td>$19,621</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Highest Priority</td>
+      <td>WFC</td>
+      <td>SELL</td>
+      <td>88</td>
+      <td>A</td>
+      <td>80.81</td>
+      <td>80.65</td>
+      <td>83.32</td>
+      <td>73.97</td>
+      <td>2.5</td>
+      <td>30.3</td>
+      <td>2.45%</td>
+      <td>0.88</td>
+      <td>-9.68</td>
+      <td>247</td>
+      <td>$19,920</td>
+      <td>Enter only below trigger</td>
+      <td>Downtrend · Weak relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>MSFT</td>
+      <td>BUY</td>
+      <td>84</td>
+      <td>B+</td>
+      <td>414.44</td>
+      <td>417.94</td>
+      <td>401.26</td>
+      <td>459.66</td>
+      <td>2.5</td>
+      <td>62.9</td>
+      <td>2.98%</td>
+      <td>0.90</td>
+      <td>2.22</td>
+      <td>47</td>
+      <td>$19,643</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>V</td>
+      <td>BUY</td>
+      <td>84</td>
+      <td>B+</td>
+      <td>328.03</td>
+      <td>336.52</td>
+      <td>326.46</td>
+      <td>361.68</td>
+      <td>2.5</td>
+      <td>67.4</td>
+      <td>2.27%</td>
+      <td>0.97</td>
+      <td>-0.09</td>
+      <td>59</td>
+      <td>$19,855</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>BA</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>227.38</td>
+      <td>231.97</td>
+      <td>222.89</td>
+      <td>254.69</td>
+      <td>2.5</td>
+      <td>55.2</td>
+      <td>2.96%</td>
+      <td>0.59</td>
+      <td>-0.31</td>
+      <td>86</td>
+      <td>$19,950</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>BLK</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>1061.68</td>
+      <td>1082.89</td>
+      <td>1046.32</td>
+      <td>1174.33</td>
+      <td>2.5</td>
+      <td>59.8</td>
+      <td>2.55%</td>
+      <td>0.67</td>
+      <td>0.91</td>
+      <td>18</td>
+      <td>$19,492</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>COST</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>1011.70</td>
+      <td>1033.33</td>
+      <td>1009.62</td>
+      <td>1092.61</td>
+      <td>2.5</td>
+      <td>65.8</td>
+      <td>1.74%</td>
+      <td>0.86</td>
+      <td>-8.46</td>
+      <td>19</td>
+      <td>$19,633</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>EOG</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>138.95</td>
+      <td>140.39</td>
+      <td>135.56</td>
+      <td>152.48</td>
+      <td>2.5</td>
+      <td>53.7</td>
+      <td>2.58%</td>
+      <td>0.66</td>
+      <td>-11.03</td>
+      <td>142</td>
+      <td>$19,935</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>GS</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>923.71</td>
+      <td>937.65</td>
+      <td>907.71</td>
+      <td>1012.49</td>
+      <td>2.5</td>
+      <td>60.0</td>
+      <td>2.4%</td>
+      <td>0.70</td>
+      <td>-2.60</td>
+      <td>21</td>
+      <td>$19,691</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>NVDA</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>198.45</td>
+      <td>203.41</td>
+      <td>194.76</td>
+      <td>225.03</td>
+      <td>2.5</td>
+      <td>58.1</td>
+      <td>3.23%</td>
+      <td>0.87</td>
+      <td>2.93</td>
+      <td>98</td>
+      <td>$19,934</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>UPS</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>107.57</td>
+      <td>110.06</td>
+      <td>106.45</td>
+      <td>119.09</td>
+      <td>2.5</td>
+      <td>62.8</td>
+      <td>2.49%</td>
+      <td>0.81</td>
+      <td>-0.12</td>
+      <td>181</td>
+      <td>$19,921</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+    <tr>
+      <td>Medium Priority</td>
+      <td>XOM</td>
+      <td>BUY</td>
+      <td>81</td>
+      <td>B+</td>
+      <td>152.75</td>
+      <td>155.32</td>
+      <td>149.79</td>
+      <td>169.15</td>
+      <td>2.5</td>
+      <td>50.2</td>
+      <td>2.68%</td>
+      <td>0.83</td>
+      <td>-14.98</td>
+      <td>128</td>
+      <td>$19,881</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Acceptable relative strength · Tradable volatility</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <div class="section">
+    <h2>Top 3 Performance Log</h2>
+    <p>Latest 60 ideas are shown first.</p>
+    <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Rank</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>Status</th>
+      <th>Result</th>
+      <th>R</th>
+      <th>Days</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-02</td>
+      <td>1</td>
+      <td>MA</td>
+      <td>SELL</td>
+      <td>95</td>
+      <td>491.17</td>
+      <td>507.75</td>
+      <td>449.7</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>2</td>
+      <td>HD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>322.71</td>
+      <td>332.79</td>
+      <td>297.52</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>3</td>
+      <td>MCD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>285.79</td>
+      <td>292.59</td>
+      <td>268.79</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <p class="disclaimer">
+    Disclaimer: This dashboard is for educational and research purposes only.
+    It is not financial advice or a trade recommendation.
+  </p>
+</div>
+</body>
+</html>
