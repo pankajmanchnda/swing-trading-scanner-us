@@ -1,6 +1,6 @@
 import math
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import numpy as np
 import pandas as pd
@@ -12,6 +12,7 @@ RISK_PER_TRADE = 0.01
 MAX_ALLOCATION = 0.20
 RR_TARGET = 2.5
 TOP_N = 3
+EARNINGS_BLACKOUT_DAYS = 8
 
 UNIVERSE = [
     "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "TSLA", "AVGO", "COST",
@@ -48,7 +49,75 @@ def rsi(series, period=14):
     rs = gain / loss.replace(0, np.nan)
     return 100 - (100 / (1 + rs))
 
+def get_earnings_risk(ticker):
+    """
+    Returns earnings-risk status for a ticker.
 
+    Logic:
+    - If earnings date is within the next EARNINGS_BLACKOUT_DAYS, skip the stock.
+    - If earnings date is unavailable, do not block the stock, but mark it as unknown.
+    """
+
+    try:
+        stock = yf.Ticker(ticker)
+        calendar = stock.calendar
+
+        earnings_date = None
+
+        if calendar is None:
+            return {
+                "skip": False,
+                "status": "Earnings date unavailable",
+                "date": "",
+            }
+
+        if isinstance(calendar, dict):
+            raw_date = calendar.get("Earnings Date") or calendar.get("EarningsDate")
+
+            if isinstance(raw_date, list) and len(raw_date) > 0:
+                earnings_date = raw_date[0]
+            else:
+                earnings_date = raw_date
+
+        elif isinstance(calendar, pd.DataFrame):
+            if "Earnings Date" in calendar.index:
+                raw_date = calendar.loc["Earnings Date"].values[0]
+
+                if isinstance(raw_date, list) and len(raw_date) > 0:
+                    earnings_date = raw_date[0]
+                else:
+                    earnings_date = raw_date
+
+        if earnings_date is None or pd.isna(earnings_date):
+            return {
+                "skip": False,
+                "status": "Earnings date unavailable",
+                "date": "",
+            }
+
+        earnings_date = pd.to_datetime(earnings_date).date()
+        today = datetime.now(timezone.utc).date()
+        days_until = (earnings_date - today).days
+
+        if 0 <= days_until <= EARNINGS_BLACKOUT_DAYS:
+            return {
+                "skip": True,
+                "status": f"Skipped: earnings in {days_until} days",
+                "date": earnings_date.isoformat(),
+            }
+
+        return {
+            "skip": False,
+            "status": "Clear",
+            "date": earnings_date.isoformat(),
+        }
+
+    except Exception:
+        return {
+            "skip": False,
+            "status": "Earnings check unavailable",
+            "date": "",
+        }
 def get_single_df(data, ticker):
     if isinstance(data.columns, pd.MultiIndex):
         if ticker not in data.columns.get_level_values(0):
