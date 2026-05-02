@@ -194,35 +194,36 @@ def score_ticker(df, bench_df, ticker):
 
     trigger_distance_pct = abs(entry - close) / close * 100
 
-    # Stricter US-market quality filters
-    if trigger_distance_pct > 1.25:
+        # US-market quality filters
+    # These are selective, but not so strict that the scanner shows zero ideas too often.
+    if trigger_distance_pct > 2.0:
         return None
 
-    if vol_ratio < 1.05:
+    if vol_ratio < 0.90:
         return None
 
-    if signal == "BUY" and rs_vs_bench < 1.5:
+    if signal == "BUY" and rs_vs_bench < 0.5:
         return None
 
-    if signal == "SELL" and rs_vs_bench > -1.5:
+    if signal == "SELL" and rs_vs_bench > -0.5:
         return None
 
-    if atr_pct > 6:
+    if atr_pct > 6.5:
         return None
 
-    # Stricter scoring thresholds
-    if score >= 90:
+    # Calibrated scoring thresholds
+    if score >= 88:
         priority = "Highest Priority"
         grade = "A"
-    elif score >= 86:
+    elif score >= 84:
         priority = "Medium Priority"
         grade = "B+"
-    elif score >= 82:
+    elif score >= 80:
         priority = "Low Priority"
         grade = "B"
     else:
         return None
-
+        
     return {
         "Priority": priority,
         "Stock": ticker,
@@ -463,9 +464,9 @@ h1 {{
   <div class="section">
     <h2>Suggested Investment Criteria</h2>
     <p>
-      <b>90+</b> Highest Priority ·
-      <b>86–89</b> Medium Priority ·
-      <b>82–85</b> Low Priority.
+      <b>88+</b> Highest Priority ·
+<b>84–87</b> Medium Priority ·
+<b>80–83</b> Low Priority.
       Entry should only be considered if the trigger level breaks with confirmation.
     </p>
   </div>
