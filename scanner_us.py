@@ -215,10 +215,10 @@ def score_ticker(df, bench_df, ticker):
     if score >= 88:
         priority = "Highest Priority"
         grade = "A"
-    elif score >= 84:
+    elif score >= 83:
         priority = "Medium Priority"
         grade = "B+"
-    elif score >= 80:
+    elif score >= 78:
         priority = "Low Priority"
         grade = "B"
     else:
@@ -465,8 +465,8 @@ h1 {{
     <h2>Suggested Investment Criteria</h2>
     <p>
       <b>88+</b> Highest Priority ·
-<b>84–87</b> Medium Priority ·
-<b>80–83</b> Low Priority.
+<b>83–87</b> Medium Priority ·
+<b>78–82</b> Low Priority.
       Entry should only be considered if the trigger level breaks with confirmation.
     </p>
   </div>
