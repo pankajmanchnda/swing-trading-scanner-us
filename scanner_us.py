@@ -412,10 +412,26 @@ body {{
   background: #0f172a;
   color: #e5e7eb;
 }}
+.topbar {{
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 18px 18px 0;
+}}
+.back-link {{
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}}
+.back-link:hover {{
+  color: #7dd3fc;
+}}
 .container {{
   max-width: 1150px;
   margin: 0 auto;
-  padding: 28px 18px 60px;
+  padding: 24px 18px 60px;
 }}
 h1 {{
   font-size: 42px;
@@ -497,27 +513,17 @@ h1 {{
   line-height: 1.6;
   margin-top: 24px;
 }}
+@media (max-width: 800px) {{
   .stats, .setup-wrap, .market-grid {{
     grid-template-columns: 1fr;
-    display: grid;
+  }}
+
+  h1 {{
+    font-size: 32px;
   }}
 }}
 </style>
-</head> .topbar {
-  max-width: 1150px;
-  margin: 0 auto 24px auto;
-}
-
-.back-link {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.back-link:hover {
-  color: #7dd3fc;
-}
+</head>
 <body>
 <div class="topbar">
   <a class="back-link" href="https://pankajmanchnda.github.io/trading-agents/">
@@ -554,9 +560,10 @@ h1 {{
     <h2>Suggested Investment Criteria</h2>
     <p>
       <b>88+</b> Highest Priority ·
-<b>83–87</b> Medium Priority ·
-<b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
+      <b>83–87</b> Medium Priority ·
+      <b>78–82</b> Low Priority.
+      Entry should only be considered if the trigger level breaks with confirmation.
+      Stocks with earnings expected within the next 8 calendar days are excluded.
     </p>
   </div>
 
@@ -580,7 +587,6 @@ h1 {{
 </html>"""
 
     Path(OUTPUT_HTML).write_text(html, encoding="utf-8")
-
 
 def main():
     tickers = sorted(set(UNIVERSE + [BENCHMARK]))
