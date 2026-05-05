@@ -3,7 +3,7 @@ name: Update USA Swing Scanner
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 23 * * 1-5"
+    - cron: "*/30 * * * *"
 
 permissions:
   contents: write
@@ -22,15 +22,18 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install pandas numpy yfinance
 
       - name: Generate dashboard
-        run: python scanner_us.py
+        run: |
+          python scanner_us.py
 
       - name: Commit updated dashboard
-  run: |
-    git config --global user.name "github-actions[bot]"
-    git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    git add index.html performance_log_us.csv
-    git commit -m "Update USA scanner dashboard" || echo "No changes to commit"
-    git push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html performance_log_us.csv
+          git commit -m "Update USA scanner dashboard" || echo "No changes to commit"
+          git push
