@@ -413,7 +413,7 @@ body {{
   color: #e5e7eb;
 }}
 .container {{
-  max-width: 1180px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 28px 18px 60px;
 }}
@@ -497,7 +497,6 @@ h1 {{
   line-height: 1.6;
   margin-top: 24px;
 }}
-@media (max-width: 900px) {{
   .stats, .setup-wrap, .market-grid {{
     grid-template-columns: 1fr;
     display: grid;
