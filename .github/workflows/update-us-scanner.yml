@@ -28,9 +28,9 @@ jobs:
         run: python scanner_us.py
 
       - name: Commit updated dashboard
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add index.html performance_log_us.csv
-          git commit -m "Update USA swing scanner" || echo "No changes to commit"
-          git push
+  run: |
+    git config --global user.name "github-actions[bot]"
+    git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    git add index.html performance_log_us.csv
+    git commit -m "Update USA scanner dashboard" || echo "No changes to commit"
+    git push
