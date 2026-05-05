@@ -29,6 +29,14 @@ BENCHMARK = "SPY"
 OUTPUT_HTML = "index.html"
 PERFORMANCE_LOG = "performance_log_us.csv"
 
+# Intraday-assisted mode. Yahoo/yfinance intraday quotes can be delayed,
+# but this updates much more frequently than daily candles.
+IST = timezone(timedelta(hours=5, minutes=30))
+DATA_PERIOD = "30d"
+DATA_INTERVAL = "15m"
+DATA_MODE_LABEL = "15-minute intraday data"
+ETF_SYMBOLS = {"SPY", "QQQ", "DIA", "IWM"}
+
 
 def ema(series, span):
     return series.ewm(span=span, adjust=False).mean()
@@ -57,6 +65,13 @@ def get_earnings_risk(ticker):
     - If earnings date is within the next EARNINGS_BLACKOUT_DAYS, skip the stock.
     - If earnings date is unavailable, do not block the stock, but mark it as unknown.
     """
+
+    if ticker in ETF_SYMBOLS:
+        return {
+            "skip": False,
+            "status": "ETF - earnings not applicable",
+            "date": "",
+        }
 
     try:
         stock = yf.Ticker(ticker)
@@ -138,15 +153,17 @@ def benchmark_bias(bench_df):
     ema20 = float(b["EMA20"].iloc[-1])
     ema50 = float(b["EMA50"].iloc[-1])
 
-    if len(b) >= 6:
-        change_5d = ((b["Close"].iloc[-1] / b["Close"].iloc[-6]) - 1) * 100
+    # In intraday mode this is a recent-bar change, not a 5-day change.
+    # With 15-minute candles, 22 bars is roughly one regular US trading session.
+    if len(b) >= 22:
+        recent_change = ((b["Close"].iloc[-1] / b["Close"].iloc[-22]) - 1) * 100
     else:
-        change_5d = 0
+        recent_change = 0
 
-    if close > ema20 > ema50 and change_5d > 0:
+    if close > ema20 > ema50 and recent_change > 0:
         bias = "Bullish"
         message = "US market trend is supportive. Scanner will only show BUY setups."
-    elif close < ema20 < ema50 and change_5d < 0:
+    elif close < ema20 < ema50 and recent_change < 0:
         bias = "Bearish"
         message = "US market trend is weak. Scanner will only show SELL setups."
     else:
@@ -159,7 +176,7 @@ def benchmark_bias(bench_df):
         "close": round(close, 2),
         "ema20": round(ema20, 2),
         "ema50": round(ema50, 2),
-        "change_5d": round(float(change_5d), 2),
+        "recent_change": round(float(recent_change), 2),
     }
 
 
@@ -361,7 +378,9 @@ def update_performance_log(top3):
 
 
 def render_html(rows, market, perf_log):
-    generated_time = datetime.now().strftime("%d %b %Y, %I:%M %p")
+    now_ist = datetime.now(IST)
+    generated_time = now_ist.strftime("%d %b %Y, %I:%M:%S %p IST")
+    build_id = now_ist.strftime("%Y%m%d%H%M%S")
 
     total = len(rows)
     high = sum(r["Priority"] == "Highest Priority" for r in rows)
@@ -404,6 +423,9 @@ def render_html(rows, market, perf_log):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>USA Swing Trading Scanner</title>
 <style>
 body {{
@@ -532,7 +554,7 @@ h1 {{
 </div>
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on {generated_time} • US large-cap watchlist</div>
+  <div class="subtitle">Generated on {generated_time} • Build {build_id} • {DATA_MODE_LABEL} • US large-cap watchlist</div>
 
   <div class="stats">
     <div class="stat"><span>Total Candidates</span><b>{total}</b></div>
@@ -549,7 +571,7 @@ h1 {{
       <div>SPY Close<br><b>{market['close']}</b></div>
       <div>EMA 20<br><b>{market['ema20']}</b></div>
       <div>EMA 50<br><b>{market['ema50']}</b></div>
-      <div>5-Day Change<br><b>{market['change_5d']}%</b></div>
+      <div>Recent Change<br><b>{market['recent_change']}%</b></div>
     </div>
   </div>
 
@@ -593,8 +615,8 @@ def main():
 
     data = yf.download(
         tickers=tickers,
-        period="6mo",
-        interval="1d",
+        period=DATA_PERIOD,
+        interval=DATA_INTERVAL,
         auto_adjust=False,
         group_by="ticker",
         threads=True,
@@ -647,7 +669,7 @@ def main():
     perf_log = update_performance_log(rows[:TOP_N])
     render_html(rows, market, perf_log)
 
-    print(f"Generated {OUTPUT_HTML} with {len(rows)} candidates.")
+    print(f"Generated {OUTPUT_HTML} with {len(rows)} candidates using {DATA_INTERVAL} candles. Build {datetime.now(IST).strftime('%Y%m%d%H%M%S')}.")
 
 if __name__ == "__main__":
     main()
