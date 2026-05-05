@@ -28,14 +28,29 @@ UNIVERSE = [
 BENCHMARK = "SPY"
 OUTPUT_HTML = "index.html"
 PERFORMANCE_LOG = "performance_log_us.csv"
-
-# Intraday-assisted mode. Yahoo/yfinance intraday quotes can be delayed,
-# but this updates much more frequently than daily candles.
 IST = timezone(timedelta(hours=5, minutes=30))
-DATA_PERIOD = "30d"
-DATA_INTERVAL = "15m"
-DATA_MODE_LABEL = "15-minute intraday data"
 ETF_SYMBOLS = {"SPY", "QQQ", "DIA", "IWM"}
+
+MODES = {
+    "swing": {
+        "label": "Swing",
+        "description": "Daily candle swing-trade view",
+        "period": "6mo",
+        "interval": "1d",
+        "bias_change_label": "5-Day Change",
+        "bias_lookback_bars": 6,
+        "rs_lookback_bars": 22,
+    },
+    "intraday": {
+        "label": "Intraday",
+        "description": "15-minute candle active-trade view",
+        "period": "30d",
+        "interval": "15m",
+        "bias_change_label": "Recent Change",
+        "bias_lookback_bars": 22,
+        "rs_lookback_bars": 22,
+    },
+}
 
 
 def ema(series, span):
@@ -57,6 +72,7 @@ def rsi(series, period=14):
     rs = gain / loss.replace(0, np.nan)
     return 100 - (100 / (1 + rs))
 
+
 def get_earnings_risk(ticker):
     """
     Returns earnings-risk status for a ticker.
@@ -64,8 +80,8 @@ def get_earnings_risk(ticker):
     Logic:
     - If earnings date is within the next EARNINGS_BLACKOUT_DAYS, skip the stock.
     - If earnings date is unavailable, do not block the stock, but mark it as unknown.
+    - ETFs are not blocked for earnings.
     """
-
     if ticker in ETF_SYMBOLS:
         return {
             "skip": False,
@@ -76,39 +92,22 @@ def get_earnings_risk(ticker):
     try:
         stock = yf.Ticker(ticker)
         calendar = stock.calendar
-
         earnings_date = None
 
         if calendar is None:
-            return {
-                "skip": False,
-                "status": "Earnings date unavailable",
-                "date": "",
-            }
+            return {"skip": False, "status": "Earnings date unavailable", "date": ""}
 
         if isinstance(calendar, dict):
             raw_date = calendar.get("Earnings Date") or calendar.get("EarningsDate")
-
-            if isinstance(raw_date, list) and len(raw_date) > 0:
-                earnings_date = raw_date[0]
-            else:
-                earnings_date = raw_date
+            earnings_date = raw_date[0] if isinstance(raw_date, list) and len(raw_date) > 0 else raw_date
 
         elif isinstance(calendar, pd.DataFrame):
             if "Earnings Date" in calendar.index:
                 raw_date = calendar.loc["Earnings Date"].values[0]
-
-                if isinstance(raw_date, list) and len(raw_date) > 0:
-                    earnings_date = raw_date[0]
-                else:
-                    earnings_date = raw_date
+                earnings_date = raw_date[0] if isinstance(raw_date, list) and len(raw_date) > 0 else raw_date
 
         if earnings_date is None or pd.isna(earnings_date):
-            return {
-                "skip": False,
-                "status": "Earnings date unavailable",
-                "date": "",
-            }
+            return {"skip": False, "status": "Earnings date unavailable", "date": ""}
 
         earnings_date = pd.to_datetime(earnings_date).date()
         today = datetime.now(timezone.utc).date()
@@ -121,18 +120,12 @@ def get_earnings_risk(ticker):
                 "date": earnings_date.isoformat(),
             }
 
-        return {
-            "skip": False,
-            "status": "Clear",
-            "date": earnings_date.isoformat(),
-        }
+        return {"skip": False, "status": "Clear", "date": earnings_date.isoformat()}
 
     except Exception:
-        return {
-            "skip": False,
-            "status": "Earnings check unavailable",
-            "date": "",
-        }
+        return {"skip": False, "status": "Earnings check unavailable", "date": ""}
+
+
 def get_single_df(data, ticker):
     if isinstance(data.columns, pd.MultiIndex):
         if ticker not in data.columns.get_level_values(0):
@@ -144,7 +137,7 @@ def get_single_df(data, ticker):
     return df.dropna(subset=["Open", "High", "Low", "Close", "Volume"], how="any")
 
 
-def benchmark_bias(bench_df):
+def benchmark_bias(bench_df, config):
     b = bench_df.copy()
     b["EMA20"] = ema(b["Close"], 20)
     b["EMA50"] = ema(b["Close"], 50)
@@ -153,10 +146,9 @@ def benchmark_bias(bench_df):
     ema20 = float(b["EMA20"].iloc[-1])
     ema50 = float(b["EMA50"].iloc[-1])
 
-    # In intraday mode this is a recent-bar change, not a 5-day change.
-    # With 15-minute candles, 22 bars is roughly one regular US trading session.
-    if len(b) >= 22:
-        recent_change = ((b["Close"].iloc[-1] / b["Close"].iloc[-22]) - 1) * 100
+    lookback = int(config["bias_lookback_bars"])
+    if len(b) >= lookback:
+        recent_change = ((b["Close"].iloc[-1] / b["Close"].iloc[-lookback]) - 1) * 100
     else:
         recent_change = 0
 
@@ -177,10 +169,11 @@ def benchmark_bias(bench_df):
         "ema20": round(ema20, 2),
         "ema50": round(ema50, 2),
         "recent_change": round(float(recent_change), 2),
+        "change_label": config["bias_change_label"],
     }
 
 
-def score_ticker(df, bench_df, ticker):
+def score_ticker(df, bench_df, ticker, config):
     if len(df) < 80:
         return None
 
@@ -208,12 +201,13 @@ def score_ticker(df, bench_df, ticker):
     if not np.isfinite(vol_ratio) or not np.isfinite(atr_pct):
         return None
 
-    if len(d) < 22 or len(bench_df) < 22:
+    rs_lookback = int(config["rs_lookback_bars"])
+    if len(d) < rs_lookback or len(bench_df) < rs_lookback:
         return None
 
-    stock_21 = ((d["Close"].iloc[-1] / d["Close"].iloc[-22]) - 1) * 100
-    bench_21 = ((bench_df["Close"].iloc[-1] / bench_df["Close"].iloc[-22]) - 1) * 100
-    rs_vs_bench = float(stock_21 - bench_21)
+    stock_change = ((d["Close"].iloc[-1] / d["Close"].iloc[-rs_lookback]) - 1) * 100
+    bench_change = ((bench_df["Close"].iloc[-1] / bench_df["Close"].iloc[-rs_lookback]) - 1) * 100
+    rs_vs_bench = float(stock_change - bench_change)
 
     if not np.isfinite(rs_vs_bench):
         return None
@@ -280,8 +274,7 @@ def score_ticker(df, bench_df, ticker):
 
     trigger_distance_pct = abs(entry - close) / close * 100
 
-        # US-market quality filters
-    # These are selective, but not so strict that the scanner shows zero ideas too often.
+    # US-market quality filters.
     if trigger_distance_pct > 2.0:
         return None
 
@@ -297,7 +290,7 @@ def score_ticker(df, bench_df, ticker):
     if atr_pct > 6.5:
         return None
 
-    # Calibrated scoring thresholds
+    # Calibrated scoring thresholds.
     if score >= 88:
         priority = "Highest Priority"
         grade = "A"
@@ -309,7 +302,7 @@ def score_ticker(df, bench_df, ticker):
         grade = "B"
     else:
         return None
-        
+
     return {
         "Priority": priority,
         "Stock": ticker,
@@ -325,7 +318,7 @@ def score_ticker(df, bench_df, ticker):
         "ATR%": f"{round(atr_pct, 2)}%",
         "Vol Ratio": round(vol_ratio, 2),
         "RS vs SPY": round(rs_vs_bench, 2),
-                "Trigger Distance": f"{round(trigger_distance_pct, 2)}%",
+        "Trigger Distance": f"{round(trigger_distance_pct, 2)}%",
         "Earnings": "Clear",
         "Earnings Date": "",
         "Qty": qty,
@@ -335,26 +328,36 @@ def score_ticker(df, bench_df, ticker):
     }
 
 
-def update_performance_log(top3):
+def update_performance_log(mode_key, top3):
     log_path = Path(PERFORMANCE_LOG)
     today = datetime.now(timezone.utc).date().isoformat()
+    mode_label = MODES[mode_key]["label"]
+
+    columns = [
+        "Date", "Mode", "Rank", "Stock", "Signal", "Conviction", "Entry", "Stop",
+        "Target", "RR", "Status", "Result", "R", "Days", "Notes"
+    ]
 
     if log_path.exists():
         log = pd.read_csv(log_path)
+        if "Mode" not in log.columns:
+            log["Mode"] = "Legacy"
+        for col in columns:
+            if col not in log.columns:
+                log[col] = ""
+        log = log[columns]
     else:
-        log = pd.DataFrame(columns=[
-            "Date", "Rank", "Stock", "Signal", "Conviction", "Entry", "Stop",
-            "Target", "RR", "Status", "Result", "R", "Days", "Notes"
-        ])
+        log = pd.DataFrame(columns=columns)
 
-    existing = set(zip(log.get("Date", []), log.get("Rank", []), log.get("Stock", [])))
+    existing = set(zip(log.get("Date", []), log.get("Mode", []), log.get("Rank", []), log.get("Stock", [])))
 
     new_rows = []
     for rank, row in enumerate(top3, start=1):
-        key = (today, rank, row["Stock"])
+        key = (today, mode_label, rank, row["Stock"])
         if key not in existing:
             new_rows.append({
                 "Date": today,
+                "Mode": mode_label,
                 "Rank": rank,
                 "Stock": row["Stock"],
                 "Signal": row["Signal"],
@@ -367,27 +370,72 @@ def update_performance_log(top3):
                 "Result": "",
                 "R": "",
                 "Days": 0,
-                "Notes": "Top 3 scanner pick",
+                "Notes": f"Top 3 {mode_label} scanner pick",
             })
 
     if new_rows:
         log = pd.concat([pd.DataFrame(new_rows), log], ignore_index=True)
 
     log.to_csv(log_path, index=False)
-    return log.head(60)
+    return log[log["Mode"] == mode_label].head(60)
 
 
-def render_html(rows, market, perf_log):
-    now_ist = datetime.now(IST)
-    generated_time = now_ist.strftime("%d %b %Y, %I:%M:%S %p IST")
-    build_id = now_ist.strftime("%Y%m%d%H%M%S")
+def run_scan(mode_key):
+    config = MODES[mode_key]
+    tickers = sorted(set(UNIVERSE + [BENCHMARK]))
 
-    total = len(rows)
-    high = sum(r["Priority"] == "Highest Priority" for r in rows)
-    medium = sum(r["Priority"] == "Medium Priority" for r in rows)
-    low = sum(r["Priority"] == "Low Priority" for r in rows)
-    best = max([r["Conviction"] for r in rows], default=0)
+    print(f"Downloading {config['label']} data: period={config['period']}, interval={config['interval']}...")
+    data = yf.download(
+        tickers=tickers,
+        period=config["period"],
+        interval=config["interval"],
+        auto_adjust=False,
+        group_by="ticker",
+        threads=True,
+        progress=False,
+    )
 
+    bench_df = get_single_df(data, BENCHMARK)
+    if bench_df.empty:
+        raise RuntimeError(f"{BENCHMARK} benchmark data could not be downloaded for {config['label']} mode.")
+
+    market = benchmark_bias(bench_df, config)
+    rows = []
+
+    for ticker in sorted(set(UNIVERSE)):
+        if ticker == BENCHMARK:
+            continue
+
+        earnings = get_earnings_risk(ticker)
+        if earnings["skip"]:
+            continue
+
+        df = get_single_df(data, ticker)
+        result = score_ticker(df, bench_df, ticker, config)
+
+        if result:
+            # Do not allow trades against the broad US market trend.
+            if market["bias"] == "Bullish" and result["Signal"] != "BUY":
+                continue
+
+            if market["bias"] == "Bearish" and result["Signal"] != "SELL":
+                continue
+
+            if market["bias"] == "Mixed" and result["Conviction"] < 90:
+                continue
+
+            result["Earnings"] = earnings["status"]
+            result["Earnings Date"] = earnings["date"]
+            rows.append(result)
+
+    rows = sorted(rows, key=lambda x: x["Conviction"], reverse=True)
+    perf_log = update_performance_log(mode_key, rows[:TOP_N])
+
+    print(f"{config['label']} mode produced {len(rows)} candidates.")
+    return {"mode_key": mode_key, "config": config, "market": market, "rows": rows, "perf_log": perf_log}
+
+
+def build_cards(rows):
     cards = ""
     for r in rows[:TOP_N]:
         cards += f"""
@@ -405,18 +453,91 @@ def render_html(rows, market, perf_log):
           <p>{r['Entry Rule']} · {r['Notes']}</p>
         </div>
         """
+    return cards if cards else "<p>No qualifying top setups for this mode.</p>"
+
+
+def build_mode_block(scan):
+    rows = scan["rows"]
+    market = scan["market"]
+    config = scan["config"]
+    mode_key = scan["mode_key"]
+    active_class = " active" if mode_key == "intraday" else ""
+
+    total = len(rows)
+    high = sum(r["Priority"] == "Highest Priority" for r in rows)
+    medium = sum(r["Priority"] == "Medium Priority" for r in rows)
+    low = sum(r["Priority"] == "Low Priority" for r in rows)
+    best = max([r["Conviction"] for r in rows], default=0)
 
     table_html = (
         pd.DataFrame(rows).to_html(index=False, classes="data-table", escape=False)
         if rows
-        else "<p>No qualifying setups today.</p>"
+        else "<p>No qualifying setups in this mode.</p>"
     )
 
+    perf_log = scan["perf_log"]
     perf_html = (
         perf_log.to_html(index=False, classes="data-table", escape=False)
         if not perf_log.empty
-        else "<p>No records yet.</p>"
+        else "<p>No performance records yet for this mode.</p>"
     )
+
+    cards = build_cards(rows)
+
+    return f"""
+<section id="panel-{mode_key}" class="mode-panel{active_class}">
+  <div class="mode-heading">
+    <div>
+      <h2>{config['label']} Mode</h2>
+      <p>{config['description']} · period {config['period']} · interval {config['interval']}</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span>Total Candidates</span><b>{total}</b></div>
+    <div class="stat"><span>Highest Priority</span><b>{high}</b></div>
+    <div class="stat"><span>Medium Priority</span><b>{medium}</b></div>
+    <div class="stat"><span>Low Priority</span><b>{low}</b></div>
+    <div class="stat"><span>Best Conviction</span><b>{best}</b></div>
+  </div>
+
+  <div class="market">
+    <h2>SPY Bias: {market['bias']}</h2>
+    <p>{market['message']}</p>
+    <div class="market-grid">
+      <div>SPY Close<br><b>{market['close']}</b></div>
+      <div>EMA 20<br><b>{market['ema20']}</b></div>
+      <div>EMA 50<br><b>{market['ema50']}</b></div>
+      <div>{market['change_label']}<br><b>{market['recent_change']}%</b></div>
+    </div>
+  </div>
+
+  <h2>Top 3 Setups</h2>
+  <div class="setup-wrap">{cards}</div>
+
+  <div class="section">
+    <h2>Scanner Table</h2>
+    {table_html}
+  </div>
+
+  <div class="section">
+    <h2>Top 3 Performance Log — {config['label']}</h2>
+    <p>Latest 60 {config['label'].lower()} ideas are shown first.</p>
+    {perf_html}
+  </div>
+</section>
+"""
+
+
+def render_html(scans):
+    now_ist = datetime.now(IST)
+    generated_time = now_ist.strftime("%d %b %Y, %I:%M:%S %p IST")
+    build_id = now_ist.strftime("%Y%m%d%H%M%S")
+
+    swing_block = build_mode_block(scans["swing"])
+    intraday_block = build_mode_block(scans["intraday"])
+    swing_count = len(scans["swing"]["rows"])
+    intraday_count = len(scans["intraday"]["rows"])
 
     html = f"""<!doctype html>
 <html>
@@ -459,9 +580,54 @@ h1 {{
   font-size: 42px;
   margin-bottom: 6px;
 }}
+h2 {{
+  margin-top: 0;
+}}
 .subtitle {{
   color: #94a3b8;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}}
+.toggle-wrap {{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 18px 0 20px;
+}}
+.toggle-btn {{
+  background: #111827;
+  border: 1px solid #243041;
+  color: #e5e7eb;
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-weight: 800;
+  cursor: pointer;
+}}
+.toggle-btn.active {{
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #06111f;
+}}
+.mode-note {{
+  color: #94a3b8;
+  font-size: 13px;
+}}
+.mode-panel {{
+  display: none;
+}}
+.mode-panel.active {{
+  display: block;
+}}
+.mode-heading {{
+  background: #111827;
+  border: 1px solid #243041;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+}}
+.mode-heading p {{
+  color: #94a3b8;
+  margin-bottom: 0;
 }}
 .stats {{
   display: grid;
@@ -554,29 +720,13 @@ h1 {{
 </div>
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on {generated_time} • Build {build_id} • {DATA_MODE_LABEL} • US large-cap watchlist</div>
+  <div class="subtitle">Generated on {generated_time} • Build {build_id} • Swing + Intraday toggle • US large-cap watchlist</div>
 
-  <div class="stats">
-    <div class="stat"><span>Total Candidates</span><b>{total}</b></div>
-    <div class="stat"><span>Highest Priority</span><b>{high}</b></div>
-    <div class="stat"><span>Medium Priority</span><b>{medium}</b></div>
-    <div class="stat"><span>Low Priority</span><b>{low}</b></div>
-    <div class="stat"><span>Best Conviction</span><b>{best}</b></div>
+  <div class="toggle-wrap">
+    <button id="btn-swing" class="toggle-btn" onclick="showMode('swing')">Swing Daily Candle <span>({swing_count})</span></button>
+    <button id="btn-intraday" class="toggle-btn active" onclick="showMode('intraday')">Intraday 15-Min Candle <span>({intraday_count})</span></button>
+    <span class="mode-note">Toggle changes the displayed scan; both scans are generated during the same build.</span>
   </div>
-
-  <div class="market">
-    <h2>SPY Bias: {market['bias']}</h2>
-    <p>{market['message']}</p>
-    <div class="market-grid">
-      <div>SPY Close<br><b>{market['close']}</b></div>
-      <div>EMA 20<br><b>{market['ema20']}</b></div>
-      <div>EMA 50<br><b>{market['ema50']}</b></div>
-      <div>Recent Change<br><b>{market['recent_change']}%</b></div>
-    </div>
-  </div>
-
-  <h2>Top 3 Setups</h2>
-  <div class="setup-wrap">{cards}</div>
 
   <div class="section">
     <h2>Suggested Investment Criteria</h2>
@@ -584,92 +734,66 @@ h1 {{
       <b>88+</b> Highest Priority ·
       <b>83–87</b> Medium Priority ·
       <b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation.
+      Swing mode uses daily candles. Intraday mode uses 15-minute candles. Entry should only be considered if the trigger level breaks with confirmation.
       Stocks with earnings expected within the next 8 calendar days are excluded.
     </p>
   </div>
 
-  <div class="section">
-    <h2>Scanner Table</h2>
-    {table_html}
-  </div>
-
-  <div class="section">
-    <h2>Top 3 Performance Log</h2>
-    <p>Latest 60 ideas are shown first.</p>
-    {perf_html}
-  </div>
+  {swing_block}
+  {intraday_block}
 
   <p class="disclaimer">
     Disclaimer: This dashboard is for educational and research purposes only.
-    It is not financial advice or a trade recommendation.
+    It is not financial advice or a trade recommendation. Yahoo/yfinance intraday data may be delayed or revised.
   </p>
 </div>
+<script>
+function showMode(mode) {{
+  const modes = ['swing', 'intraday'];
+  modes.forEach(function(item) {{
+    const panel = document.getElementById('panel-' + item);
+    const button = document.getElementById('btn-' + item);
+    if (panel) {{
+      panel.classList.toggle('active', item === mode);
+    }}
+    if (button) {{
+      button.classList.toggle('active', item === mode);
+    }}
+  }});
+  const url = new URL(window.location);
+  url.searchParams.set('mode', mode);
+  window.history.replaceState(null, '', url);
+}}
+(function initMode() {{
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('mode');
+  if (requested === 'swing' || requested === 'intraday') {{
+    showMode(requested);
+  }} else {{
+    showMode('intraday');
+  }}
+}})();
+</script>
 </body>
 </html>"""
 
     Path(OUTPUT_HTML).write_text(html, encoding="utf-8")
 
-def main():
-    tickers = sorted(set(UNIVERSE + [BENCHMARK]))
 
-    data = yf.download(
-        tickers=tickers,
-        period=DATA_PERIOD,
-        interval=DATA_INTERVAL,
-        auto_adjust=False,
-        group_by="ticker",
-        threads=True,
-        progress=False,
+def main():
+    scans = {
+        "swing": run_scan("swing"),
+        "intraday": run_scan("intraday"),
+    }
+    render_html(scans)
+
+    print(
+        f"Generated {OUTPUT_HTML} with "
+        f"{len(scans['swing']['rows'])} swing candidates and "
+        f"{len(scans['intraday']['rows'])} intraday candidates. "
+        f"Build {datetime.now(IST).strftime('%Y%m%d%H%M%S')}."
     )
 
-    bench_df = get_single_df(data, BENCHMARK)
-
-    if bench_df.empty:
-        raise RuntimeError("SPY benchmark data could not be downloaded.")
-
-    market = benchmark_bias(bench_df)
-
-    rows = []
-
-    for ticker in sorted(set(UNIVERSE)):
-        if ticker == BENCHMARK:
-            continue
-
-        earnings = get_earnings_risk(ticker)
-
-        # Avoid US stocks with earnings too close to the swing-trade window.
-        if earnings["skip"]:
-            continue
-
-        df = get_single_df(data, ticker)
-        result = score_ticker(df, bench_df, ticker)
-
-        if result:
-            # Do not allow trades against the broad US market trend.
-            # If SPY is bullish, only BUY setups are allowed.
-            # If SPY is bearish, only SELL setups are allowed.
-            # If SPY is mixed, only very high-conviction setups are allowed.
-            if market["bias"] == "Bullish" and result["Signal"] != "BUY":
-                continue
-
-            if market["bias"] == "Bearish" and result["Signal"] != "SELL":
-                continue
-
-            if market["bias"] == "Mixed" and result["Conviction"] < 90:
-                continue
-
-            result["Earnings"] = earnings["status"]
-            result["Earnings Date"] = earnings["date"]
-
-            rows.append(result)
-
-    rows = sorted(rows, key=lambda x: x["Conviction"], reverse=True)
-
-    perf_log = update_performance_log(rows[:TOP_N])
-    render_html(rows, market, perf_log)
-
-    print(f"Generated {OUTPUT_HTML} with {len(rows)} candidates using {DATA_INTERVAL} candles. Build {datetime.now(IST).strftime('%Y%m%d%H%M%S')}.")
 
 if __name__ == "__main__":
     main()
