@@ -39,9 +39,54 @@ h1 {
   font-size: 42px;
   margin-bottom: 6px;
 }
+h2 {
+  margin-top: 0;
+}
 .subtitle {
   color: #94a3b8;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+.toggle-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 18px 0 20px;
+}
+.toggle-btn {
+  background: #111827;
+  border: 1px solid #243041;
+  color: #e5e7eb;
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.toggle-btn.active {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #06111f;
+}
+.mode-note {
+  color: #94a3b8;
+  font-size: 13px;
+}
+.mode-panel {
+  display: none;
+}
+.mode-panel.active {
+  display: block;
+}
+.mode-heading {
+  background: #111827;
+  border: 1px solid #243041;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.mode-heading p {
+  color: #94a3b8;
+  margin-bottom: 0;
 }
 .stats {
   display: grid;
@@ -134,7 +179,180 @@ h1 {
 </div>
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on 05 May 2026, 08:17:24 AM IST • Build 20260505081724 • 15-minute intraday data • US large-cap watchlist</div>
+  <div class="subtitle">Generated on 05 May 2026, 10:25:27 AM IST • Build 20260505102527 • Swing + Intraday toggle • US large-cap watchlist</div>
+
+  <div class="toggle-wrap">
+    <button id="btn-swing" class="toggle-btn" onclick="showMode('swing')">Swing Daily Candle <span>(1)</span></button>
+    <button id="btn-intraday" class="toggle-btn active" onclick="showMode('intraday')">Intraday 15-Min Candle <span>(13)</span></button>
+    <span class="mode-note">Toggle changes the displayed scan; both scans are generated during the same build.</span>
+  </div>
+
+  <div class="section">
+    <h2>Suggested Investment Criteria</h2>
+    <p>
+      <b>88+</b> Highest Priority ·
+      <b>83–87</b> Medium Priority ·
+      <b>78–82</b> Low Priority.
+      Swing mode uses daily candles. Intraday mode uses 15-minute candles. Entry should only be considered if the trigger level breaks with confirmation.
+      Stocks with earnings expected within the next 8 calendar days are excluded.
+    </p>
+  </div>
+
+  
+<section id="panel-swing" class="mode-panel">
+  <div class="mode-heading">
+    <div>
+      <h2>Swing Mode</h2>
+      <p>Daily candle swing-trade view · period 6mo · interval 1d</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span>Total Candidates</span><b>1</b></div>
+    <div class="stat"><span>Highest Priority</span><b>1</b></div>
+    <div class="stat"><span>Medium Priority</span><b>0</b></div>
+    <div class="stat"><span>Low Priority</span><b>0</b></div>
+    <div class="stat"><span>Best Conviction</span><b>91</b></div>
+  </div>
+
+  <div class="market">
+    <h2>SPY Bias: Bullish</h2>
+    <p>US market trend is supportive. Scanner will only show BUY setups.</p>
+    <div class="market-grid">
+      <div>SPY Close<br><b>718.01</b></div>
+      <div>EMA 20<br><b>702.06</b></div>
+      <div>EMA 50<br><b>688.92</b></div>
+      <div>5-Day Change<br><b>0.4%</b></div>
+    </div>
+  </div>
+
+  <h2>Top 3 Setups</h2>
+  <div class="setup-wrap">
+        <div class="setup">
+          <h3>ORCL — BUY</h3>
+          <p><b>Highest Priority</b> · Score 91</p>
+          <div class="grid">
+            <div>Entry<br><b>183.87</b></div>
+            <div>Stop<br><b>171.39</b></div>
+            <div>Target<br><b>215.06</b></div>
+            <div>Qty<br><b>80</b></div>
+            <div>Value<br><b>$14,709</b></div>
+            <div>RR<br><b>2.5</b></div>
+          </div>
+          <p>Enter only above trigger · Uptrend · Strong relative strength · Tradable volatility · Normal volume</p>
+        </div>
+        </div>
+
+  <div class="section">
+    <h2>Scanner Table</h2>
+    <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Grade</th>
+      <th>Close</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>RSI</th>
+      <th>ATR%</th>
+      <th>Vol Ratio</th>
+      <th>RS vs SPY</th>
+      <th>Trigger Distance</th>
+      <th>Earnings</th>
+      <th>Earnings Date</th>
+      <th>Qty</th>
+      <th>Trade Value</th>
+      <th>Entry Rule</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Highest Priority</td>
+      <td>ORCL</td>
+      <td>BUY</td>
+      <td>91</td>
+      <td>A</td>
+      <td>180.29</td>
+      <td>183.87</td>
+      <td>171.39</td>
+      <td>215.06</td>
+      <td>2.5</td>
+      <td>61.4</td>
+      <td>5.13%</td>
+      <td>1.01</td>
+      <td>13.68</td>
+      <td>1.98%</td>
+      <td>Clear</td>
+      <td>2026-06-10</td>
+      <td>80</td>
+      <td>$14,709</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Strong relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <div class="section">
+    <h2>Top 3 Performance Log — Swing</h2>
+    <p>Latest 60 swing ideas are shown first.</p>
+    <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Mode</th>
+      <th>Rank</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>Status</th>
+      <th>Result</th>
+      <th>R</th>
+      <th>Days</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-05</td>
+      <td>Swing</td>
+      <td>1</td>
+      <td>ORCL</td>
+      <td>BUY</td>
+      <td>91</td>
+      <td>183.87</td>
+      <td>171.39</td>
+      <td>215.06</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Swing scanner pick</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</section>
+
+  
+<section id="panel-intraday" class="mode-panel active">
+  <div class="mode-heading">
+    <div>
+      <h2>Intraday Mode</h2>
+      <p>15-minute candle active-trade view · period 30d · interval 15m</p>
+    </div>
+  </div>
 
   <div class="stats">
     <div class="stat"><span>Total Candidates</span><b>13</b></div>
@@ -199,17 +417,6 @@ h1 {
           <p>Enter only below trigger · Downtrend · Acceptable relative strength · Strong volume</p>
         </div>
         </div>
-
-  <div class="section">
-    <h2>Suggested Investment Criteria</h2>
-    <p>
-      <b>88+</b> Highest Priority ·
-      <b>83–87</b> Medium Priority ·
-      <b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation.
-      Stocks with earnings expected within the next 8 calendar days are excluded.
-    </p>
-  </div>
 
   <div class="section">
     <h2>Scanner Table</h2>
@@ -391,7 +598,7 @@ h1 {
       <td>2.5</td>
       <td>31.4</td>
       <td>0.42%</td>
-      <td>4.30</td>
+      <td>3.74</td>
       <td>-2.45</td>
       <td>0.27%</td>
       <td>Clear</td>
@@ -478,11 +685,11 @@ h1 {
       <td>B</td>
       <td>127.80</td>
       <td>127.12</td>
-      <td>127.66</td>
-      <td>125.74</td>
+      <td>127.65</td>
+      <td>125.77</td>
       <td>2.5</td>
       <td>34.9</td>
-      <td>0.32%</td>
+      <td>0.31%</td>
       <td>4.13</td>
       <td>-1.72</td>
       <td>0.54%</td>
@@ -501,8 +708,8 @@ h1 {
       <td>B</td>
       <td>96.31</td>
       <td>95.79</td>
-      <td>96.35</td>
-      <td>94.39</td>
+      <td>96.34</td>
+      <td>94.40</td>
       <td>2.5</td>
       <td>39.1</td>
       <td>0.43%</td>
@@ -544,12 +751,13 @@ h1 {
   </div>
 
   <div class="section">
-    <h2>Top 3 Performance Log</h2>
-    <p>Latest 60 ideas are shown first.</p>
+    <h2>Top 3 Performance Log — Intraday</h2>
+    <p>Latest 60 intraday ideas are shown first.</p>
     <table border="1" class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Date</th>
+      <th>Mode</th>
       <th>Rank</th>
       <th>Stock</th>
       <th>Signal</th>
@@ -568,6 +776,7 @@ h1 {
   <tbody>
     <tr>
       <td>2026-05-05</td>
+      <td>Intraday</td>
       <td>1</td>
       <td>ABT</td>
       <td>SELL</td>
@@ -580,10 +789,11 @@ h1 {
       <td></td>
       <td></td>
       <td>0</td>
-      <td>Top 3 scanner pick</td>
+      <td>Top 3 Intraday scanner pick</td>
     </tr>
     <tr>
       <td>2026-05-05</td>
+      <td>Intraday</td>
       <td>2</td>
       <td>BA</td>
       <td>SELL</td>
@@ -596,10 +806,11 @@ h1 {
       <td></td>
       <td></td>
       <td>0</td>
-      <td>Top 3 scanner pick</td>
+      <td>Top 3 Intraday scanner pick</td>
     </tr>
     <tr>
       <td>2026-05-05</td>
+      <td>Intraday</td>
       <td>3</td>
       <td>BLK</td>
       <td>SELL</td>
@@ -612,96 +823,45 @@ h1 {
       <td></td>
       <td></td>
       <td>0</td>
-      <td>Top 3 scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-05-05</td>
-      <td>1</td>
-      <td>ORCL</td>
-      <td>BUY</td>
-      <td>91</td>
-      <td>183.87</td>
-      <td>171.39</td>
-      <td>215.06</td>
-      <td>2.5</td>
-      <td>Pending Trigger</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>Top 3 scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-05-02</td>
-      <td>1</td>
-      <td>MSFT</td>
-      <td>BUY</td>
-      <td>84</td>
-      <td>417.94</td>
-      <td>401.26</td>
-      <td>459.66</td>
-      <td>2.5</td>
-      <td>Pending Trigger</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>Top 3 scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-05-02</td>
-      <td>1</td>
-      <td>MA</td>
-      <td>SELL</td>
-      <td>95</td>
-      <td>491.17</td>
-      <td>507.75</td>
-      <td>449.70</td>
-      <td>2.5</td>
-      <td>Pending Trigger</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>Top 3 scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-05-02</td>
-      <td>2</td>
-      <td>HD</td>
-      <td>SELL</td>
-      <td>91</td>
-      <td>322.71</td>
-      <td>332.79</td>
-      <td>297.52</td>
-      <td>2.5</td>
-      <td>Pending Trigger</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>Top 3 scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-05-02</td>
-      <td>3</td>
-      <td>MCD</td>
-      <td>SELL</td>
-      <td>91</td>
-      <td>285.79</td>
-      <td>292.59</td>
-      <td>268.79</td>
-      <td>2.5</td>
-      <td>Pending Trigger</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>Top 3 scanner pick</td>
+      <td>Top 3 Intraday scanner pick</td>
     </tr>
   </tbody>
 </table>
   </div>
+</section>
+
 
   <p class="disclaimer">
     Disclaimer: This dashboard is for educational and research purposes only.
-    It is not financial advice or a trade recommendation.
+    It is not financial advice or a trade recommendation. Yahoo/yfinance intraday data may be delayed or revised.
   </p>
 </div>
+<script>
+function showMode(mode) {
+  const modes = ['swing', 'intraday'];
+  modes.forEach(function(item) {
+    const panel = document.getElementById('panel-' + item);
+    const button = document.getElementById('btn-' + item);
+    if (panel) {
+      panel.classList.toggle('active', item === mode);
+    }
+    if (button) {
+      button.classList.toggle('active', item === mode);
+    }
+  });
+  const url = new URL(window.location);
+  url.searchParams.set('mode', mode);
+  window.history.replaceState(null, '', url);
+}
+(function initMode() {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('mode');
+  if (requested === 'swing' || requested === 'intraday') {
+    showMode(requested);
+  } else {
+    showMode('intraday');
+  }
+})();
+</script>
 </body>
 </html>
