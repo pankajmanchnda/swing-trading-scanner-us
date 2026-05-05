@@ -1,13 +1,16 @@
-Date,Mode,Rank,Stock,Signal,Conviction,Entry,Stop,Target,RR,Status,Result,R,Days,Notes
-2026-05-05,Intraday,1,ABT,SELL,80,87.2,87.48,86.49,2.5,Pending Trigger,,,0,Top 3 Intraday scanner pick
-2026-05-05,Intraday,2,BA,SELL,80,220.6,221.53,218.27,2.5,Pending Trigger,,,0,Top 3 Intraday scanner pick
-2026-05-05,Intraday,3,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,Pending Trigger,,,0,Top 3 Intraday scanner pick
-2026-05-05,Swing,1,ORCL,BUY,91,183.87,171.39,215.06,2.5,Pending Trigger,,,0,Top 3 Swing scanner pick
-2026-05-05,Legacy,1,ABT,SELL,80,87.2,87.48,86.49,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-05,Legacy,2,BA,SELL,80,220.6,221.53,218.27,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-05,Legacy,3,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-05,Legacy,1,ORCL,BUY,91,183.87,171.39,215.06,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-02,Legacy,1,MSFT,BUY,84,417.94,401.26,459.66,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-02,Legacy,1,MA,SELL,95,491.17,507.75,449.7,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-02,Legacy,2,HD,SELL,91,322.71,332.79,297.52,2.5,Pending Trigger,,,0,Top 3 scanner pick
-2026-05-02,Legacy,3,MCD,SELL,91,285.79,292.59,268.79,2.5,Pending Trigger,,,0,Top 3 scanner pick
+Date,Mode,Rank,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Price,Status,First Hit,Hit Date,Stop Away,Target Away,Result,R,Days,Notes
+2026-05-05,Intraday,1,HD,SELL,94,311.64,315.21,304.49,2.0,312.49,Pending Trigger,,,+$2.72 / +0.87%,+$8.00 / +2.56%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Intraday,2,NKE,SELL,94,43.0,43.5,42.01,2.0,43.09,Pending Trigger,,,+$0.41 / +0.95%,+$1.08 / +2.51%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Intraday,3,TGT,SELL,94,127.12,128.77,123.81,2.0,127.8,Pending Trigger,,,+$0.97 / +0.76%,+$3.99 / +3.12%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Intraday,1,ABT,SELL,80,87.2,87.48,86.49,2.5,87.57,Pending Trigger,,,-$0.09 / -0.10%,+$1.08 / +1.23%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Intraday,2,BA,SELL,80,220.6,221.53,218.27,2.5,221.35,Pending Trigger,,,+$0.18 / +0.08%,+$3.08 / +1.39%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Intraday,3,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,1052.25,Pending Trigger,,,+$0.74 / +0.07%,+$10.86 / +1.03%,,,0,Top 3 Intraday scanner pick
+2026-05-05,Swing,1,ORCL,BUY,91,183.87,171.39,215.06,2.5,180.29,Pending Trigger,,,+$8.90 / +4.94%,+$34.77 / +19.29%,,,0,Top 3 Swing scanner pick
+2026-05-05,Legacy,1,ABT,SELL,80,87.2,87.48,86.49,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-05,Legacy,2,BA,SELL,80,220.6,221.53,218.27,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-05,Legacy,3,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-05,Legacy,1,ORCL,BUY,91,183.87,171.39,215.06,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-02,Legacy,1,MSFT,BUY,84,417.94,401.26,459.66,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-02,Legacy,1,MA,SELL,94,491.17,507.75,449.7,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-02,Legacy,2,HD,SELL,91,322.71,332.79,297.52,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
+2026-05-02,Legacy,3,MCD,SELL,91,285.79,292.59,268.79,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
