@@ -11,10 +11,26 @@ body {
   background: #0f172a;
   color: #e5e7eb;
 }
-.container {
-  max-width: 1180px;
+.topbar {
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 28px 18px 60px;
+  padding: 18px 18px 0;
+}
+.back-link {
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.back-link:hover {
+  color: #7dd3fc;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 24px 18px 60px;
 }
 h1 {
   font-size: 42px;
@@ -78,7 +94,7 @@ h1 {
 .data-table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 1000px;
+  min-width: 1150px;
   font-size: 14px;
 }
 .data-table th, .data-table td {
@@ -96,18 +112,26 @@ h1 {
   line-height: 1.6;
   margin-top: 24px;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .stats, .setup-wrap, .market-grid {
     grid-template-columns: 1fr;
-    display: grid;
+  }
+
+  h1 {
+    font-size: 32px;
   }
 }
 </style>
 </head>
 <body>
+<div class="topbar">
+  <a class="back-link" href="https://pankajmanchnda.github.io/trading-agents/">
+    ← Back to Trading Agents Dashboard
+  </a>
+</div>
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on 05 May 2026, 12:10 AM · US large-cap watchlist</div>
+  <div class="subtitle">Generated on 05 May 2026, 02:13 AM • US large-cap watchlist</div>
 
   <div class="stats">
     <div class="stat"><span>Total Candidates</span><b>1</b></div>
@@ -149,9 +173,10 @@ h1 {
     <h2>Suggested Investment Criteria</h2>
     <p>
       <b>88+</b> Highest Priority ·
-<b>83–87</b> Medium Priority ·
-<b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
+      <b>83–87</b> Medium Priority ·
+      <b>78–82</b> Low Priority.
+      Entry should only be considered if the trigger level breaks with confirmation.
+      Stocks with earnings expected within the next 8 calendar days are excluded.
     </p>
   </div>
 
@@ -245,8 +270,8 @@ h1 {
       <td>215.06</td>
       <td>2.5</td>
       <td>Pending Trigger</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>0</td>
       <td>Top 3 scanner pick</td>
     </tr>
