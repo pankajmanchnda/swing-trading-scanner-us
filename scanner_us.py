@@ -361,7 +361,7 @@ def update_performance_log(top3):
 
 
 def render_html(rows, market, perf_log):
-    generated = datetime.now().strftime("%d %b %Y, %I:%M %p")
+    generated_time = datetime.now().strftime("%d %b %Y, %I:%M %p")
 
     total = len(rows)
     high = sum(r["Priority"] == "Highest Priority" for r in rows)
@@ -504,11 +504,30 @@ h1 {{
   }}
 }}
 </style>
-</head>
+</head> .topbar {
+  max-width: 1150px;
+  margin: 0 auto 24px auto;
+}
+
+.back-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: #7dd3fc;
+}
 <body>
+<div class="topbar">
+  <a class="back-link" href="https://pankajmanchnda.github.io/trading-agents/">
+    ← Back to Trading Agents Dashboard
+  </a>
+</div>
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on {generated} · US large-cap watchlist</div>
+  <div class="subtitle">Generated on {generated_time} • US large-cap watchlist</div>
 
   <div class="stats">
     <div class="stat"><span>Total Candidates</span><b>{total}</b></div>
