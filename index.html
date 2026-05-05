@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>USA Swing Trading Scanner</title>
-
 <style>
 body {
   margin: 0;
@@ -12,88 +11,50 @@ body {
   background: #0f172a;
   color: #e5e7eb;
 }
-
-.topbar {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 22px 18px 0;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 14px;
-  background: #111827;
-  border: 1px solid #243041;
-  padding: 10px 14px;
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
-}
-
-.back-link:hover {
-  color: #7dd3fc;
-  background: #0b1220;
-  border-color: #38bdf8;
-}
-
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 24px 18px 60px;
+  padding: 28px 18px 60px;
 }
-
 h1 {
   font-size: 42px;
   margin-bottom: 6px;
 }
-
 .subtitle {
   color: #94a3b8;
   margin-bottom: 24px;
 }
-
 .stats {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-bottom: 20px;
 }
-
 .stat, .market, .setup, .section {
   background: #111827;
   border: 1px solid #243041;
   border-radius: 18px;
   padding: 18px;
 }
-
 .stat span {
   display: block;
   color: #94a3b8;
   font-size: 13px;
 }
-
 .stat b {
   font-size: 26px;
 }
-
 .market {
   margin-bottom: 22px;
 }
-
 .market-grid, .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
-
 .grid {
   grid-template-columns: repeat(3, 1fr);
 }
-
 .market-grid div, .grid div {
   background: #0b1220;
   border: 1px solid #243041;
@@ -101,275 +62,260 @@ h1 {
   padding: 10px;
   color: #94a3b8;
 }
-
 .market-grid b, .grid b {
   color: #e5e7eb;
 }
-
 .setup-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-bottom: 22px;
 }
-
 .section {
   margin-top: 18px;
   overflow-x: auto;
 }
-
 .data-table {
   border-collapse: collapse;
   width: 100%;
   min-width: 1000px;
   font-size: 14px;
 }
-
 .data-table th, .data-table td {
   border-bottom: 1px solid #243041;
   padding: 10px;
   text-align: left;
   white-space: nowrap;
 }
-
 .data-table th {
   background: #0b1220;
 }
-
 .disclaimer {
   color: #94a3b8;
   font-size: 13px;
   line-height: 1.6;
   margin-top: 24px;
 }
-
 @media (max-width: 900px) {
   .stats, .setup-wrap, .market-grid {
     grid-template-columns: 1fr;
     display: grid;
   }
-
-  h1 {
-    font-size: 32px;
-  }
 }
 </style>
 </head>
-
 <body>
-
-<div class="topbar">
-  <a class="back-link" href="https://pankajmanchnda.github.io/trading-agents/">
-    ← Back to Trading Agents Dashboard
-  </a>
-</div>
-
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
-  <div class="subtitle">Generated on 02 May 2026, 07:13 AM · US large-cap watchlist</div>
+  <div class="subtitle">Generated on 05 May 2026, 12:10 AM · US large-cap watchlist</div>
 
   <div class="stats">
     <div class="stat"><span>Total Candidates</span><b>1</b></div>
-    <div class="stat"><span>Highest Priority</span><b>0</b></div>
-    <div class="stat"><span>Medium Priority</span><b>1</b></div>
+    <div class="stat"><span>Highest Priority</span><b>1</b></div>
+    <div class="stat"><span>Medium Priority</span><b>0</b></div>
     <div class="stat"><span>Low Priority</span><b>0</b></div>
-    <div class="stat"><span>Best Conviction</span><b>84</b></div>
+    <div class="stat"><span>Best Conviction</span><b>91</b></div>
   </div>
 
   <div class="market">
     <h2>SPY Bias: Bullish</h2>
     <p>US market trend is supportive. Scanner will only show BUY setups.</p>
     <div class="market-grid">
-      <div>SPY Close<br><b>720.65</b></div>
-      <div>EMA 20<br><b>700.38</b></div>
-      <div>EMA 50<br><b>687.78</b></div>
-      <div>5-Day Change<br><b>0.94%</b></div>
+      <div>SPY Close<br><b>718.01</b></div>
+      <div>EMA 20<br><b>702.06</b></div>
+      <div>EMA 50<br><b>688.92</b></div>
+      <div>5-Day Change<br><b>0.4%</b></div>
     </div>
   </div>
 
   <h2>Top 3 Setups</h2>
-
   <div class="setup-wrap">
-    <div class="setup">
-      <h3>MSFT — BUY</h3>
-      <p><b>Medium Priority</b> · Score 84</p>
-
-      <div class="grid">
-        <div>Entry<br><b>417.94</b></div>
-        <div>Stop<br><b>401.26</b></div>
-        <div>Target<br><b>459.66</b></div>
-        <div>Qty<br><b>47</b></div>
-        <div>Value<br><b>$19,643</b></div>
-        <div>RR<br><b>2.5</b></div>
-      </div>
-
-      <p>Enter only above trigger · Uptrend · Acceptable relative strength · Tradable volatility · Normal volume</p>
-    </div>
-  </div>
+        <div class="setup">
+          <h3>ORCL — BUY</h3>
+          <p><b>Highest Priority</b> · Score 91</p>
+          <div class="grid">
+            <div>Entry<br><b>183.87</b></div>
+            <div>Stop<br><b>171.39</b></div>
+            <div>Target<br><b>215.06</b></div>
+            <div>Qty<br><b>80</b></div>
+            <div>Value<br><b>$14,709</b></div>
+            <div>RR<br><b>2.5</b></div>
+          </div>
+          <p>Enter only above trigger · Uptrend · Strong relative strength · Tradable volatility · Normal volume</p>
+        </div>
+        </div>
 
   <div class="section">
     <h2>Suggested Investment Criteria</h2>
     <p>
       <b>88+</b> Highest Priority ·
-      <b>83–87</b> Medium Priority ·
-      <b>78–82</b> Low Priority.
-      Entry should only be considered if the trigger level breaks with confirmation.
-      Stocks with earnings expected within the next 8 calendar days are excluded.
+<b>83–87</b> Medium Priority ·
+<b>78–82</b> Low Priority.
+      Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
     </p>
   </div>
 
   <div class="section">
     <h2>Scanner Table</h2>
-
     <table border="1" class="dataframe data-table">
-      <thead>
-        <tr>
-          <th>Priority</th>
-          <th>Stock</th>
-          <th>Signal</th>
-          <th>Conviction</th>
-          <th>Grade</th>
-          <th>Close</th>
-          <th>Entry</th>
-          <th>Stop</th>
-          <th>Target</th>
-          <th>RR</th>
-          <th>RSI</th>
-          <th>ATR%</th>
-          <th>Vol Ratio</th>
-          <th>RS vs SPY</th>
-          <th>Trigger Distance</th>
-          <th>Earnings</th>
-          <th>Earnings Date</th>
-          <th>Qty</th>
-          <th>Trade Value</th>
-          <th>Entry Rule</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Medium Priority</td>
-          <td>MSFT</td>
-          <td>BUY</td>
-          <td>84</td>
-          <td>B+</td>
-          <td>414.44</td>
-          <td>417.94</td>
-          <td>401.26</td>
-          <td>459.66</td>
-          <td>2.5</td>
-          <td>62.9</td>
-          <td>2.98%</td>
-          <td>0.9</td>
-          <td>2.22</td>
-          <td>0.85%</td>
-          <td>Clear</td>
-          <td>2026-07-29</td>
-          <td>47</td>
-          <td>$19,643</td>
-          <td>Enter only above trigger</td>
-          <td>Uptrend · Acceptable relative strength · Tradable volatility · Normal volume</td>
-        </tr>
-      </tbody>
-    </table>
+  <thead>
+    <tr style="text-align: right;">
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Grade</th>
+      <th>Close</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>RSI</th>
+      <th>ATR%</th>
+      <th>Vol Ratio</th>
+      <th>RS vs SPY</th>
+      <th>Trigger Distance</th>
+      <th>Earnings</th>
+      <th>Earnings Date</th>
+      <th>Qty</th>
+      <th>Trade Value</th>
+      <th>Entry Rule</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Highest Priority</td>
+      <td>ORCL</td>
+      <td>BUY</td>
+      <td>91</td>
+      <td>A</td>
+      <td>180.29</td>
+      <td>183.87</td>
+      <td>171.39</td>
+      <td>215.06</td>
+      <td>2.5</td>
+      <td>61.4</td>
+      <td>5.13%</td>
+      <td>0.94</td>
+      <td>13.68</td>
+      <td>1.98%</td>
+      <td>Clear</td>
+      <td>2026-06-10</td>
+      <td>80</td>
+      <td>$14,709</td>
+      <td>Enter only above trigger</td>
+      <td>Uptrend · Strong relative strength · Tradable volatility · Normal volume</td>
+    </tr>
+  </tbody>
+</table>
   </div>
 
   <div class="section">
     <h2>Top 3 Performance Log</h2>
     <p>Latest 60 ideas are shown first.</p>
-
     <table border="1" class="dataframe data-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Rank</th>
-          <th>Stock</th>
-          <th>Signal</th>
-          <th>Conviction</th>
-          <th>Entry</th>
-          <th>Stop</th>
-          <th>Target</th>
-          <th>RR</th>
-          <th>Status</th>
-          <th>Result</th>
-          <th>R</th>
-          <th>Days</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>2026-05-02</td>
-          <td>1</td>
-          <td>MSFT</td>
-          <td>BUY</td>
-          <td>84</td>
-          <td>417.94</td>
-          <td>401.26</td>
-          <td>459.66</td>
-          <td>2.5</td>
-          <td>Pending Trigger</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0</td>
-          <td>Top 3 scanner pick</td>
-        </tr>
-
-        <tr>
-          <td>2026-05-02</td>
-          <td>1</td>
-          <td>MA</td>
-          <td>SELL</td>
-          <td>95</td>
-          <td>491.17</td>
-          <td>507.75</td>
-          <td>449.70</td>
-          <td>2.5</td>
-          <td>Pending Trigger</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0</td>
-          <td>Top 3 scanner pick</td>
-        </tr>
-
-        <tr>
-          <td>2026-05-02</td>
-          <td>2</td>
-          <td>HD</td>
-          <td>SELL</td>
-          <td>91</td>
-          <td>322.71</td>
-          <td>332.79</td>
-          <td>297.52</td>
-          <td>2.5</td>
-          <td>Pending Trigger</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0</td>
-          <td>Top 3 scanner pick</td>
-        </tr>
-
-        <tr>
-          <td>2026-05-02</td>
-          <td>3</td>
-          <td>MCD</td>
-          <td>SELL</td>
-          <td>91</td>
-          <td>285.79</td>
-          <td>292.59</td>
-          <td>268.79</td>
-          <td>2.5</td>
-          <td>Pending Trigger</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0</td>
-          <td>Top 3 scanner pick</td>
-        </tr>
-      </tbody>
-    </table>
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Rank</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>Status</th>
+      <th>Result</th>
+      <th>R</th>
+      <th>Days</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-05-05</td>
+      <td>1</td>
+      <td>ORCL</td>
+      <td>BUY</td>
+      <td>91</td>
+      <td>183.87</td>
+      <td>171.39</td>
+      <td>215.06</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>1</td>
+      <td>MSFT</td>
+      <td>BUY</td>
+      <td>84</td>
+      <td>417.94</td>
+      <td>401.26</td>
+      <td>459.66</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>1</td>
+      <td>MA</td>
+      <td>SELL</td>
+      <td>95</td>
+      <td>491.17</td>
+      <td>507.75</td>
+      <td>449.70</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>2</td>
+      <td>HD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>322.71</td>
+      <td>332.79</td>
+      <td>297.52</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-05-02</td>
+      <td>3</td>
+      <td>MCD</td>
+      <td>SELL</td>
+      <td>91</td>
+      <td>285.79</td>
+      <td>292.59</td>
+      <td>268.79</td>
+      <td>2.5</td>
+      <td>Pending Trigger</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>Top 3 scanner pick</td>
+    </tr>
+  </tbody>
+</table>
   </div>
 
   <p class="disclaimer">
@@ -377,6 +323,5 @@ h1 {
     It is not financial advice or a trade recommendation.
   </p>
 </div>
-
 </body>
 </html>
