@@ -479,7 +479,7 @@ h1 {{
 .data-table {{
   border-collapse: collapse;
   width: 100%;
-  min-width: 1000px;
+  min-width: 1150px;
   font-size: 14px;
 }}
 .data-table th, .data-table td {{
