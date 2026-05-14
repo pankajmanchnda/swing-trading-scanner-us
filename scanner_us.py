@@ -269,13 +269,8 @@ def normalise_score(raw_score):
     return max(0, min(raw_score, 89))
 
 
-def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
+def score_ticker(df, bench_df, ticker, mode_key):
     mode = SCAN_MODES[mode_key]
-
-    # Relaxed fallback is only for Swing. Intraday remains unchanged.
-    if mode_key != "swing":
-        relaxed = False
-
     if len(df) < mode["min_rows"] or len(bench_df) < mode["min_rows"]:
         return None
 
@@ -313,63 +308,25 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
         return None
 
     ema20_prev = float(d["EMA20"].iloc[-6]) if len(d) >= 26 and np.isfinite(d["EMA20"].iloc[-6]) else ema20
-
-    if relaxed:
-        # Swing-only fallback settings.
-        # Used only when the normal Swing scan returns zero candidates.
-        # This keeps the USA page useful while preserving SPY-direction discipline.
-        min_atr_pct = 0.70
-        max_atr_pct = 7.00
-        max_trigger_distance = 3.00
-        min_vol_ratio = 0.65
-        min_rs = 0.00
-        buy_rsi_min, buy_rsi_max = 48, 72
-        sell_rsi_min, sell_rsi_max = 28, 58
-        max_extension = 8.00
-        structure_lookback = 8
-        atr_stop_mult = 1.15
-        atr_structure_buffer = 0.12
-        max_risk_pct = 9.00
-
-        # Fallback relaxes the strict EMA-stack slope rule, but still requires
-        # price to be on the correct side of both EMAs.
-        buy_trend = close > ema20 and close > ema50
-        sell_trend = close < ema20 and close < ema50
-    else:
-        min_atr_pct = float(mode["min_atr_pct"])
-        max_atr_pct = float(mode["max_atr_pct"])
-        max_trigger_distance = float(mode["max_trigger_distance"])
-        min_vol_ratio = float(mode["min_vol_ratio"])
-        min_rs = float(mode["min_rs"])
-        buy_rsi_min = float(mode["buy_rsi_min"])
-        buy_rsi_max = float(mode["buy_rsi_max"])
-        sell_rsi_min = float(mode["sell_rsi_min"])
-        sell_rsi_max = float(mode["sell_rsi_max"])
-        max_extension = float(mode["max_extension"])
-        structure_lookback = int(mode["structure_lookback"])
-        atr_stop_mult = float(mode["atr_stop_mult"])
-        atr_structure_buffer = float(mode["atr_structure_buffer"])
-        max_risk_pct = 8.0 if mode_key == "swing" else 4.5
-
-        buy_trend = close > ema20 > ema50 and ema20 > ema20_prev
-        sell_trend = close < ema20 < ema50 and ema20 < ema20_prev
+    buy_trend = close > ema20 > ema50 and ema20 > ema20_prev
+    sell_trend = close < ema20 < ema50 and ema20 < ema20_prev
 
     signal = None
     score = 50
     notes = []
 
-    if buy_trend and buy_rsi_min <= rsi14 <= buy_rsi_max and rs_vs_spy >= min_rs:
+    if buy_trend and mode["buy_rsi_min"] <= rsi14 <= mode["buy_rsi_max"] and rs_vs_spy >= mode["min_rs"]:
         signal = "BUY"
         score += 16
-        notes.append("Confirmed uptrend" if not relaxed else "Relaxed swing uptrend")
-    elif sell_trend and sell_rsi_min <= rsi14 <= sell_rsi_max and rs_vs_spy <= -min_rs:
+        notes.append("Confirmed uptrend")
+    elif sell_trend and mode["sell_rsi_min"] <= rsi14 <= mode["sell_rsi_max"] and rs_vs_spy <= -mode["min_rs"]:
         signal = "SELL"
         score += 16
-        notes.append("Confirmed downtrend" if not relaxed else "Relaxed swing downtrend")
+        notes.append("Confirmed downtrend")
     else:
         return None
 
-    recent = d.tail(structure_lookback)
+    recent = d.tail(int(mode["structure_lookback"]))
     last_high = float(d["High"].iloc[-1])
     last_low = float(d["Low"].iloc[-1])
     recent_low = float(recent["Low"].min())
@@ -377,22 +334,22 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
 
     if signal == "BUY":
         extension_pct = ((close / ema20) - 1) * 100 if ema20 > 0 else np.nan
-        if not np.isfinite(extension_pct) or extension_pct > max_extension:
+        if not np.isfinite(extension_pct) or extension_pct > mode["max_extension"]:
             return None
 
         entry = max(close, last_high * 1.002)
-        atr_stop = entry - atr_stop_mult * atr14
-        structure_stop = recent_low - atr_structure_buffer * atr14
+        atr_stop = entry - float(mode["atr_stop_mult"]) * atr14
+        structure_stop = recent_low - float(mode["atr_structure_buffer"]) * atr14
         stop = min(atr_stop, structure_stop)
         entry_rule = "Enter only above trigger; prefer candle close confirmation"
     else:
         extension_pct = ((ema20 / close) - 1) * 100 if close > 0 else np.nan
-        if not np.isfinite(extension_pct) or extension_pct > max_extension:
+        if not np.isfinite(extension_pct) or extension_pct > mode["max_extension"]:
             return None
 
         entry = min(close, last_low * 0.998)
-        atr_stop = entry + atr_stop_mult * atr14
-        structure_stop = recent_high + atr_structure_buffer * atr14
+        atr_stop = entry + float(mode["atr_stop_mult"]) * atr14
+        structure_stop = recent_high + float(mode["atr_structure_buffer"]) * atr14
         stop = max(atr_stop, structure_stop)
         entry_rule = "Enter only below trigger; prefer candle close confirmation"
 
@@ -400,11 +357,11 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
     if not np.isfinite(trigger_distance_pct):
         return None
 
-    if trigger_distance_pct > max_trigger_distance:
+    if trigger_distance_pct > mode["max_trigger_distance"]:
         return None
-    if vol_ratio < min_vol_ratio:
+    if vol_ratio < mode["min_vol_ratio"]:
         return None
-    if not (min_atr_pct <= atr_pct <= max_atr_pct):
+    if not (mode["min_atr_pct"] <= atr_pct <= mode["max_atr_pct"]):
         return None
 
     risk_per_share = abs(entry - stop)
@@ -413,7 +370,11 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
 
     # Avoid setups where structure-aware stop is impractically wide.
     risk_pct = (risk_per_share / entry) * 100 if entry > 0 else np.nan
-    if not np.isfinite(risk_pct) or risk_pct > max_risk_pct:
+    if not np.isfinite(risk_pct):
+        return None
+    if mode_key == "swing" and risk_pct > 8.0:
+        return None
+    if mode_key == "intraday" and risk_pct > 4.5:
         return None
 
     if signal == "BUY":
@@ -422,7 +383,7 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
         target = entry - RR_TARGET * risk_per_share
 
     if signal == "BUY":
-        if rs_vs_spy >= max(1.0, min_rs * 2):
+        if rs_vs_spy >= mode["min_rs"] * 2:
             score += 12
             notes.append("Strong relative strength")
         else:
@@ -436,7 +397,7 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
             score += 4
             notes.append("Acceptable RSI")
     else:
-        if rs_vs_spy <= -max(1.0, min_rs * 2):
+        if rs_vs_spy <= -mode["min_rs"] * 2:
             score += 12
             notes.append("Weak relative strength")
         else:
@@ -461,7 +422,7 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
         notes.append("Acceptable volume")
 
     if mode_key == "swing":
-        if 1.0 <= atr_pct <= 5.2:
+        if 1.2 <= atr_pct <= 4.8:
             score += 6
             notes.append("Clean swing volatility")
         else:
@@ -475,27 +436,23 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
             score += 3
             notes.append("Acceptable volatility")
 
-    if trigger_distance_pct <= max_trigger_distance * 0.55:
+    if trigger_distance_pct <= mode["max_trigger_distance"] * 0.55:
         score += 5
         notes.append("Close to trigger")
     else:
         score += 2
         notes.append("Trigger needs confirmation")
 
-    if extension_pct <= max_extension * 0.55:
+    if extension_pct <= mode["max_extension"] * 0.55:
         score += 5
         notes.append("Not extended")
     else:
         score += 2
         notes.append("Slightly extended")
 
-    if relaxed:
-        notes.append("Swing fallback candidate")
-
     score = normalise_score(score)
 
-    score_floor = 74 if relaxed else 78
-    if score < score_floor:
+    if score < 78:
         return None
 
     max_risk_dollars = CAPITAL_USD * RISK_PER_TRADE
@@ -508,7 +465,6 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
 
     return {
         "Mode": mode["label"],
-        "Scan Type": "Fallback" if relaxed else "Normal",
         "Priority": "Qualified Candidate",
         "Stock": ticker,
         "Signal": signal,
@@ -534,37 +490,25 @@ def score_ticker(df, bench_df, ticker, mode_key, relaxed=False):
         "Notes": " · ".join(notes),
     }
 
+
 def calibrate_priorities(rows, highest_cap=HIGHEST_PRIORITY_CAP):
     calibrated = []
-
     for rank, row in enumerate(sorted(rows, key=lambda x: x["Conviction"], reverse=True), start=1):
         score = int(row["Conviction"])
-        mode_label = str(row.get("Mode", "")).lower()
-
-        if mode_label == "swing":
-            high_threshold = 88
-            medium_threshold = 82
-            low_threshold = 74
-        else:
-            high_threshold = 90
-            medium_threshold = 84
-            low_threshold = 78
-
-        if rank <= highest_cap and score >= high_threshold:
+        if rank <= highest_cap and score >= 90:
             row["Priority"] = "Highest Priority"
             row["Grade"] = "A"
-        elif score >= medium_threshold:
+        elif score >= 84:
             row["Priority"] = "Medium Priority"
             row["Grade"] = "B+"
-        elif score >= low_threshold:
+        elif score >= 78:
             row["Priority"] = "Low Priority"
             row["Grade"] = "B"
         else:
             continue
-
         calibrated.append(row)
-
     return calibrated
+
 
 def calculate_distances(current_price, signal, stop, target):
     current_price = float(current_price)
@@ -798,7 +742,7 @@ def update_performance_log(all_rows_by_mode, data_by_mode):
     today = now_ist().date().isoformat()
 
     columns = [
-        "Date", "Mode", "Rank", "Stock", "Signal", "Conviction", "Entry", "Stop",
+        "Date", "Mode", "Rank", "Priority", "Stock", "Signal", "Conviction", "Entry", "Stop",
         "Target", "RR", "Current Price", "Status", "First Hit", "Hit Date",
         "Stop Away", "Target Away", "Result", "R", "Days", "Notes"
     ]
@@ -810,6 +754,18 @@ def update_performance_log(all_rows_by_mode, data_by_mode):
         for col in columns:
             if col not in log.columns:
                 log[col] = ""
+
+        # Backfill priority for older rows that were logged before Priority existed.
+        # This keeps historical performance usable without changing old trade outcomes.
+        if "Priority" in log.columns:
+            missing_priority = log["Priority"].isna() | (log["Priority"].astype(str).str.strip() == "")
+            conviction_num = pd.to_numeric(log["Conviction"], errors="coerce")
+
+            log.loc[missing_priority & (conviction_num >= 90), "Priority"] = "Highest Priority"
+            log.loc[missing_priority & (conviction_num >= 84) & (conviction_num < 90), "Priority"] = "Medium Priority"
+            log.loc[missing_priority & (conviction_num >= 78) & (conviction_num < 84), "Priority"] = "Low Priority"
+            log.loc[missing_priority & (conviction_num < 78), "Priority"] = "Unclassified"
+
         log = log[columns]
         log["Conviction"] = pd.to_numeric(log["Conviction"], errors="coerce").clip(upper=94)
     else:
@@ -830,6 +786,7 @@ def update_performance_log(all_rows_by_mode, data_by_mode):
                     "Date": today,
                     "Mode": mode_label,
                     "Rank": rank,
+                    "Priority": row.get("Priority", ""),
                     "Stock": row["Stock"],
                     "Signal": row["Signal"],
                     "Conviction": row["Conviction"],
@@ -846,7 +803,7 @@ def update_performance_log(all_rows_by_mode, data_by_mode):
                     "Result": "",
                     "R": "",
                     "Days": 0,
-                    "Notes": f"Top 3 {mode_label} scanner pick · {row.get('Scan Type', 'Normal')}",
+                    "Notes": f"Top 3 {mode_label} scanner pick",
                 })
 
     if new_rows:
@@ -872,64 +829,40 @@ def run_scan(mode_key):
         raise RuntimeError(f"{BENCHMARK} benchmark data could not be downloaded for {mode['label']} mode.")
 
     market = benchmark_bias(bench_df, mode)
+    rows = []
 
-    earnings_cache = {}
+    for ticker in sorted(set(UNIVERSE)):
+        if ticker == BENCHMARK:
+            continue
 
-    def collect_candidates(relaxed=False):
-        candidates = []
+        earnings = get_earnings_risk(ticker)
+        if earnings["skip"]:
+            continue
 
-        for ticker in sorted(set(UNIVERSE)):
-            if ticker == BENCHMARK:
-                continue
+        df = get_single_df(data, ticker)
+        if df.empty:
+            continue
 
-            earnings = earnings_cache.get(ticker)
-            if earnings is None:
-                earnings = get_earnings_risk(ticker)
-                earnings_cache[ticker] = earnings
+        result = score_ticker(df, bench_df, ticker, mode_key)
+        if not result:
+            continue
 
-            if earnings["skip"]:
-                continue
+        if market["bias"] == "Bullish" and result["Signal"] != "BUY":
+            continue
+        if market["bias"] == "Bearish" and result["Signal"] != "SELL":
+            continue
+        if market["bias"] == "Mixed" and result["Conviction"] < 84:
+            continue
 
-            df = get_single_df(data, ticker)
-            if df.empty:
-                continue
-
-            result = score_ticker(df, bench_df, ticker, mode_key, relaxed=relaxed)
-            if not result:
-                continue
-
-            # Do not allow trades against the broad SPY trend.
-            if market["bias"] == "Bullish" and result["Signal"] != "BUY":
-                continue
-            if market["bias"] == "Bearish" and result["Signal"] != "SELL":
-                continue
-
-            # In a mixed market, demand stronger setup quality.
-            if market["bias"] == "Mixed":
-                required_score = 82 if mode_key == "swing" and relaxed else 84
-                if result["Conviction"] < required_score:
-                    continue
-
-            result["Earnings"] = earnings["status"]
-            result["Earnings Date"] = earnings["date"]
-            candidates.append(result)
-
-        return candidates
-
-    rows = collect_candidates(relaxed=False)
-
-    # Swing-only fallback:
-    # If the normal Swing scan returns zero candidates, use a looser second pass.
-    # Intraday remains unchanged because it is more sensitive and should stay strict.
-    if mode_key == "swing" and len(rows) == 0:
-        rows = collect_candidates(relaxed=True)
-        if rows:
-            market["message"] += " Normal swing scan had no candidates, so a relaxed swing fallback was used."
+        result["Earnings"] = earnings["status"]
+        result["Earnings Date"] = earnings["date"]
+        rows.append(result)
 
     rows = calibrate_priorities(rows, highest_cap=HIGHEST_PRIORITY_CAP)
     rows = rows[:20]
     print(f"{mode['label']}: generated {len(rows)} candidates.")
     return rows, market, data
+
 
 def df_to_html(rows):
     if not rows:
@@ -937,13 +870,96 @@ def df_to_html(rows):
     return pd.DataFrame(rows).to_html(index=False, classes="data-table", escape=False)
 
 
+def performance_summary_html(df, title):
+    """
+    Small summary block for a performance bucket.
+    Closed win rate counts only rows with Result = Win/Loss.
+    Open, Pending, Review, and Ambiguous rows are excluded from win-rate math.
+    """
+    if df.empty:
+        return f"""
+        <div class="perf-summary">
+          <h3>{title}</h3>
+          <p>No records in this bucket yet.</p>
+        </div>
+        """
+
+    closed = df[df["Result"].isin(["Win", "Loss"])]
+    wins = int((closed["Result"] == "Win").sum())
+    losses = int((closed["Result"] == "Loss").sum())
+    closed_count = wins + losses
+    win_rate = round((wins / closed_count) * 100, 1) if closed_count > 0 else 0
+
+    r_values = pd.to_numeric(closed["R"], errors="coerce")
+    avg_r = round(float(r_values.mean()), 2) if not r_values.dropna().empty else 0
+    total_r = round(float(r_values.sum()), 2) if not r_values.dropna().empty else 0
+
+    return f"""
+    <div class="perf-summary">
+      <h3>{title}</h3>
+      <div class="perf-grid">
+        <div>Total Ideas<br><b>{len(df)}</b></div>
+        <div>Closed Trades<br><b>{closed_count}</b></div>
+        <div>Wins<br><b>{wins}</b></div>
+        <div>Losses<br><b>{losses}</b></div>
+        <div>Win Rate<br><b>{win_rate}%</b></div>
+        <div>Total R<br><b>{total_r}</b></div>
+        <div>Avg R<br><b>{avg_r}</b></div>
+      </div>
+    </div>
+    """
+
+
 def perf_to_html(perf_log, mode_label):
     if perf_log.empty:
         return "<p>No records yet.</p>"
-    df = perf_log[perf_log["Mode"] == mode_label].head(60)
+
+    df = perf_log[perf_log["Mode"] == mode_label].copy().head(60)
     if df.empty:
         return "<p>No records yet for this mode.</p>"
-    return df.to_html(index=False, classes="data-table", escape=False)
+
+    if "Priority" not in df.columns:
+        df["Priority"] = ""
+
+    # Keep priority readable for older log rows.
+    missing_priority = df["Priority"].isna() | (df["Priority"].astype(str).str.strip() == "")
+    conviction_num = pd.to_numeric(df["Conviction"], errors="coerce")
+    df.loc[missing_priority & (conviction_num >= 90), "Priority"] = "Highest Priority"
+    df.loc[missing_priority & (conviction_num >= 84) & (conviction_num < 90), "Priority"] = "Medium Priority"
+    df.loc[missing_priority & (conviction_num >= 78) & (conviction_num < 84), "Priority"] = "Low Priority"
+
+    highest_df = df[df["Priority"] == "Highest Priority"].copy()
+    medium_low_df = df[df["Priority"].isin(["Medium Priority", "Low Priority"])].copy()
+    other_df = df[~df["Priority"].isin(["Highest Priority", "Medium Priority", "Low Priority"])].copy()
+
+    highest_table = (
+        highest_df.to_html(index=False, classes="data-table", escape=False)
+        if not highest_df.empty
+        else "<p>No Highest Priority records yet for this mode.</p>"
+    )
+
+    medium_low_table = (
+        medium_low_df.to_html(index=False, classes="data-table", escape=False)
+        if not medium_low_df.empty
+        else "<p>No Medium/Low Priority records yet for this mode.</p>"
+    )
+
+    other_block = ""
+    if not other_df.empty:
+        other_block = f"""
+        <h3>Other / Legacy Records</h3>
+        {other_df.to_html(index=False, classes="data-table", escape=False)}
+        """
+
+    return f"""
+    {performance_summary_html(highest_df, "Highest Priority Performance")}
+    {highest_table}
+
+    {performance_summary_html(medium_low_df, "Medium + Low Priority Performance")}
+    {medium_low_table}
+
+    {other_block}
+    """
 
 
 def render_cards(rows):
@@ -952,7 +968,7 @@ def render_cards(rows):
         cards += f"""
         <div class="setup">
           <h3>{r['Stock']} — {r['Signal']}</h3>
-          <p><b>{r['Priority']}</b> · Score {r['Conviction']} · {r.get('Scan Type', 'Normal')}</p>
+          <p><b>{r['Priority']}</b> · Score {r['Conviction']}</p>
           <div class="grid">
             <div>Entry<br><b>{r['Entry']}</b></div>
             <div>Stop<br><b>{r['Stop']}</b></div>
@@ -1009,19 +1025,12 @@ def render_mode_block(mode_key, rows, market, perf_log, active=False):
       <div class="section">
         <h2>Suggested Investment Criteria</h2>
         <p>
-          Swing is calibrated slightly looser to avoid empty daily output:
-          <b>88–94</b> Highest Priority candidate range ·
-          <b>82–87</b> Medium Priority ·
-          <b>74–81</b> Low Priority.
-          Intraday remains stricter:
-          <b>90–94</b> Highest Priority ·
+          <b>90–94</b> Highest Priority candidate range, but only the top 5 ranked ideas per mode can receive that label ·
           <b>84–89</b> Medium Priority ·
           <b>78–83</b> Low Priority.
-          Only the top 5 ranked ideas per mode can receive the Highest Priority label.
           Score is setup quality, not probability of profit. No trade is assumed loss-proof, so the model intentionally avoids 100 scores.
-          Expert filter requires SPY-direction alignment, relative strength/weakness, volume confirmation, controlled volatility, and a nearby trigger.
+          Expert filter requires trend alignment, SPY relative strength, volume confirmation, controlled volatility, and a nearby trigger.
           Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
-          If normal Swing has no candidate, a Swing-only fallback pass may be used; Intraday remains unchanged.
         </p>
       </div>
 
@@ -1032,7 +1041,7 @@ def render_mode_block(mode_key, rows, market, perf_log, active=False):
 
       <div class="section">
         <h2>{mode_label} Top 3 Performance Log</h2>
-        <p>Latest 60 ideas for this mode are shown first. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
+        <p>Latest 60 ideas for this mode are shown first, now separated into Highest Priority versus Medium/Low Priority buckets. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
         {perf_to_html(perf_log, mode_label)}
       </div>
     </section>
@@ -1260,6 +1269,39 @@ h2 {{
   background: #0b1220;
 }}
 
+.perf-summary {{
+  background: #0b1220;
+  border: 1px solid #243041;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 14px 0;
+}}
+
+.perf-summary h3 {{
+  margin: 0 0 12px;
+  font-size: 16px;
+}}
+
+.perf-grid {{
+  display: grid;
+  grid-template-columns: repeat(7, minmax(110px, 1fr));
+  gap: 10px;
+}}
+
+.perf-grid div {{
+  background: #111827;
+  border: 1px solid #243041;
+  border-radius: 10px;
+  padding: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+}}
+
+.perf-grid b {{
+  color: #e5e7eb;
+  font-size: 18px;
+}}
+
 .disclaimer {{
   color: #94a3b8;
   font-size: 13px;
@@ -1274,7 +1316,8 @@ h2 {{
 
   .stats,
   .setup-wrap,
-  .market-grid {{
+  .market-grid,
+  .perf-grid {{
     grid-template-columns: 1fr;
   }}
 }}
