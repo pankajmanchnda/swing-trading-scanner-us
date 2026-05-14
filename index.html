@@ -207,6 +207,39 @@ h2 {
   background: #0b1220;
 }
 
+.perf-summary {
+  background: #0b1220;
+  border: 1px solid #243041;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 14px 0;
+}
+
+.perf-summary h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.perf-grid div {
+  background: #111827;
+  border: 1px solid #243041;
+  border-radius: 10px;
+  padding: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.perf-grid b {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
 .disclaimer {
   color: #94a3b8;
   font-size: 13px;
@@ -221,7 +254,8 @@ h2 {
 
   .stats,
   .setup-wrap,
-  .market-grid {
+  .market-grid,
+  .perf-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -237,7 +271,7 @@ h2 {
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
   <div class="subtitle">
-    Generated on 14 May 2026, 04:16:04 PM IST · Build 20260514161604 · SPY benchmark · Swing vs Intraday scanner
+    Generated on 14 May 2026, 04:32:27 PM IST · Build 20260514163227 · SPY benchmark · Swing vs Intraday scanner
   </div>
 
   <div class="refresh-panel">
@@ -259,16 +293,16 @@ h2 {
       </div>
 
       <div class="stats">
-        <div class="stat"><span>Total Candidates</span><b>6</b></div>
-        <div class="stat"><span>Highest Priority</span><b>5</b></div>
-        <div class="stat"><span>Medium Priority</span><b>1</b></div>
+        <div class="stat"><span>Total Candidates</span><b>0</b></div>
+        <div class="stat"><span>Highest Priority</span><b>0</b></div>
+        <div class="stat"><span>Medium Priority</span><b>0</b></div>
         <div class="stat"><span>Low Priority</span><b>0</b></div>
-        <div class="stat"><span>Best Conviction</span><b>94</b></div>
+        <div class="stat"><span>Best Conviction</span><b>0</b></div>
       </div>
 
       <div class="market">
         <h2>SPY Bias: Bullish</h2>
-        <p>US market trend is supportive. Scanner will only show BUY setups. Normal swing scan had no candidates, so a relaxed swing fallback was used.</p>
+        <p>US market trend is supportive. Scanner will only show BUY setups.</p>
         <div class="market-grid">
           <div>SPY Close<br><b>742.31</b></div>
           <div>EMA 20<br><b>719.27</b></div>
@@ -278,277 +312,50 @@ h2 {
       </div>
 
       <h2>Top 3 Setups</h2>
-      <div class="setup-wrap">
-        <div class="setup">
-          <h3>AMZN — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Fallback</p>
-          <div class="grid">
-            <div>Entry<br><b>271.26</b></div>
-            <div>Stop<br><b>261.74</b></div>
-            <div>Target<br><b>290.3</b></div>
-            <div>Qty<br><b>73</b></div>
-            <div>Value<br><b>$19,802</b></div>
-            <div>RR<br><b>2.0</b></div>
-          </div>
-          <p>Enter only above trigger; prefer candle close confirmation · Relaxed swing uptrend · Strong relative strength · Acceptable RSI · Acceptable volume · Clean swing volatility · Close to trigger · Not extended · Swing fallback candidate</p>
-        </div>
-        
-        <div class="setup">
-          <h3>AVGO — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Fallback</p>
-          <div class="grid">
-            <div>Entry<br><b>419.47</b></div>
-            <div>Stop<br><b>401.52</b></div>
-            <div>Target<br><b>455.36</b></div>
-            <div>Qty<br><b>47</b></div>
-            <div>Value<br><b>$19,715</b></div>
-            <div>RR<br><b>2.0</b></div>
-          </div>
-          <p>Enter only above trigger; prefer candle close confirmation · Relaxed swing uptrend · Strong relative strength · Acceptable RSI · Acceptable volume · Clean swing volatility · Close to trigger · Not extended · Swing fallback candidate</p>
-        </div>
-        
-        <div class="setup">
-          <h3>LLY — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Fallback</p>
-          <div class="grid">
-            <div>Entry<br><b>1024.87</b></div>
-            <div>Stop<br><b>939.1</b></div>
-            <div>Target<br><b>1196.39</b></div>
-            <div>Qty<br><b>11</b></div>
-            <div>Value<br><b>$11,274</b></div>
-            <div>RR<br><b>2.0</b></div>
-          </div>
-          <p>Enter only above trigger; prefer candle close confirmation · Relaxed swing uptrend · Strong relative strength · Healthy RSI · Acceptable volume · Clean swing volatility · Close to trigger · Slightly extended · Swing fallback candidate</p>
-        </div>
-        </div>
+      <div class="setup-wrap"><p>No fresh qualifying setups in this mode right now. Historical ideas below are from earlier runs and may no longer be valid.</p></div>
 
       <div class="section">
         <h2>Suggested Investment Criteria</h2>
         <p>
-          Swing is calibrated slightly looser to avoid empty daily output:
-          <b>88–94</b> Highest Priority candidate range ·
-          <b>82–87</b> Medium Priority ·
-          <b>74–81</b> Low Priority.
-          Intraday remains stricter:
-          <b>90–94</b> Highest Priority ·
+          <b>90–94</b> Highest Priority candidate range, but only the top 5 ranked ideas per mode can receive that label ·
           <b>84–89</b> Medium Priority ·
           <b>78–83</b> Low Priority.
-          Only the top 5 ranked ideas per mode can receive the Highest Priority label.
           Score is setup quality, not probability of profit. No trade is assumed loss-proof, so the model intentionally avoids 100 scores.
-          Expert filter requires SPY-direction alignment, relative strength/weakness, volume confirmation, controlled volatility, and a nearby trigger.
+          Expert filter requires trend alignment, SPY relative strength, volume confirmation, controlled volatility, and a nearby trigger.
           Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
-          If normal Swing has no candidate, a Swing-only fallback pass may be used; Intraday remains unchanged.
         </p>
       </div>
 
       <div class="section">
         <h2>Scanner Table</h2>
-        <table border="1" class="dataframe data-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Mode</th>
-      <th>Scan Type</th>
-      <th>Priority</th>
-      <th>Stock</th>
-      <th>Signal</th>
-      <th>Conviction</th>
-      <th>Grade</th>
-      <th>Close</th>
-      <th>Entry</th>
-      <th>Stop</th>
-      <th>Target</th>
-      <th>RR</th>
-      <th>RSI</th>
-      <th>ATR%</th>
-      <th>Vol Ratio</th>
-      <th>RS vs SPY</th>
-      <th>Trigger Distance</th>
-      <th>Extension</th>
-      <th>Risk %</th>
-      <th>Earnings</th>
-      <th>Earnings Date</th>
-      <th>Qty</th>
-      <th>Trade Value</th>
-      <th>Entry Rule</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Highest Priority</td>
-      <td>AMZN</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>A</td>
-      <td>270.13</td>
-      <td>271.26</td>
-      <td>261.74</td>
-      <td>290.30</td>
-      <td>2.0</td>
-      <td>66.7</td>
-      <td>2.73%</td>
-      <td>0.85</td>
-      <td>1.59</td>
-      <td>0.42%</td>
-      <td>3.56%</td>
-      <td>3.51%</td>
-      <td>Clear</td>
-      <td>2026-07-30</td>
-      <td>73</td>
-      <td>$19,802</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Strong relative strength · Acceptable RSI · Acceptable volume · Clean swing volatility · Close to trigger · Not extended · Swing fallback candidate</td>
-    </tr>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Highest Priority</td>
-      <td>AVGO</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>A</td>
-      <td>416.79</td>
-      <td>419.47</td>
-      <td>401.52</td>
-      <td>455.36</td>
-      <td>2.0</td>
-      <td>48.5</td>
-      <td>3.74%</td>
-      <td>0.88</td>
-      <td>2.57</td>
-      <td>0.64%</td>
-      <td>2.05%</td>
-      <td>4.28%</td>
-      <td>Clear</td>
-      <td>2026-06-03</td>
-      <td>47</td>
-      <td>$19,715</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Strong relative strength · Acceptable RSI · Acceptable volume · Clean swing volatility · Close to trigger · Not extended · Swing fallback candidate</td>
-    </tr>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Highest Priority</td>
-      <td>LLY</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>A</td>
-      <td>1015.75</td>
-      <td>1024.87</td>
-      <td>939.10</td>
-      <td>1196.39</td>
-      <td>2.0</td>
-      <td>65.2</td>
-      <td>3.41%</td>
-      <td>0.98</td>
-      <td>3.22</td>
-      <td>0.9%</td>
-      <td>6.72%</td>
-      <td>8.37%</td>
-      <td>Clear</td>
-      <td>2026-08-05</td>
-      <td>11</td>
-      <td>$11,274</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Strong relative strength · Healthy RSI · Acceptable volume · Clean swing volatility · Close to trigger · Slightly extended · Swing fallback candidate</td>
-    </tr>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Highest Priority</td>
-      <td>CAT</td>
-      <td>BUY</td>
-      <td>92</td>
-      <td>A</td>
-      <td>902.30</td>
-      <td>924.84</td>
-      <td>865.96</td>
-      <td>1042.58</td>
-      <td>2.0</td>
-      <td>62.9</td>
-      <td>3.35%</td>
-      <td>0.79</td>
-      <td>6.71</td>
-      <td>2.5%</td>
-      <td>4.75%</td>
-      <td>6.37%</td>
-      <td>Clear</td>
-      <td>2026-08-04</td>
-      <td>16</td>
-      <td>$14,797</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Strong relative strength · Healthy RSI · Acceptable volume · Clean swing volatility · Trigger needs confirmation · Slightly extended · Swing fallback candidate</td>
-    </tr>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Highest Priority</td>
-      <td>SBUX</td>
-      <td>BUY</td>
-      <td>92</td>
-      <td>A</td>
-      <td>105.95</td>
-      <td>108.27</td>
-      <td>102.60</td>
-      <td>119.60</td>
-      <td>2.0</td>
-      <td>67.0</td>
-      <td>2.68%</td>
-      <td>1.12</td>
-      <td>0.71</td>
-      <td>2.19%</td>
-      <td>3.08%</td>
-      <td>5.23%</td>
-      <td>Clear</td>
-      <td>2026-07-28</td>
-      <td>176</td>
-      <td>$19,055</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Positive relative strength · Acceptable RSI · Good volume · Clean swing volatility · Trigger needs confirmation · Not extended · Swing fallback candidate</td>
-    </tr>
-    <tr>
-      <td>Swing</td>
-      <td>Fallback</td>
-      <td>Medium Priority</td>
-      <td>SLB</td>
-      <td>BUY</td>
-      <td>92</td>
-      <td>B+</td>
-      <td>55.38</td>
-      <td>55.94</td>
-      <td>52.53</td>
-      <td>62.76</td>
-      <td>2.0</td>
-      <td>52.8</td>
-      <td>2.98%</td>
-      <td>0.98</td>
-      <td>0.66</td>
-      <td>1.01%</td>
-      <td>1.81%</td>
-      <td>6.1%</td>
-      <td>Clear</td>
-      <td>2026-07-24</td>
-      <td>293</td>
-      <td>$16,391</td>
-      <td>Enter only above trigger; prefer candle close confirmation</td>
-      <td>Relaxed swing uptrend · Positive relative strength · Acceptable RSI · Acceptable volume · Clean swing volatility · Close to trigger · Not extended · Swing fallback candidate</td>
-    </tr>
-  </tbody>
-</table>
+        <p>No qualifying setups in this mode right now.</p>
       </div>
 
       <div class="section">
         <h2>Swing Top 3 Performance Log</h2>
-        <p>Latest 60 ideas for this mode are shown first. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
-        <table border="1" class="dataframe data-table">
+        <p>Latest 60 ideas for this mode are shown first, now separated into Highest Priority versus Medium/Low Priority buckets. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
+        
+    
+    <div class="perf-summary">
+      <h3>Highest Priority Performance</h3>
+      <div class="perf-grid">
+        <div>Total Ideas<br><b>7</b></div>
+        <div>Closed Trades<br><b>0</b></div>
+        <div>Wins<br><b>0</b></div>
+        <div>Losses<br><b>0</b></div>
+        <div>Win Rate<br><b>0%</b></div>
+        <div>Total R<br><b>0</b></div>
+        <div>Avg R<br><b>0</b></div>
+      </div>
+    </div>
+    
+    <table border="1" class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Date</th>
       <th>Mode</th>
       <th>Rank</th>
+      <th>Priority</th>
       <th>Stock</th>
       <th>Signal</th>
       <th>Conviction</th>
@@ -573,6 +380,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Swing</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>AMZN</td>
       <td>BUY</td>
       <td>94</td>
@@ -582,12 +390,12 @@ h2 {
       <td>2.0</td>
       <td>270.13</td>
       <td>Pending Trigger</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>+$8.39 / +3.11%</td>
       <td>+$20.17 / +7.47%</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>0</td>
       <td>Top 3 Swing scanner pick · Fallback</td>
     </tr>
@@ -595,6 +403,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Swing</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>AVGO</td>
       <td>BUY</td>
       <td>94</td>
@@ -604,12 +413,12 @@ h2 {
       <td>2.0</td>
       <td>416.79</td>
       <td>Pending Trigger</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>+$15.27 / +3.66%</td>
       <td>+$38.57 / +9.25%</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>0</td>
       <td>Top 3 Swing scanner pick · Fallback</td>
     </tr>
@@ -617,6 +426,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Swing</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>LLY</td>
       <td>BUY</td>
       <td>94</td>
@@ -626,12 +436,12 @@ h2 {
       <td>2.0</td>
       <td>1015.75</td>
       <td>Pending Trigger</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>+$76.65 / +7.55%</td>
       <td>+$180.64 / +17.78%</td>
-      <td></td>
-      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>0</td>
       <td>Top 3 Swing scanner pick · Fallback</td>
     </tr>
@@ -639,6 +449,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Swing</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>MS</td>
       <td>BUY</td>
       <td>94</td>
@@ -661,6 +472,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Swing</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>NVDA</td>
       <td>BUY</td>
       <td>94</td>
@@ -683,6 +495,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Swing</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>NVDA</td>
       <td>BUY</td>
       <td>94</td>
@@ -705,6 +518,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Swing</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>ORCL</td>
       <td>BUY</td>
       <td>91</td>
@@ -725,6 +539,17 @@ h2 {
     </tr>
   </tbody>
 </table>
+
+    
+        <div class="perf-summary">
+          <h3>Medium + Low Priority Performance</h3>
+          <p>No records in this bucket yet.</p>
+        </div>
+        
+    <p>No Medium/Low Priority records yet for this mode.</p>
+
+    
+    
       </div>
     </section>
     
@@ -758,7 +583,7 @@ h2 {
       <div class="setup-wrap">
         <div class="setup">
           <h3>AMZN — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Normal</p>
+          <p><b>Highest Priority</b> · Score 94</p>
           <div class="grid">
             <div>Entry<br><b>271.26</b></div>
             <div>Stop<br><b>268.89</b></div>
@@ -772,7 +597,7 @@ h2 {
         
         <div class="setup">
           <h3>GOOGL — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Normal</p>
+          <p><b>Highest Priority</b> · Score 94</p>
           <div class="grid">
             <div>Entry<br><b>404.16</b></div>
             <div>Stop<br><b>400.7</b></div>
@@ -786,7 +611,7 @@ h2 {
         
         <div class="setup">
           <h3>LLY — BUY</h3>
-          <p><b>Highest Priority</b> · Score 94 · Normal</p>
+          <p><b>Highest Priority</b> · Score 94</p>
           <div class="grid">
             <div>Entry<br><b>1019.14</b></div>
             <div>Stop<br><b>1008.99</b></div>
@@ -802,19 +627,12 @@ h2 {
       <div class="section">
         <h2>Suggested Investment Criteria</h2>
         <p>
-          Swing is calibrated slightly looser to avoid empty daily output:
-          <b>88–94</b> Highest Priority candidate range ·
-          <b>82–87</b> Medium Priority ·
-          <b>74–81</b> Low Priority.
-          Intraday remains stricter:
-          <b>90–94</b> Highest Priority ·
+          <b>90–94</b> Highest Priority candidate range, but only the top 5 ranked ideas per mode can receive that label ·
           <b>84–89</b> Medium Priority ·
           <b>78–83</b> Low Priority.
-          Only the top 5 ranked ideas per mode can receive the Highest Priority label.
           Score is setup quality, not probability of profit. No trade is assumed loss-proof, so the model intentionally avoids 100 scores.
-          Expert filter requires SPY-direction alignment, relative strength/weakness, volume confirmation, controlled volatility, and a nearby trigger.
+          Expert filter requires trend alignment, SPY relative strength, volume confirmation, controlled volatility, and a nearby trigger.
           Entry should only be considered if the trigger level breaks with confirmation. Stocks with earnings expected within the next 8 calendar days are excluded.
-          If normal Swing has no candidate, a Swing-only fallback pass may be used; Intraday remains unchanged.
         </p>
       </div>
 
@@ -824,7 +642,6 @@ h2 {
   <thead>
     <tr style="text-align: right;">
       <th>Mode</th>
-      <th>Scan Type</th>
       <th>Priority</th>
       <th>Stock</th>
       <th>Signal</th>
@@ -853,7 +670,6 @@ h2 {
   <tbody>
     <tr>
       <td>Intraday</td>
-      <td>Normal</td>
       <td>Highest Priority</td>
       <td>AMZN</td>
       <td>BUY</td>
@@ -880,7 +696,6 @@ h2 {
     </tr>
     <tr>
       <td>Intraday</td>
-      <td>Normal</td>
       <td>Highest Priority</td>
       <td>GOOGL</td>
       <td>BUY</td>
@@ -907,7 +722,6 @@ h2 {
     </tr>
     <tr>
       <td>Intraday</td>
-      <td>Normal</td>
       <td>Highest Priority</td>
       <td>LLY</td>
       <td>BUY</td>
@@ -934,7 +748,6 @@ h2 {
     </tr>
     <tr>
       <td>Intraday</td>
-      <td>Normal</td>
       <td>Highest Priority</td>
       <td>META</td>
       <td>BUY</td>
@@ -965,13 +778,29 @@ h2 {
 
       <div class="section">
         <h2>Intraday Top 3 Performance Log</h2>
-        <p>Latest 60 ideas for this mode are shown first. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
-        <table border="1" class="dataframe data-table">
+        <p>Latest 60 ideas for this mode are shown first, now separated into Highest Priority versus Medium/Low Priority buckets. Current Price, First Hit, Hit Date, Stop Away, and Target Away update on each scanner run to help track whether target or stop-loss was reached first.</p>
+        
+    
+    <div class="perf-summary">
+      <h3>Highest Priority Performance</h3>
+      <div class="perf-grid">
+        <div>Total Ideas<br><b>29</b></div>
+        <div>Closed Trades<br><b>14</b></div>
+        <div>Wins<br><b>8</b></div>
+        <div>Losses<br><b>6</b></div>
+        <div>Win Rate<br><b>57.1%</b></div>
+        <div>Total R<br><b>10.0</b></div>
+        <div>Avg R<br><b>0.71</b></div>
+      </div>
+    </div>
+    
+    <table border="1" class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Date</th>
       <th>Mode</th>
       <th>Rank</th>
+      <th>Priority</th>
       <th>Stock</th>
       <th>Signal</th>
       <th>Conviction</th>
@@ -996,6 +825,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>AMZN</td>
       <td>BUY</td>
       <td>94</td>
@@ -1018,6 +848,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>GOOGL</td>
       <td>BUY</td>
       <td>94</td>
@@ -1040,6 +871,7 @@ h2 {
       <td>2026-05-14</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>LLY</td>
       <td>BUY</td>
       <td>94</td>
@@ -1062,6 +894,7 @@ h2 {
       <td>2026-05-13</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>ADBE</td>
       <td>SELL</td>
       <td>94</td>
@@ -1084,6 +917,7 @@ h2 {
       <td>2026-05-13</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>DHR</td>
       <td>SELL</td>
       <td>94</td>
@@ -1106,6 +940,7 @@ h2 {
       <td>2026-05-13</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>IBM</td>
       <td>SELL</td>
       <td>94</td>
@@ -1128,6 +963,7 @@ h2 {
       <td>2026-05-13</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>MCD</td>
       <td>SELL</td>
       <td>94</td>
@@ -1150,6 +986,7 @@ h2 {
       <td>2026-05-12</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>INTC</td>
       <td>BUY</td>
       <td>94</td>
@@ -1172,6 +1009,7 @@ h2 {
       <td>2026-05-12</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>TSLA</td>
       <td>BUY</td>
       <td>94</td>
@@ -1194,6 +1032,7 @@ h2 {
       <td>2026-05-11</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>MU</td>
       <td>BUY</td>
       <td>94</td>
@@ -1216,6 +1055,7 @@ h2 {
       <td>2026-05-10</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>MU</td>
       <td>BUY</td>
       <td>94</td>
@@ -1238,6 +1078,7 @@ h2 {
       <td>2026-05-09</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>MU</td>
       <td>BUY</td>
       <td>94</td>
@@ -1260,6 +1101,7 @@ h2 {
       <td>2026-05-08</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>AVGO</td>
       <td>SELL</td>
       <td>94</td>
@@ -1282,6 +1124,7 @@ h2 {
       <td>2026-05-08</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>CAT</td>
       <td>SELL</td>
       <td>94</td>
@@ -1304,6 +1147,7 @@ h2 {
       <td>2026-05-08</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>DHR</td>
       <td>BUY</td>
       <td>94</td>
@@ -1326,6 +1170,7 @@ h2 {
       <td>2026-05-08</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>CAT</td>
       <td>SELL</td>
       <td>94</td>
@@ -1348,6 +1193,7 @@ h2 {
       <td>2026-05-08</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>TMO</td>
       <td>BUY</td>
       <td>94</td>
@@ -1370,6 +1216,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>ORCL</td>
       <td>BUY</td>
       <td>94</td>
@@ -1392,6 +1239,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>AMD</td>
       <td>BUY</td>
       <td>94</td>
@@ -1414,6 +1262,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>NVDA</td>
       <td>BUY</td>
       <td>94</td>
@@ -1436,6 +1285,7 @@ h2 {
       <td>2026-05-07</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>ORCL</td>
       <td>BUY</td>
       <td>94</td>
@@ -1458,6 +1308,7 @@ h2 {
       <td>2026-05-06</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>AMD</td>
       <td>BUY</td>
       <td>94</td>
@@ -1480,6 +1331,7 @@ h2 {
       <td>2026-05-06</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>NOW</td>
       <td>BUY</td>
       <td>94</td>
@@ -1502,6 +1354,7 @@ h2 {
       <td>2026-05-06</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>ORCL</td>
       <td>BUY</td>
       <td>94</td>
@@ -1524,6 +1377,7 @@ h2 {
       <td>2026-05-06</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>NOW</td>
       <td>BUY</td>
       <td>94</td>
@@ -1546,6 +1400,7 @@ h2 {
       <td>2026-05-06</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>ORCL</td>
       <td>BUY</td>
       <td>92</td>
@@ -1568,6 +1423,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Highest Priority</td>
       <td>HD</td>
       <td>SELL</td>
       <td>94</td>
@@ -1590,6 +1446,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Highest Priority</td>
       <td>NKE</td>
       <td>SELL</td>
       <td>94</td>
@@ -1612,6 +1469,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Highest Priority</td>
       <td>TGT</td>
       <td>SELL</td>
       <td>94</td>
@@ -1630,10 +1488,55 @@ h2 {
       <td>2</td>
       <td>Top 3 Intraday scanner pick</td>
     </tr>
+  </tbody>
+</table>
+
+    
+    <div class="perf-summary">
+      <h3>Medium + Low Priority Performance</h3>
+      <div class="perf-grid">
+        <div>Total Ideas<br><b>3</b></div>
+        <div>Closed Trades<br><b>0</b></div>
+        <div>Wins<br><b>0</b></div>
+        <div>Losses<br><b>0</b></div>
+        <div>Win Rate<br><b>0%</b></div>
+        <div>Total R<br><b>0</b></div>
+        <div>Avg R<br><b>0</b></div>
+      </div>
+    </div>
+    
+    <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Mode</th>
+      <th>Rank</th>
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>Current Price</th>
+      <th>Status</th>
+      <th>First Hit</th>
+      <th>Hit Date</th>
+      <th>Stop Away</th>
+      <th>Target Away</th>
+      <th>Result</th>
+      <th>R</th>
+      <th>Days</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>1</td>
+      <td>Low Priority</td>
       <td>ABT</td>
       <td>SELL</td>
       <td>80</td>
@@ -1656,6 +1559,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>2</td>
+      <td>Low Priority</td>
       <td>BA</td>
       <td>SELL</td>
       <td>80</td>
@@ -1678,6 +1582,7 @@ h2 {
       <td>2026-05-05</td>
       <td>Intraday</td>
       <td>3</td>
+      <td>Low Priority</td>
       <td>BLK</td>
       <td>SELL</td>
       <td>80</td>
@@ -1698,6 +1603,9 @@ h2 {
     </tr>
   </tbody>
 </table>
+
+    
+    
       </div>
     </section>
     
