@@ -1,184 +1,186 @@
 Date,Mode,Rank,Priority,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Price,Status,First Hit,Hit Date,Stop Away,Target Away,Result,R,Days,Notes
-2026-06-29,Swing,1,Highest Priority,COST,SELL,94,941.11,998.97,825.4,2.0,944.53,Pending Trigger,,,+$54.44 / +5.76%,+$119.13 / +12.61%,,,1,Top 3 Swing scanner pick
-2026-06-29,Swing,2,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,342.15,Active After Trigger,,,+$23.74 / +6.94%,+$42.23 / +12.34%,,,1,Top 3 Swing scanner pick
-2026-06-29,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,130.77,Target Hit First,Target,2026-06-29,-$0.56 / -0.43%,+$9.45 / +7.22%,Win,2.0,0,Top 3 Intraday scanner pick
-2026-06-28,Swing,2,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,342.15,Active After Trigger,,,+$23.74 / +6.94%,+$42.23 / +12.34%,,,2,Top 3 Swing scanner pick
-2026-06-28,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,406.29,Pending Trigger,,,+$18.40 / +4.53%,+$61.40 / +15.11%,,,2,Top 3 Swing scanner pick
-2026-06-28,Swing,1,Highest Priority,COST,SELL,94,941.11,998.97,825.4,2.0,944.53,Pending Trigger,,,+$54.44 / +5.76%,+$119.13 / +12.61%,,,2,Top 3 Swing scanner pick
-2026-06-28,Swing,2,Highest Priority,HON,BUY,94,234.13,217.69,267.0,2.0,231.66,Active After Trigger,,,+$13.97 / +6.03%,+$35.34 / +15.25%,,,2,Top 3 Swing scanner pick
-2026-06-28,Swing,3,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,342.15,Active After Trigger,,,+$23.74 / +6.94%,+$42.23 / +12.34%,,,2,Top 3 Swing scanner pick
-2026-06-28,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,130.77,Target Hit First,Target,2026-06-29,-$0.56 / -0.43%,+$9.45 / +7.22%,Win,2.0,1,Top 3 Intraday scanner pick
-2026-06-27,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,406.29,Pending Trigger,,,+$18.40 / +4.53%,+$61.40 / +15.11%,,,3,Top 3 Swing scanner pick
-2026-06-27,Swing,1,Highest Priority,COST,SELL,94,943.13,998.97,831.45,2.0,944.53,Active After Trigger,,,+$54.44 / +5.76%,+$113.08 / +11.97%,,,3,Top 3 Swing scanner pick
-2026-06-27,Swing,2,Highest Priority,HON,BUY,94,234.07,217.69,266.82,2.0,231.66,Active After Trigger,,,+$13.97 / +6.03%,+$35.16 / +15.17%,,,3,Top 3 Swing scanner pick
-2026-06-27,Swing,3,Highest Priority,V,BUY,94,340.39,318.41,384.35,2.0,342.15,Active After Trigger,,,+$23.74 / +6.94%,+$42.20 / +12.33%,,,3,Top 3 Swing scanner pick
-2026-06-27,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,130.77,Target Hit First,Target,2026-06-29,-$0.56 / -0.43%,+$9.45 / +7.22%,Win,2.0,2,Top 3 Intraday scanner pick
-2026-06-26,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,406.29,Pending Trigger,,,+$18.40 / +4.53%,+$61.40 / +15.11%,,,4,Top 3 Swing scanner pick
-2026-06-26,Intraday,1,Highest Priority,ADBE,SELL,94,192.91,196.38,185.97,2.0,206.47,Pending Trigger,,,-$10.09 / -4.89%,+$20.50 / +9.93%,,,4,Top 3 Intraday scanner pick
-2026-06-26,Intraday,2,Highest Priority,BA,SELL,94,216.73,220.37,209.43,2.0,215.54,Stop Hit First,Stop,2026-06-26,+$4.83 / +2.24%,+$6.11 / +2.84%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-26,Intraday,3,Highest Priority,BLK,SELL,94,967.68,979.16,944.72,2.0,951.58,Stop Hit First,Stop,2026-06-26,+$27.58 / +2.90%,+$6.86 / +0.72%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-25,Intraday,1,Highest Priority,GE,BUY,94,373.25,362.86,394.01,2.0,375.23,Active After Trigger,,,+$12.37 / +3.30%,+$18.78 / +5.00%,,,5,Top 3 Intraday scanner pick
-2026-06-25,Intraday,2,Highest Priority,JPM,BUY,94,337.07,331.67,347.88,2.0,330.61,Stop Hit First,Stop,2026-06-26,-$1.06 / -0.32%,+$17.27 / +5.22%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,412.51,Ambiguous Entry Candle,Ambiguous,2026-06-25,-$33.65 / -8.16%,+$50.77 / +12.31%,Review,,0,Top 3 Intraday scanner pick
-2026-06-25,Intraday,1,Highest Priority,GOOG,SELL,94,342.5,349.27,328.97,2.0,350.62,Stop Hit First,Stop,2026-06-29,-$1.36 / -0.39%,+$21.65 / +6.18%,Loss,-1,4,Top 3 Intraday scanner pick
-2026-06-25,Intraday,2,Highest Priority,PFE,SELL,94,23.98,24.21,23.52,2.0,24.37,Stop Hit First,Stop,2026-06-26,-$0.16 / -0.65%,+$0.85 / +3.49%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-24,Swing,1,Highest Priority,PFE,SELL,94,24.64,26.59,20.74,2.0,24.37,Active After Trigger,,,+$2.22 / +9.13%,+$3.63 / +14.88%,,,6,Top 3 Swing scanner pick
-2026-06-24,Intraday,1,Highest Priority,BLK,SELL,94,1010.45,1026.35,978.63,2.0,951.58,Target Hit First,Target,2026-06-24,+$74.77 / +7.86%,-$27.05 / -2.84%,Win,2.0,0,Top 3 Intraday scanner pick
-2026-06-24,Intraday,2,Highest Priority,TSLA,SELL,94,379.95,386.11,367.63,2.0,412.51,Stop Hit First,Stop,2026-06-26,-$26.40 / -6.40%,+$44.88 / +10.88%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-06-23,Intraday,1,Highest Priority,AMZN,SELL,94,232.32,235.18,226.61,2.0,241.13,Stop Hit First,Stop,2026-06-23,-$5.95 / -2.47%,+$14.52 / +6.02%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-23,Intraday,2,Highest Priority,MA,SELL,94,482.84,487.55,473.42,2.0,511.83,Pending Trigger,,,-$24.28 / -4.74%,+$38.41 / +7.50%,,,7,Top 3 Intraday scanner pick
-2026-06-23,Intraday,3,Highest Priority,MSFT,SELL,94,366.34,370.81,357.38,2.0,368.67,Target Hit First,Target,2026-06-25,+$2.14 / +0.58%,+$11.29 / +3.06%,Win,2.0,2,Top 3 Intraday scanner pick
-2026-06-22,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,536.68,Stop Hit First,Stop,2026-06-23,+$7.91 / +1.47%,+$28.01 / +5.22%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-22,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,241.13,Stop Hit First,Stop,2026-06-29,-$1.17 / -0.48%,+$9.86 / +4.09%,Loss,-1,7,Top 3 Intraday scanner pick
-2026-06-22,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,58.04,Pending Trigger,,,-$1.52 / -2.63%,+$3.33 / +5.75%,,,8,Top 3 Intraday scanner pick
-2026-06-21,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,536.68,Stop Hit First,Stop,2026-06-23,+$7.91 / +1.47%,+$28.01 / +5.22%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-06-21,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,241.13,Stop Hit First,Stop,2026-06-29,-$1.17 / -0.48%,+$9.86 / +4.09%,Loss,-1,8,Top 3 Intraday scanner pick
-2026-06-21,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,58.04,Pending Trigger,,,-$1.52 / -2.63%,+$3.33 / +5.75%,,,9,Top 3 Intraday scanner pick
-2026-06-20,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,536.68,Stop Hit First,Stop,2026-06-23,+$7.91 / +1.47%,+$28.01 / +5.22%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-06-20,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,241.13,Stop Hit First,Stop,2026-06-29,-$1.17 / -0.48%,+$9.86 / +4.09%,Loss,-1,9,Top 3 Intraday scanner pick
-2026-06-20,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,58.04,Pending Trigger,,,-$1.52 / -2.63%,+$3.33 / +5.75%,,,10,Top 3 Intraday scanner pick
-2026-06-19,Swing,1,Highest Priority,JNJ,BUY,94,235.9,224.89,257.93,2.0,257.28,Active After Trigger,,,+$32.39 / +12.59%,+$0.65 / +0.25%,,,11,Top 3 Swing scanner pick
-2026-06-19,Swing,2,Highest Priority,ABBV,BUY,92,223.29,216.39,237.07,2.0,254.75,Target Hit First,Target,2026-06-24,+$38.36 / +15.06%,-$17.68 / -6.94%,Win,2.0,5,Top 3 Swing scanner pick
-2026-06-19,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,536.68,Stop Hit First,Stop,2026-06-23,+$7.91 / +1.47%,+$28.01 / +5.22%,Loss,-1,4,Top 3 Intraday scanner pick
-2026-06-19,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,241.13,Stop Hit First,Stop,2026-06-29,-$1.17 / -0.48%,+$9.86 / +4.09%,Loss,-1,10,Top 3 Intraday scanner pick
-2026-06-19,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,58.04,Pending Trigger,,,-$1.52 / -2.63%,+$3.33 / +5.75%,,,11,Top 3 Intraday scanner pick
-2026-06-18,Swing,2,Highest Priority,ABBV,BUY,92,223.29,216.39,237.07,2.0,254.75,Target Hit First,Target,2026-06-24,+$38.36 / +15.06%,-$17.68 / -6.94%,Win,2.0,6,Top 3 Swing scanner pick
-2026-06-18,Swing,1,Highest Priority,JNJ,BUY,94,235.9,224.89,257.93,2.0,257.28,Active After Trigger,,,+$32.39 / +12.59%,+$0.65 / +0.25%,,,12,Top 3 Swing scanner pick
-2026-06-18,Intraday,1,Highest Priority,QCOM,SELL,94,212.48,221.68,194.08,2.0,189.18,Target Hit First,Target,2026-06-24,+$32.50 / +17.18%,-$4.90 / -2.59%,Win,2.0,6,Top 3 Intraday scanner pick
-2026-06-18,Intraday,1,Highest Priority,TMO,SELL,94,465.05,472.09,450.96,2.0,504.25,Stop Hit First,Stop,2026-06-24,-$32.16 / -6.38%,+$53.29 / +10.57%,Loss,-1,6,Top 3 Intraday scanner pick
-2026-06-17,Intraday,1,Highest Priority,AVGO,SELL,94,375.74,381.81,363.59,2.0,372.47,Ambiguous Entry Candle,Ambiguous,2026-06-25,+$9.34 / +2.51%,+$8.88 / +2.38%,Review,,8,Top 3 Intraday scanner pick
-2026-06-17,Intraday,2,Highest Priority,META,BUY,94,602.44,594.82,617.7,2.0,565.43,Pending Trigger,,,-$29.39 / -5.20%,+$52.27 / +9.24%,,,13,Top 3 Intraday scanner pick
-2026-06-17,Intraday,3,Highest Priority,RTX,BUY,94,187.22,185.01,191.64,2.0,187.74,Target Hit First,Target,2026-06-17,+$2.73 / +1.45%,+$3.90 / +2.08%,Win,2.0,0,Top 3 Intraday scanner pick
-2026-06-17,Intraday,1,Highest Priority,CRM,SELL,94,160.91,161.93,158.87,2.0,158.54,Ambiguous Entry Candle,Ambiguous,2026-06-17,+$3.39 / +2.14%,-$0.33 / -0.21%,Review,,0,Top 3 Intraday scanner pick
-2026-06-17,Intraday,2,Highest Priority,RTX,BUY,94,186.62,184.78,190.3,2.0,187.74,Ambiguous Entry Candle,Ambiguous,2026-06-17,+$2.96 / +1.57%,+$2.56 / +1.37%,Review,,0,Top 3 Intraday scanner pick
-2026-06-16,Intraday,1,Highest Priority,AVGO,BUY,94,395.79,392.04,403.29,2.0,372.47,Stop Hit First,Stop,2026-06-17,-$19.57 / -5.25%,+$30.82 / +8.27%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-16,Intraday,2,Highest Priority,MU,BUY,94,1090.64,1067.91,1136.09,2.0,1136.68,Stop Hit First,Stop,2026-06-16,+$68.77 / +6.05%,-$0.59 / -0.05%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-15,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,130.77,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$6.70 / +5.12%,-$2.68 / -2.05%,Review,,0,Top 3 Intraday scanner pick
-2026-06-14,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,130.77,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$6.70 / +5.12%,-$2.68 / -2.05%,Review,,1,Top 3 Intraday scanner pick
-2026-06-13,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,130.77,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$6.70 / +5.12%,-$2.68 / -2.05%,Review,,2,Top 3 Intraday scanner pick
-2026-06-12,Swing,1,Highest Priority,GS,BUY,94,1038.82,992.92,1130.64,2.0,1022.7,Active After Trigger,,,+$29.78 / +2.91%,+$107.94 / +10.55%,,,18,Top 3 Swing scanner pick
-2026-06-11,Intraday,1,Highest Priority,AMD,SELL,94,449.46,460.2,427.99,2.0,536.68,Pending Trigger,,,-$76.48 / -14.25%,+$108.69 / +20.25%,,,19,Top 3 Intraday scanner pick
-2026-06-11,Intraday,2,Highest Priority,CAT,SELL,94,854.29,867.88,827.1,2.0,1033.99,Pending Trigger,,,-$166.11 / -16.06%,+$206.89 / +20.01%,,,19,Top 3 Intraday scanner pick
-2026-06-11,Intraday,3,Highest Priority,IBM,SELL,94,271.91,276.31,263.11,2.0,277.52,Stop Hit First,Stop,2026-06-11,-$1.21 / -0.44%,+$14.41 / +5.19%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-10,Intraday,1,Highest Priority,BAC,BUY,94,54.52,53.75,56.07,2.0,58.04,Target Hit First,Target,2026-06-12,+$4.29 / +7.40%,-$1.97 / -3.40%,Win,2.0,2,Top 3 Intraday scanner pick
-2026-06-10,Intraday,2,Highest Priority,RTX,BUY,94,182.29,180.19,186.51,2.0,187.74,Ambiguous Entry Candle,Ambiguous,2026-06-10,+$7.55 / +4.02%,-$1.23 / -0.65%,Review,,0,Top 3 Intraday scanner pick
-2026-06-09,Intraday,1,Highest Priority,DE,SELL,94,572.08,580.31,555.64,2.0,620.59,Ambiguous Entry Candle,Ambiguous,2026-06-09,-$40.28 / -6.49%,+$64.95 / +10.47%,Review,,0,Top 3 Intraday scanner pick
-2026-06-09,Intraday,2,Highest Priority,IBM,SELL,94,278.87,282.33,271.95,2.0,277.52,Stop Hit First,Stop,2026-06-09,+$4.81 / +1.73%,+$5.57 / +2.01%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-09,Intraday,3,Highest Priority,LOW,SELL,94,207.52,210.3,201.98,2.0,219.9,Pending Trigger,,,-$9.60 / -4.37%,+$17.92 / +8.15%,,,21,Top 3 Intraday scanner pick
-2026-06-08,Intraday,1,Highest Priority,V,SELL,94,318.56,321.93,311.82,2.0,342.24,Stop Hit First,Stop,2026-06-09,-$20.31 / -5.93%,+$30.42 / +8.89%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-08,Swing,1,Highest Priority,UNH,BUY,94,404.85,372.74,469.07,2.0,417.85,Active After Trigger,,,+$45.11 / +10.80%,+$51.22 / +12.26%,,,22,Top 3 Swing scanner pick
-2026-06-08,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,536.68,Stop Hit First,Stop,2026-06-11,-$57.27 / -10.67%,+$102.72 / +19.14%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-06-08,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1033.99,Stop Hit First,Stop,2026-06-09,-$117.53 / -11.37%,+$161.02 / +15.57%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-08,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.97,Stop Hit First,Stop,2026-06-08,+$14.65 / +14.65%,-$5.76 / -5.76%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-06-07,Swing,1,Highest Priority,UNH,BUY,94,404.85,372.74,469.07,2.0,417.85,Active After Trigger,,,+$45.11 / +10.80%,+$51.22 / +12.26%,,,23,Top 3 Swing scanner pick
-2026-06-07,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,536.68,Stop Hit First,Stop,2026-06-11,-$57.27 / -10.67%,+$102.72 / +19.14%,Loss,-1,4,Top 3 Intraday scanner pick
-2026-06-07,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1033.99,Stop Hit First,Stop,2026-06-09,-$117.53 / -11.37%,+$161.02 / +15.57%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-06-07,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.97,Stop Hit First,Stop,2026-06-08,+$14.65 / +14.65%,-$5.76 / -5.76%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-06,Swing,1,Highest Priority,UNH,BUY,94,404.81,372.74,468.95,2.0,417.85,Active After Trigger,,,+$45.11 / +10.80%,+$51.10 / +12.23%,,,24,Top 3 Swing scanner pick
-2026-06-06,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,536.68,Stop Hit First,Stop,2026-06-11,-$57.27 / -10.67%,+$102.72 / +19.14%,Loss,-1,5,Top 3 Intraday scanner pick
-2026-06-06,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1033.99,Stop Hit First,Stop,2026-06-09,-$117.53 / -11.37%,+$161.02 / +15.57%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-06-06,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.97,Stop Hit First,Stop,2026-06-08,+$14.65 / +14.65%,-$5.76 / -5.76%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-06-05,Swing,1,Highest Priority,MRK,BUY,94,120.79,111.42,139.53,2.0,129.34,Active After Trigger,,,+$17.92 / +13.85%,+$10.19 / +7.88%,,,25,Top 3 Swing scanner pick
-2026-06-05,Intraday,1,Highest Priority,SLB,BUY,94,58.24,57.36,60.0,2.0,46.32,Pending Trigger,,,-$11.04 / -23.83%,+$13.68 / +29.53%,,,25,Top 3 Intraday scanner pick
-2026-06-03,Intraday,1,Highest Priority,HON,BUY,92,236.49,232.66,244.15,2.0,231.69,Ambiguous Entry Candle,Ambiguous,2026-06-03,-$0.97 / -0.42%,+$12.46 / +5.38%,Review,,0,Top 3 Intraday scanner pick
-2026-06-02,Intraday,3,Highest Priority,UPS,BUY,94,109.77,107.8,113.71,2.0,107.83,Stop Hit First,Stop,2026-06-08,+$0.03 / +0.03%,+$5.88 / +5.45%,Loss,-1,6,Top 3 Intraday scanner pick
-2026-06-02,Intraday,1,Highest Priority,NOW,BUY,94,136.92,134.11,142.56,2.0,99.97,Pending Trigger,,,-$34.14 / -34.15%,+$42.59 / +42.60%,,,28,Top 3 Intraday scanner pick
-2026-06-02,Intraday,2,Highest Priority,NVDA,BUY,94,224.88,221.18,232.29,2.0,194.43,Stop Hit First,Stop,2026-06-03,-$26.75 / -13.76%,+$37.86 / +19.48%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-02,Intraday,3,Highest Priority,ORCL,BUY,94,249.81,242.82,263.8,2.0,147.77,Pending Trigger,,,-$95.05 / -64.32%,+$116.03 / +78.52%,,,28,Top 3 Intraday scanner pick
-2026-06-01,Intraday,1,Highest Priority,ADBE,BUY,94,261.15,254.55,274.35,2.0,206.47,Target Hit First,Target,2026-06-01,-$48.08 / -23.29%,+$67.88 / +32.88%,Win,2.0,0,Top 3 Intraday scanner pick
-2026-06-01,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.97,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.91 / -21.92%,+$31.15 / +31.16%,Review,,0,Top 3 Intraday scanner pick
-2026-05-31,Intraday,1,Highest Priority,ADBE,BUY,94,261.15,254.55,274.35,2.0,206.47,Target Hit First,Target,2026-06-01,-$48.08 / -23.29%,+$67.88 / +32.88%,Win,2.0,1,Top 3 Intraday scanner pick
-2026-05-31,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.97,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.91 / -21.92%,+$31.15 / +31.16%,Review,,1,Top 3 Intraday scanner pick
-2026-05-30,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.97,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.91 / -21.92%,+$31.15 / +31.16%,Review,,2,Top 3 Intraday scanner pick
-2026-05-30,Intraday,1,Highest Priority,ADBE,BUY,94,258.91,254.58,267.57,2.0,206.47,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$48.11 / -23.30%,+$61.10 / +29.59%,Review,,2,Top 3 Intraday scanner pick
-2026-05-29,Intraday,1,Highest Priority,BA,BUY,94,231.69,227.92,239.23,2.0,215.54,Stop Hit First,Stop,2026-06-01,-$12.38 / -5.74%,+$23.69 / +10.99%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-05-29,Intraday,2,Highest Priority,WFC,BUY,94,77.56,76.93,78.82,2.0,84.33,Stop Hit First,Stop,2026-06-01,+$7.40 / +8.78%,-$5.51 / -6.54%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-05-29,Intraday,1,Highest Priority,INTC,BUY,94,122.95,119.88,129.09,2.0,130.77,Stop Hit First,Stop,2026-05-29,+$10.89 / +8.33%,-$1.68 / -1.28%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-29,Intraday,2,Highest Priority,NVDA,BUY,92,216.86,212.66,225.27,2.0,194.43,Stop Hit First,Stop,2026-05-29,-$18.23 / -9.38%,+$30.84 / +15.86%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-29,Intraday,1,Highest Priority,DE,BUY,94,540.72,536.01,550.13,2.0,620.59,Ambiguous Entry Candle,Ambiguous,2026-05-29,+$84.58 / +13.63%,-$70.46 / -11.35%,Review,,0,Top 3 Intraday scanner pick
-2026-05-29,Intraday,2,Highest Priority,DHR,BUY,94,180.96,178.68,185.51,2.0,192.98,Stop Hit First,Stop,2026-06-02,+$14.30 / +7.41%,-$7.47 / -3.87%,Loss,-1,4,Top 3 Intraday scanner pick
-2026-05-29,Intraday,3,Highest Priority,NVDA,BUY,94,214.92,212.81,219.14,2.0,194.43,Ambiguous Entry Candle,Ambiguous,2026-05-29,-$18.38 / -9.46%,+$24.71 / +12.71%,Review,,0,Top 3 Intraday scanner pick
-2026-05-28,Intraday,1,Highest Priority,BA,BUY,94,226.03,221.51,235.07,2.0,215.54,Stop Hit First,Stop,2026-06-02,-$5.97 / -2.77%,+$19.53 / +9.06%,Loss,-1,5,Top 3 Intraday scanner pick
-2026-05-28,Intraday,2,Highest Priority,CAT,BUY,94,913.49,902.38,935.72,2.0,1033.99,Target Hit First,Target,2026-06-03,+$131.61 / +12.73%,-$98.27 / -9.50%,Win,2.0,6,Top 3 Intraday scanner pick
-2026-05-28,Intraday,3,Highest Priority,GE,BUY,94,319.51,315.06,328.4,2.0,375.23,Ambiguous Entry Candle,Ambiguous,2026-05-28,+$60.17 / +16.04%,-$46.83 / -12.48%,Review,,0,Top 3 Intraday scanner pick
-2026-05-27,Intraday,1,Highest Priority,BA,SELL,94,218.25,219.82,215.13,2.0,215.54,Target Hit First,Target,2026-06-02,+$4.28 / +1.98%,+$0.41 / +0.19%,Win,2.0,6,Top 3 Intraday scanner pick
-2026-05-26,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,231.69,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$4.47 / +1.93%,+$0.56 / +0.24%,Review,,0,Top 3 Intraday scanner pick
-2026-05-26,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.36,Stop Hit First,Stop,2026-05-26,+$8.02 / +6.20%,-$3.41 / -2.64%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-26,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.97,Stop Hit First,Stop,2026-05-26,-$1.15 / -1.15%,+$5.03 / +5.03%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-25,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,231.69,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$4.47 / +1.93%,+$0.56 / +0.24%,Review,,1,Top 3 Intraday scanner pick
-2026-05-25,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.36,Stop Hit First,Stop,2026-05-26,+$8.02 / +6.20%,-$3.41 / -2.64%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-05-25,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.97,Stop Hit First,Stop,2026-05-26,-$1.15 / -1.15%,+$5.03 / +5.03%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-05-24,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,231.69,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$4.47 / +1.93%,+$0.56 / +0.24%,Review,,2,Top 3 Intraday scanner pick
-2026-05-24,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.36,Stop Hit First,Stop,2026-05-26,+$8.02 / +6.20%,-$3.41 / -2.64%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-05-24,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.97,Stop Hit First,Stop,2026-05-26,-$1.15 / -1.15%,+$5.03 / +5.03%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-05-23,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,231.69,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$4.47 / +1.93%,+$0.56 / +0.24%,Review,,3,Top 3 Intraday scanner pick
-2026-05-23,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.36,Stop Hit First,Stop,2026-05-26,+$8.02 / +6.20%,-$3.41 / -2.64%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-05-23,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.97,Stop Hit First,Stop,2026-05-26,-$1.15 / -1.15%,+$5.03 / +5.03%,Loss,-1,3,Top 3 Intraday scanner pick
-2026-05-22,Intraday,1,Highest Priority,INTC,BUY,94,118.95,116.78,123.28,2.0,130.77,Target Hit First,Target,2026-05-26,+$13.99 / +10.70%,-$7.49 / -5.73%,Win,2.0,4,Top 3 Intraday scanner pick
-2026-05-22,Intraday,2,Highest Priority,NKE,BUY,94,44.51,43.84,45.85,2.0,41.56,Target Hit First,Target,2026-05-27,-$2.28 / -5.49%,+$4.29 / +10.32%,Win,2.0,5,Top 3 Intraday scanner pick
-2026-05-21,Swing,2,Highest Priority,RTX,SELL,92,172.65,180.69,156.57,2.0,187.69,Stop Hit First,Stop,2026-06-05,-$7.00 / -3.73%,+$31.12 / +16.58%,Loss,-1,15,Top 3 Swing scanner pick
-2026-05-21,Swing,1,Highest Priority,SCHW,SELL,94,89.55,93.87,80.9,2.0,90.46,Stop Hit First,Stop,2026-06-17,+$3.41 / +3.77%,+$9.56 / +10.57%,Loss,-1,27,Top 3 Swing scanner pick
-2026-05-21,Intraday,1,Highest Priority,GE,BUY,94,301.05,297.63,307.9,2.0,375.23,Target Hit First,Target,2026-05-26,+$77.60 / +20.68%,-$67.33 / -17.94%,Win,2.0,5,Top 3 Intraday scanner pick
-2026-05-21,Intraday,2,Highest Priority,MS,BUY,94,198.28,196.75,201.33,2.0,212.61,Target Hit First,Target,2026-05-22,+$15.86 / +7.46%,-$11.28 / -5.31%,Win,2.0,1,Top 3 Intraday scanner pick
-2026-05-21,Intraday,3,Highest Priority,MSFT,BUY,94,422.92,417.57,433.64,2.0,368.67,Stop Hit First,Stop,2026-05-21,-$48.90 / -13.26%,+$64.97 / +17.62%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-20,Swing,1,Highest Priority,ISRG,SELL,94,435.52,464.98,376.6,2.0,406.29,Active After Trigger,,,+$58.69 / +14.45%,+$29.69 / +7.31%,,,41,Top 3 Swing scanner pick
-2026-05-20,Intraday,1,Highest Priority,AXP,SELL,94,307.84,310.99,301.55,2.0,341.48,Stop Hit First,Stop,2026-05-22,-$30.49 / -8.93%,+$39.93 / +11.69%,Loss,-1,2,Top 3 Intraday scanner pick
-2026-05-20,Intraday,2,Highest Priority,INTC,BUY,94,111.28,109.68,114.49,2.0,130.77,Ambiguous Entry Candle,Ambiguous,2026-05-20,+$21.09 / +16.13%,-$16.28 / -12.45%,Review,,0,Top 3 Intraday scanner pick
-2026-05-20,Intraday,3,Highest Priority,LLY,BUY,94,1023.7,1009.44,1052.23,2.0,1227.84,Stop Hit First,Stop,2026-05-20,+$218.40 / +17.79%,-$175.61 / -14.30%,Loss,-1,0,Top 3 Intraday scanner pick
-2026-05-19,Intraday,1,Highest Priority,CVX,BUY,94,196.59,194.33,201.12,2.0,169.35,Stop Hit First,Stop,2026-05-20,-$24.98 / -14.75%,+$31.77 / +18.76%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-05-19,Intraday,2,Highest Priority,GOOG,SELL,94,391.41,399.57,375.07,2.0,350.62,Target Hit First,Target,2026-05-29,+$48.94 / +13.96%,-$24.44 / -6.97%,Win,2.0,10,Top 3 Intraday scanner pick
-2026-05-19,Intraday,3,Highest Priority,GOOGL,SELL,94,395.12,403.12,379.11,2.0,352.86,Target Hit First,Target,2026-05-29,+$50.26 / +14.24%,-$26.25 / -7.44%,Win,2.0,10,Top 3 Intraday scanner pick
-2026-05-18,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,375.23,Pending Trigger,,,-$91.69 / -24.44%,+$99.89 / +26.62%,,,43,Top 3 Intraday scanner pick
-2026-05-18,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,406.29,Target Hit First,Target,2026-06-02,+$21.91 / +5.39%,+$3.36 / +0.83%,Win,2.0,15,Top 3 Intraday scanner pick
-2026-05-18,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1136.68,Target Hit First,Target,2026-05-18,-$389.26 / -34.25%,+$465.51 / +40.95%,Win,2.0,0,Top 3 Intraday scanner pick
-2026-05-17,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,375.23,Pending Trigger,,,-$91.69 / -24.44%,+$99.89 / +26.62%,,,44,Top 3 Intraday scanner pick
-2026-05-17,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,406.29,Target Hit First,Target,2026-06-02,+$21.91 / +5.39%,+$3.36 / +0.83%,Win,2.0,16,Top 3 Intraday scanner pick
-2026-05-17,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1136.68,Target Hit First,Target,2026-05-18,-$389.26 / -34.25%,+$465.51 / +40.95%,Win,2.0,1,Top 3 Intraday scanner pick
-2026-05-16,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,375.23,Pending Trigger,,,-$91.69 / -24.44%,+$99.89 / +26.62%,,,45,Top 3 Intraday scanner pick
-2026-05-16,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,406.29,Target Hit First,Target,2026-06-02,+$21.91 / +5.39%,+$3.36 / +0.83%,Win,2.0,17,Top 3 Intraday scanner pick
-2026-05-16,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1136.68,Target Hit First,Target,2026-05-18,-$389.26 / -34.25%,+$465.51 / +40.95%,Win,2.0,2,Top 3 Intraday scanner pick
-2026-05-15,Intraday,1,Highest Priority,CAT,BUY,94,922.19,909.44,947.69,2.0,1033.99,Stop Hit First,Stop,2026-06-04,+$124.55 / +12.05%,-$86.30 / -8.35%,Loss,-1,20,Top 3 Intraday scanner pick
-2026-05-15,Intraday,2,Highest Priority,COST,BUY,94,1043.85,1032.5,1066.56,2.0,944.53,Target Hit First,Target,2026-05-18,-$87.97 / -9.31%,+$122.03 / +12.92%,Win,2.0,3,Top 3 Intraday scanner pick
-2026-05-15,Intraday,3,Highest Priority,GOOGL,BUY,94,401.95,398.57,408.71,2.0,352.86,Ambiguous Entry Candle,Ambiguous,2026-05-18,-$45.71 / -12.95%,+$55.85 / +15.83%,Review,,3,Top 3 Intraday scanner pick
-2026-05-14,Swing,1,Highest Priority,AMZN,BUY,94,271.26,261.74,290.3,2.0,241.14,Stop Hit First,Stop,2026-06-01,-$20.60 / -8.54%,+$49.16 / +20.39%,Loss,-1,18,Top 3 Swing scanner pick · Fallback
-2026-05-14,Swing,2,Highest Priority,AVGO,BUY,94,419.47,401.52,455.36,2.0,372.38,Target Hit First,Target,2026-06-01,-$29.14 / -7.83%,+$82.98 / +22.28%,Win,2.0,18,Top 3 Swing scanner pick · Fallback
-2026-05-14,Swing,3,Highest Priority,LLY,BUY,94,1024.87,939.1,1196.39,2.0,1227.84,Target Hit First,Target,2026-06-26,+$288.74 / +23.52%,-$31.45 / -2.56%,Win,2.0,43,Top 3 Swing scanner pick · Fallback
-2026-05-14,Intraday,1,Highest Priority,AMZN,BUY,94,271.26,268.89,276.0,2.0,241.13,Stop Hit First,Stop,2026-05-28,-$27.76 / -11.51%,+$34.87 / +14.46%,Loss,-1,14,Top 3 Intraday scanner pick
-2026-05-14,Intraday,2,Highest Priority,GOOGL,BUY,94,404.16,400.7,411.06,2.0,352.86,Ambiguous Entry Candle,Ambiguous,2026-05-18,-$47.84 / -13.56%,+$58.20 / +16.49%,Review,,4,Top 3 Intraday scanner pick
-2026-05-14,Intraday,3,Highest Priority,LLY,BUY,94,1019.14,1008.99,1039.44,2.0,1227.84,Stop Hit First,Stop,2026-05-20,+$218.85 / +17.82%,-$188.40 / -15.34%,Loss,-1,6,Top 3 Intraday scanner pick
-2026-05-13,Intraday,1,Highest Priority,ADBE,SELL,94,240.22,242.85,234.96,2.0,206.47,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$36.38 / +17.62%,-$28.49 / -13.80%,Review,,13,Top 3 Intraday scanner pick
-2026-05-13,Intraday,2,Highest Priority,DHR,SELL,94,165.92,167.39,162.96,2.0,192.98,Target Hit First,Target,2026-05-15,-$25.59 / -13.26%,+$30.02 / +15.55%,Win,2.0,2,Top 3 Intraday scanner pick
-2026-05-13,Intraday,3,Highest Priority,IBM,SELL,94,218.83,220.95,214.59,2.0,277.52,Stop Hit First,Stop,2026-05-18,-$56.57 / -20.38%,+$62.93 / +22.68%,Loss,-1,5,Top 3 Intraday scanner pick
-2026-05-13,Intraday,1,Highest Priority,MCD,SELL,94,274.56,278.54,266.6,2.0,266.46,Stop Hit First,Stop,2026-06-05,+$12.08 / +4.53%,-$0.14 / -0.05%,Loss,-1,23,Top 3 Intraday scanner pick
-2026-05-12,Intraday,1,Highest Priority,INTC,BUY,94,130.26,125.18,140.42,2.0,130.77,Stop Hit First,Stop,2026-06-16,+$5.59 / +4.27%,+$9.65 / +7.38%,Loss,-1,35,Top 3 Intraday scanner pick
-2026-05-12,Intraday,2,Highest Priority,TSLA,BUY,94,446.69,437.33,465.42,2.0,412.51,Pending Trigger,,,-$24.82 / -6.02%,+$52.91 / +12.83%,,,49,Top 3 Intraday scanner pick
-2026-05-11,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1136.68,Stop Hit First,Stop,2026-05-15,+$410.35 / +36.10%,-$343.22 / -30.19%,Loss,-1,4,Top 3 Intraday scanner pick
-2026-05-10,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1136.68,Stop Hit First,Stop,2026-05-15,+$410.35 / +36.10%,-$343.22 / -30.19%,Loss,-1,5,Top 3 Intraday scanner pick
-2026-05-09,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1136.68,Stop Hit First,Stop,2026-05-15,+$410.35 / +36.10%,-$343.22 / -30.19%,Loss,-1,6,Top 3 Intraday scanner pick
-2026-05-08,Intraday,1,Highest Priority,AVGO,SELL,94,411.49,418.42,397.61,2.0,372.47,Stop Hit First,Stop,2026-05-20,+$45.95 / +12.34%,-$25.14 / -6.75%,Loss,-1,12,Top 3 Intraday scanner pick
-2026-05-08,Intraday,2,Highest Priority,CAT,SELL,94,891.32,901.98,870.02,2.0,1033.99,Target Hit First,Target,2026-05-18,-$132.01 / -12.77%,+$163.97 / +15.86%,Win,2.0,10,Top 3 Intraday scanner pick
-2026-05-08,Intraday,3,Highest Priority,DHR,BUY,94,176.08,173.29,181.67,2.0,192.98,Stop Hit First,Stop,2026-05-27,+$19.69 / +10.20%,-$11.31 / -5.86%,Loss,-1,19,Top 3 Intraday scanner pick
-2026-05-08,Intraday,1,Highest Priority,CAT,SELL,94,891.32,901.98,870.02,2.0,1033.99,Target Hit First,Target,2026-05-18,-$132.01 / -12.77%,+$163.97 / +15.86%,Win,2.0,10,Top 3 Intraday scanner pick
-2026-05-08,Intraday,2,Highest Priority,TMO,BUY,94,475.63,467.92,491.04,2.0,504.25,Target Hit First,Target,2026-05-29,+$36.33 / +7.20%,-$13.21 / -2.62%,Win,2.0,21,Top 3 Intraday scanner pick
-2026-05-07,Swing,1,Highest Priority,MS,BUY,94,195.22,184.1,217.46,2.0,212.6,Target Hit First,Target,2026-06-04,+$28.50 / +13.41%,+$4.86 / +2.28%,Win,2.0,28,Top 3 Swing scanner pick
-2026-05-07,Swing,2,Highest Priority,NVDA,BUY,94,208.68,193.36,239.33,2.0,194.45,Stop Hit First,Stop,2026-06-25,+$1.09 / +0.56%,+$44.88 / +23.08%,Loss,-1,49,Top 3 Swing scanner pick
-2026-05-07,Intraday,2,Highest Priority,ORCL,BUY,94,194.68,190.91,202.22,2.0,147.77,Stop Hit First,Stop,2026-05-18,-$43.14 / -29.19%,+$54.45 / +36.85%,Loss,-1,11,Top 3 Intraday scanner pick
-2026-05-07,Swing,1,Highest Priority,NVDA,BUY,94,208.68,193.36,239.33,2.0,194.45,Stop Hit First,Stop,2026-06-25,+$1.09 / +0.56%,+$44.88 / +23.08%,Loss,-1,49,Top 3 Swing scanner pick
-2026-05-07,Intraday,1,Highest Priority,AMD,BUY,94,422.81,410.63,447.17,2.0,536.68,Stop Hit First,Stop,2026-05-19,+$126.05 / +23.49%,-$89.51 / -16.68%,Loss,-1,12,Top 3 Intraday scanner pick
-2026-05-07,Intraday,2,Highest Priority,NVDA,BUY,94,208.68,204.3,217.44,2.0,194.43,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$9.87 / -5.08%,+$23.01 / +11.84%,Review,,8,Top 3 Intraday scanner pick
-2026-05-07,Intraday,3,Highest Priority,ORCL,BUY,94,194.68,190.91,202.22,2.0,147.77,Stop Hit First,Stop,2026-05-18,-$43.14 / -29.19%,+$54.45 / +36.85%,Loss,-1,11,Top 3 Intraday scanner pick
-2026-05-06,Intraday,1,Highest Priority,AMD,BUY,94,357.06,352.31,366.57,2.0,536.68,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$184.37 / +34.35%,-$170.11 / -31.70%,Review,,9,Top 3 Intraday scanner pick
-2026-05-06,Intraday,2,Highest Priority,NOW,BUY,94,92.25,90.67,95.42,2.0,99.97,Target Hit First,Target,2026-05-15,+$9.30 / +9.30%,-$4.55 / -4.55%,Win,2.0,9,Top 3 Intraday scanner pick
-2026-05-06,Intraday,3,Highest Priority,ORCL,BUY,94,186.57,182.55,194.62,2.0,147.77,Target Hit First,Target,2026-05-15,-$34.78 / -23.54%,+$46.85 / +31.70%,Win,2.0,9,Top 3 Intraday scanner pick
-2026-05-06,Intraday,1,Highest Priority,NOW,BUY,94,92.25,90.67,95.42,2.0,99.97,Target Hit First,Target,2026-05-15,+$9.30 / +9.30%,-$4.55 / -4.55%,Win,2.0,9,Top 3 Intraday scanner pick
-2026-05-06,Intraday,2,Highest Priority,ORCL,BUY,92,186.57,182.55,194.62,2.0,147.77,Target Hit First,Target,2026-05-15,-$34.78 / -23.54%,+$46.85 / +31.70%,Win,2.0,9,Top 3 Intraday scanner pick
-2026-05-05,Intraday,1,Highest Priority,HD,SELL,94,311.64,315.21,304.49,2.0,349.96,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$34.75 / -9.93%,+$45.47 / +12.99%,Review,,10,Top 3 Intraday scanner pick
-2026-05-05,Intraday,2,Highest Priority,NKE,SELL,94,43.0,43.5,42.01,2.0,41.56,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$1.94 / +4.67%,-$0.45 / -1.08%,Review,,10,Top 3 Intraday scanner pick
-2026-05-05,Intraday,3,Highest Priority,TGT,SELL,94,127.12,128.77,123.81,2.0,135.54,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$6.77 / -4.99%,+$11.73 / +8.65%,Review,,10,Top 3 Intraday scanner pick
-2026-05-05,Intraday,1,Low Priority,ABT,SELL,80,87.2,87.48,86.49,2.5,93.05,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$5.57 / -5.99%,+$6.56 / +7.05%,Review,,10,Top 3 Intraday scanner pick
-2026-05-05,Intraday,2,Low Priority,BA,SELL,80,220.6,221.53,218.27,2.5,215.54,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$5.99 / +2.78%,-$2.73 / -1.26%,Review,,10,Top 3 Intraday scanner pick
-2026-05-05,Intraday,3,Low Priority,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,951.58,Ambiguous Entry Candle,Ambiguous,2026-05-19,+$101.41 / +10.66%,-$89.81 / -9.44%,Review,,14,Top 3 Intraday scanner pick
-2026-05-05,Swing,1,Highest Priority,ORCL,BUY,91,183.87,171.39,215.06,2.5,147.79,Target Hit First,Target,2026-05-29,-$23.60 / -15.97%,+$67.27 / +45.52%,Win,2.0,24,Top 3 Swing scanner pick
+2026-06-30,Intraday,1,Highest Priority,AMD,BUY,94,541.38,531.05,562.04,2.0,539.56,Pending Trigger,,,+$8.51 / +1.58%,+$22.48 / +4.17%,,,0,Top 3 Intraday scanner pick
+2026-06-30,Intraday,2,Highest Priority,CAT,BUY,94,1038.9,1023.37,1069.97,2.0,1032.85,Pending Trigger,,,+$9.48 / +0.92%,+$37.12 / +3.59%,,,0,Top 3 Intraday scanner pick
+2026-06-29,Swing,1,Highest Priority,COST,SELL,94,941.11,998.97,825.4,2.0,946.68,Pending Trigger,,,+$52.29 / +5.52%,+$121.28 / +12.81%,,,1,Top 3 Swing scanner pick
+2026-06-29,Swing,2,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,341.65,Active After Trigger,,,+$23.24 / +6.80%,+$42.73 / +12.51%,,,1,Top 3 Swing scanner pick
+2026-06-29,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,131.71,Target Hit First,Target,2026-06-29,-$1.50 / -1.14%,+$10.39 / +7.89%,Win,2.0,0,Top 3 Intraday scanner pick
+2026-06-28,Swing,2,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,341.65,Active After Trigger,,,+$23.24 / +6.80%,+$42.73 / +12.51%,,,2,Top 3 Swing scanner pick
+2026-06-28,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,405.97,Pending Trigger,,,+$18.72 / +4.61%,+$61.08 / +15.05%,,,2,Top 3 Swing scanner pick
+2026-06-28,Swing,1,Highest Priority,COST,SELL,94,941.11,998.97,825.4,2.0,946.68,Pending Trigger,,,+$52.29 / +5.52%,+$121.28 / +12.81%,,,2,Top 3 Swing scanner pick
+2026-06-28,Swing,2,Highest Priority,HON,BUY,94,234.13,217.69,267.0,2.0,227.8,Active After Trigger,,,+$10.11 / +4.44%,+$39.20 / +17.21%,,,2,Top 3 Swing scanner pick
+2026-06-28,Swing,3,Highest Priority,V,BUY,94,340.4,318.41,384.38,2.0,341.65,Active After Trigger,,,+$23.24 / +6.80%,+$42.73 / +12.51%,,,2,Top 3 Swing scanner pick
+2026-06-28,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,131.71,Target Hit First,Target,2026-06-29,-$1.50 / -1.14%,+$10.39 / +7.89%,Win,2.0,1,Top 3 Intraday scanner pick
+2026-06-27,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,405.97,Pending Trigger,,,+$18.72 / +4.61%,+$61.08 / +15.05%,,,3,Top 3 Swing scanner pick
+2026-06-27,Swing,1,Highest Priority,COST,SELL,94,943.13,998.97,831.45,2.0,946.68,Active After Trigger,,,+$52.29 / +5.52%,+$115.23 / +12.17%,,,3,Top 3 Swing scanner pick
+2026-06-27,Swing,2,Highest Priority,HON,BUY,94,234.07,217.69,266.82,2.0,227.8,Active After Trigger,,,+$10.11 / +4.44%,+$39.02 / +17.13%,,,3,Top 3 Swing scanner pick
+2026-06-27,Swing,3,Highest Priority,V,BUY,94,340.39,318.41,384.35,2.0,341.65,Active After Trigger,,,+$23.24 / +6.80%,+$42.70 / +12.50%,,,3,Top 3 Swing scanner pick
+2026-06-27,Intraday,1,Highest Priority,INTC,SELL,94,127.25,130.21,121.32,2.0,131.71,Target Hit First,Target,2026-06-29,-$1.50 / -1.14%,+$10.39 / +7.89%,Win,2.0,2,Top 3 Intraday scanner pick
+2026-06-26,Swing,1,Highest Priority,ISRG,SELL,94,398.09,424.69,344.89,2.0,405.97,Pending Trigger,,,+$18.72 / +4.61%,+$61.08 / +15.05%,,,4,Top 3 Swing scanner pick
+2026-06-26,Intraday,1,Highest Priority,ADBE,SELL,94,192.91,196.38,185.97,2.0,206.45,Pending Trigger,,,-$10.07 / -4.88%,+$20.48 / +9.92%,,,4,Top 3 Intraday scanner pick
+2026-06-26,Intraday,2,Highest Priority,BA,SELL,94,216.73,220.37,209.43,2.0,214.64,Stop Hit First,Stop,2026-06-26,+$5.73 / +2.67%,+$5.21 / +2.43%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-26,Intraday,3,Highest Priority,BLK,SELL,94,967.68,979.16,944.72,2.0,949.57,Stop Hit First,Stop,2026-06-26,+$29.59 / +3.12%,+$4.85 / +0.51%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-25,Intraday,1,Highest Priority,GE,BUY,94,373.25,362.86,394.01,2.0,373.55,Active After Trigger,,,+$10.69 / +2.86%,+$20.46 / +5.48%,,,5,Top 3 Intraday scanner pick
+2026-06-25,Intraday,2,Highest Priority,JPM,BUY,94,337.07,331.67,347.88,2.0,329.44,Stop Hit First,Stop,2026-06-26,-$2.23 / -0.68%,+$18.44 / +5.60%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,411.79,Stop Hit First,Stop,2026-06-26,-$32.93 / -8.00%,+$50.05 / +12.15%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-25,Intraday,1,Highest Priority,GOOG,SELL,94,342.5,349.27,328.97,2.0,351.08,Stop Hit First,Stop,2026-06-29,-$1.81 / -0.52%,+$22.11 / +6.30%,Loss,-1,4,Top 3 Intraday scanner pick
+2026-06-25,Intraday,2,Highest Priority,PFE,SELL,94,23.98,24.21,23.52,2.0,24.39,Stop Hit First,Stop,2026-06-26,-$0.18 / -0.74%,+$0.87 / +3.57%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-24,Swing,1,Highest Priority,PFE,SELL,94,24.64,26.59,20.74,2.0,24.37,Active After Trigger,,,+$2.22 / +9.11%,+$3.63 / +14.90%,,,6,Top 3 Swing scanner pick
+2026-06-24,Intraday,1,Highest Priority,BLK,SELL,94,1010.45,1026.35,978.63,2.0,949.57,Target Hit First,Target,2026-06-24,+$76.78 / +8.09%,-$29.06 / -3.06%,Win,2.0,0,Top 3 Intraday scanner pick
+2026-06-24,Intraday,2,Highest Priority,TSLA,SELL,94,379.95,386.11,367.63,2.0,411.79,Stop Hit First,Stop,2026-06-26,-$25.68 / -6.24%,+$44.16 / +10.72%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-06-23,Intraday,1,Highest Priority,AMZN,SELL,94,232.32,235.18,226.61,2.0,240.12,Stop Hit First,Stop,2026-06-23,-$4.94 / -2.06%,+$13.51 / +5.63%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-23,Intraday,2,Highest Priority,MA,SELL,94,482.84,487.55,473.42,2.0,509.64,Pending Trigger,,,-$22.09 / -4.33%,+$36.22 / +7.11%,,,7,Top 3 Intraday scanner pick
+2026-06-23,Intraday,3,Highest Priority,MSFT,SELL,94,366.34,370.81,357.38,2.0,368.5,Target Hit First,Target,2026-06-25,+$2.31 / +0.63%,+$11.12 / +3.02%,Win,2.0,2,Top 3 Intraday scanner pick
+2026-06-22,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,539.56,Stop Hit First,Stop,2026-06-23,+$10.79 / +2.00%,+$25.13 / +4.66%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-22,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,240.12,Stop Hit First,Stop,2026-06-29,-$2.18 / -0.91%,+$10.87 / +4.53%,Loss,-1,7,Top 3 Intraday scanner pick
+2026-06-22,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,57.87,Pending Trigger,,,-$1.35 / -2.33%,+$3.16 / +5.46%,,,8,Top 3 Intraday scanner pick
+2026-06-21,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,539.56,Stop Hit First,Stop,2026-06-23,+$10.79 / +2.00%,+$25.13 / +4.66%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-06-21,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,240.12,Stop Hit First,Stop,2026-06-29,-$2.18 / -0.91%,+$10.87 / +4.53%,Loss,-1,8,Top 3 Intraday scanner pick
+2026-06-21,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,57.87,Pending Trigger,,,-$1.35 / -2.33%,+$3.16 / +5.46%,,,9,Top 3 Intraday scanner pick
+2026-06-20,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,539.56,Stop Hit First,Stop,2026-06-23,+$10.79 / +2.00%,+$25.13 / +4.66%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-06-20,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,240.12,Stop Hit First,Stop,2026-06-29,-$2.18 / -0.91%,+$10.87 / +4.53%,Loss,-1,9,Top 3 Intraday scanner pick
+2026-06-20,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,57.87,Pending Trigger,,,-$1.35 / -2.33%,+$3.16 / +5.46%,,,10,Top 3 Intraday scanner pick
+2026-06-19,Swing,1,Highest Priority,JNJ,BUY,94,235.9,224.89,257.93,2.0,258.51,Target Hit First,Target,2026-06-29,+$33.62 / +13.01%,-$0.58 / -0.22%,Win,2.0,10,Top 3 Swing scanner pick
+2026-06-19,Swing,2,Highest Priority,ABBV,BUY,92,223.29,216.39,237.07,2.0,254.31,Target Hit First,Target,2026-06-24,+$37.92 / +14.91%,-$17.24 / -6.78%,Win,2.0,5,Top 3 Swing scanner pick
+2026-06-19,Intraday,1,Highest Priority,AMD,BUY,94,540.74,528.77,564.69,2.0,539.56,Stop Hit First,Stop,2026-06-23,+$10.79 / +2.00%,+$25.13 / +4.66%,Loss,-1,4,Top 3 Intraday scanner pick
+2026-06-19,Intraday,2,Highest Priority,AMZN,BUY,94,245.2,242.3,250.99,2.0,240.12,Stop Hit First,Stop,2026-06-29,-$2.18 / -0.91%,+$10.87 / +4.53%,Loss,-1,10,Top 3 Intraday scanner pick
+2026-06-19,Intraday,3,Highest Priority,BAC,SELL,94,55.92,56.52,54.71,2.0,57.87,Pending Trigger,,,-$1.35 / -2.33%,+$3.16 / +5.46%,,,11,Top 3 Intraday scanner pick
+2026-06-18,Swing,2,Highest Priority,ABBV,BUY,92,223.29,216.39,237.07,2.0,254.31,Target Hit First,Target,2026-06-24,+$37.92 / +14.91%,-$17.24 / -6.78%,Win,2.0,6,Top 3 Swing scanner pick
+2026-06-18,Swing,1,Highest Priority,JNJ,BUY,94,235.9,224.89,257.93,2.0,258.51,Target Hit First,Target,2026-06-29,+$33.62 / +13.01%,-$0.58 / -0.22%,Win,2.0,11,Top 3 Swing scanner pick
+2026-06-18,Intraday,1,Highest Priority,QCOM,SELL,94,212.48,221.68,194.08,2.0,188.7,Target Hit First,Target,2026-06-24,+$32.98 / +17.48%,-$5.38 / -2.85%,Win,2.0,6,Top 3 Intraday scanner pick
+2026-06-18,Intraday,1,Highest Priority,TMO,SELL,94,465.05,472.09,450.96,2.0,506.24,Stop Hit First,Stop,2026-06-24,-$34.15 / -6.75%,+$55.28 / +10.92%,Loss,-1,6,Top 3 Intraday scanner pick
+2026-06-17,Intraday,1,Highest Priority,AVGO,SELL,94,375.74,381.81,363.59,2.0,372.44,Ambiguous Entry Candle,Ambiguous,2026-06-25,+$9.37 / +2.52%,+$8.85 / +2.38%,Review,,8,Top 3 Intraday scanner pick
+2026-06-17,Intraday,2,Highest Priority,META,BUY,94,602.44,594.82,617.7,2.0,562.33,Pending Trigger,,,-$32.49 / -5.78%,+$55.37 / +9.85%,,,13,Top 3 Intraday scanner pick
+2026-06-17,Intraday,3,Highest Priority,RTX,BUY,94,187.22,185.01,191.64,2.0,187.39,Target Hit First,Target,2026-06-17,+$2.38 / +1.27%,+$4.25 / +2.27%,Win,2.0,0,Top 3 Intraday scanner pick
+2026-06-17,Intraday,1,Highest Priority,CRM,SELL,94,160.91,161.93,158.87,2.0,157.95,Ambiguous Entry Candle,Ambiguous,2026-06-17,+$3.98 / +2.52%,-$0.92 / -0.58%,Review,,0,Top 3 Intraday scanner pick
+2026-06-17,Intraday,2,Highest Priority,RTX,BUY,94,186.62,184.78,190.3,2.0,187.39,Ambiguous Entry Candle,Ambiguous,2026-06-17,+$2.61 / +1.39%,+$2.91 / +1.55%,Review,,0,Top 3 Intraday scanner pick
+2026-06-16,Intraday,1,Highest Priority,AVGO,BUY,94,395.79,392.04,403.29,2.0,372.44,Stop Hit First,Stop,2026-06-17,-$19.60 / -5.26%,+$30.85 / +8.28%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-16,Intraday,2,Highest Priority,MU,BUY,94,1090.64,1067.91,1136.09,2.0,1145.31,Stop Hit First,Stop,2026-06-16,+$77.40 / +6.76%,-$9.22 / -0.81%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-15,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,131.71,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$7.64 / +5.80%,-$3.62 / -2.75%,Review,,0,Top 3 Intraday scanner pick
+2026-06-14,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,131.71,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$7.64 / +5.80%,-$3.62 / -2.75%,Review,,1,Top 3 Intraday scanner pick
+2026-06-13,Intraday,1,Highest Priority,INTC,BUY,94,125.41,124.07,128.09,2.0,131.71,Ambiguous Entry Candle,Ambiguous,2026-06-15,+$7.64 / +5.80%,-$3.62 / -2.75%,Review,,2,Top 3 Intraday scanner pick
+2026-06-12,Swing,1,Highest Priority,GS,BUY,94,1038.82,992.92,1130.64,2.0,1020.21,Active After Trigger,,,+$27.29 / +2.67%,+$110.43 / +10.82%,,,18,Top 3 Swing scanner pick
+2026-06-11,Intraday,1,Highest Priority,AMD,SELL,94,449.46,460.2,427.99,2.0,539.56,Pending Trigger,,,-$79.36 / -14.71%,+$111.57 / +20.68%,,,19,Top 3 Intraday scanner pick
+2026-06-11,Intraday,2,Highest Priority,CAT,SELL,94,854.29,867.88,827.1,2.0,1032.85,Pending Trigger,,,-$164.97 / -15.97%,+$205.75 / +19.92%,,,19,Top 3 Intraday scanner pick
+2026-06-11,Intraday,3,Highest Priority,IBM,SELL,94,271.91,276.31,263.11,2.0,277.9,Stop Hit First,Stop,2026-06-11,-$1.59 / -0.57%,+$14.79 / +5.32%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-10,Intraday,1,Highest Priority,BAC,BUY,94,54.52,53.75,56.07,2.0,57.87,Target Hit First,Target,2026-06-12,+$4.12 / +7.12%,-$1.80 / -3.11%,Win,2.0,2,Top 3 Intraday scanner pick
+2026-06-10,Intraday,2,Highest Priority,RTX,BUY,94,182.29,180.19,186.51,2.0,187.39,Ambiguous Entry Candle,Ambiguous,2026-06-10,+$7.20 / +3.84%,-$0.88 / -0.47%,Review,,0,Top 3 Intraday scanner pick
+2026-06-09,Intraday,1,Highest Priority,DE,SELL,94,572.08,580.31,555.64,2.0,626.95,Ambiguous Entry Candle,Ambiguous,2026-06-09,-$46.64 / -7.44%,+$71.31 / +11.37%,Review,,0,Top 3 Intraday scanner pick
+2026-06-09,Intraday,2,Highest Priority,IBM,SELL,94,278.87,282.33,271.95,2.0,277.9,Stop Hit First,Stop,2026-06-09,+$4.43 / +1.59%,+$5.95 / +2.14%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-09,Intraday,3,Highest Priority,LOW,SELL,94,207.52,210.3,201.98,2.0,219.59,Pending Trigger,,,-$9.29 / -4.23%,+$17.61 / +8.02%,,,21,Top 3 Intraday scanner pick
+2026-06-08,Intraday,1,Highest Priority,V,SELL,94,318.56,321.93,311.82,2.0,341.69,Stop Hit First,Stop,2026-06-09,-$19.76 / -5.78%,+$29.87 / +8.74%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-08,Swing,1,Highest Priority,UNH,BUY,94,404.85,372.74,469.07,2.0,419.82,Active After Trigger,,,+$47.08 / +11.21%,+$49.25 / +11.73%,,,22,Top 3 Swing scanner pick
+2026-06-08,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,539.56,Stop Hit First,Stop,2026-06-11,-$60.15 / -11.15%,+$105.60 / +19.57%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-06-08,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1032.85,Stop Hit First,Stop,2026-06-09,-$116.39 / -11.27%,+$159.88 / +15.48%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-08,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.96,Stop Hit First,Stop,2026-06-08,+$14.66 / +14.66%,-$5.77 / -5.77%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-06-07,Swing,1,Highest Priority,UNH,BUY,94,404.85,372.74,469.07,2.0,419.82,Active After Trigger,,,+$47.08 / +11.21%,+$49.25 / +11.73%,,,23,Top 3 Swing scanner pick
+2026-06-07,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,539.56,Stop Hit First,Stop,2026-06-11,-$60.15 / -11.15%,+$105.60 / +19.57%,Loss,-1,4,Top 3 Intraday scanner pick
+2026-06-07,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1032.85,Stop Hit First,Stop,2026-06-09,-$116.39 / -11.27%,+$159.88 / +15.48%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-06-07,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.96,Stop Hit First,Stop,2026-06-08,+$14.66 / +14.66%,-$5.77 / -5.77%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-06,Swing,1,Highest Priority,UNH,BUY,94,404.81,372.74,468.95,2.0,419.82,Active After Trigger,,,+$47.08 / +11.21%,+$49.13 / +11.70%,,,24,Top 3 Swing scanner pick
+2026-06-06,Intraday,1,Highest Priority,AMD,SELL,94,464.26,479.41,433.96,2.0,539.56,Stop Hit First,Stop,2026-06-11,-$60.15 / -11.15%,+$105.60 / +19.57%,Loss,-1,5,Top 3 Intraday scanner pick
+2026-06-06,Intraday,2,Highest Priority,CAT,SELL,94,901.96,916.46,872.97,2.0,1032.85,Stop Hit First,Stop,2026-06-09,-$116.39 / -11.27%,+$159.88 / +15.48%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-06-06,Intraday,3,Highest Priority,NOW,SELL,94,111.66,114.62,105.73,2.0,99.96,Stop Hit First,Stop,2026-06-08,+$14.66 / +14.66%,-$5.77 / -5.77%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-06-05,Swing,1,Highest Priority,MRK,BUY,94,120.79,111.42,139.53,2.0,129.38,Active After Trigger,,,+$17.96 / +13.88%,+$10.15 / +7.85%,,,25,Top 3 Swing scanner pick
+2026-06-05,Intraday,1,Highest Priority,SLB,BUY,94,58.24,57.36,60.0,2.0,46.36,Pending Trigger,,,-$11.00 / -23.73%,+$13.64 / +29.42%,,,25,Top 3 Intraday scanner pick
+2026-06-03,Intraday,1,Highest Priority,HON,BUY,92,236.49,232.66,244.15,2.0,227.71,Ambiguous Entry Candle,Ambiguous,2026-06-03,-$4.95 / -2.17%,+$16.44 / +7.22%,Review,,0,Top 3 Intraday scanner pick
+2026-06-02,Intraday,3,Highest Priority,UPS,BUY,94,109.77,107.8,113.71,2.0,107.97,Stop Hit First,Stop,2026-06-08,+$0.17 / +0.16%,+$5.74 / +5.31%,Loss,-1,6,Top 3 Intraday scanner pick
+2026-06-02,Intraday,1,Highest Priority,NOW,BUY,94,136.92,134.11,142.56,2.0,99.96,Pending Trigger,,,-$34.15 / -34.16%,+$42.60 / +42.61%,,,28,Top 3 Intraday scanner pick
+2026-06-02,Intraday,2,Highest Priority,NVDA,BUY,94,224.88,221.18,232.29,2.0,194.9,Stop Hit First,Stop,2026-06-03,-$26.28 / -13.48%,+$37.39 / +19.18%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-02,Intraday,3,Highest Priority,ORCL,BUY,94,249.81,242.82,263.8,2.0,147.79,Pending Trigger,,,-$95.03 / -64.30%,+$116.01 / +78.50%,,,28,Top 3 Intraday scanner pick
+2026-06-01,Intraday,1,Highest Priority,ADBE,BUY,94,261.15,254.55,274.35,2.0,206.45,Target Hit First,Target,2026-06-01,-$48.10 / -23.30%,+$67.90 / +32.89%,Win,2.0,0,Top 3 Intraday scanner pick
+2026-06-01,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.96,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.92 / -21.92%,+$31.16 / +31.17%,Review,,0,Top 3 Intraday scanner pick
+2026-05-31,Intraday,1,Highest Priority,ADBE,BUY,94,261.15,254.55,274.35,2.0,206.45,Target Hit First,Target,2026-06-01,-$48.10 / -23.30%,+$67.90 / +32.89%,Win,2.0,1,Top 3 Intraday scanner pick
+2026-05-31,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.96,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.92 / -21.92%,+$31.16 / +31.17%,Review,,1,Top 3 Intraday scanner pick
+2026-05-30,Intraday,2,Highest Priority,NOW,BUY,94,124.96,121.88,131.12,2.0,99.96,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$21.92 / -21.92%,+$31.16 / +31.17%,Review,,2,Top 3 Intraday scanner pick
+2026-05-30,Intraday,1,Highest Priority,ADBE,BUY,94,258.91,254.58,267.57,2.0,206.45,Ambiguous Entry Candle,Ambiguous,2026-06-01,-$48.13 / -23.31%,+$61.12 / +29.61%,Review,,2,Top 3 Intraday scanner pick
+2026-05-29,Intraday,1,Highest Priority,BA,BUY,94,231.69,227.92,239.23,2.0,214.64,Stop Hit First,Stop,2026-06-01,-$13.28 / -6.19%,+$24.59 / +11.46%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-05-29,Intraday,2,Highest Priority,WFC,BUY,94,77.56,76.93,78.82,2.0,83.49,Stop Hit First,Stop,2026-06-01,+$6.56 / +7.86%,-$4.67 / -5.59%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-05-29,Intraday,1,Highest Priority,INTC,BUY,94,122.95,119.88,129.09,2.0,131.71,Stop Hit First,Stop,2026-05-29,+$11.83 / +8.98%,-$2.62 / -1.99%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-29,Intraday,2,Highest Priority,NVDA,BUY,92,216.86,212.66,225.27,2.0,194.9,Stop Hit First,Stop,2026-05-29,-$17.76 / -9.11%,+$30.37 / +15.58%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-29,Intraday,1,Highest Priority,DE,BUY,94,540.72,536.01,550.13,2.0,626.95,Ambiguous Entry Candle,Ambiguous,2026-05-29,+$90.94 / +14.51%,-$76.82 / -12.25%,Review,,0,Top 3 Intraday scanner pick
+2026-05-29,Intraday,2,Highest Priority,DHR,BUY,94,180.96,178.68,185.51,2.0,192.83,Stop Hit First,Stop,2026-06-02,+$14.15 / +7.34%,-$7.32 / -3.80%,Loss,-1,4,Top 3 Intraday scanner pick
+2026-05-29,Intraday,3,Highest Priority,NVDA,BUY,94,214.92,212.81,219.14,2.0,194.9,Ambiguous Entry Candle,Ambiguous,2026-05-29,-$17.91 / -9.19%,+$24.24 / +12.44%,Review,,0,Top 3 Intraday scanner pick
+2026-05-28,Intraday,1,Highest Priority,BA,BUY,94,226.03,221.51,235.07,2.0,214.64,Stop Hit First,Stop,2026-06-02,-$6.87 / -3.20%,+$20.43 / +9.52%,Loss,-1,5,Top 3 Intraday scanner pick
+2026-05-28,Intraday,2,Highest Priority,CAT,BUY,94,913.49,902.38,935.72,2.0,1032.85,Target Hit First,Target,2026-06-03,+$130.47 / +12.63%,-$97.13 / -9.40%,Win,2.0,6,Top 3 Intraday scanner pick
+2026-05-28,Intraday,3,Highest Priority,GE,BUY,94,319.51,315.06,328.4,2.0,373.55,Ambiguous Entry Candle,Ambiguous,2026-05-28,+$58.49 / +15.66%,-$45.15 / -12.09%,Review,,0,Top 3 Intraday scanner pick
+2026-05-27,Intraday,1,Highest Priority,BA,SELL,94,218.25,219.82,215.13,2.0,214.64,Target Hit First,Target,2026-06-02,+$5.18 / +2.41%,-$0.49 / -0.23%,Win,2.0,6,Top 3 Intraday scanner pick
+2026-05-26,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,227.71,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$0.49 / +0.22%,+$4.54 / +1.99%,Review,,0,Top 3 Intraday scanner pick
+2026-05-26,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.38,Stop Hit First,Stop,2026-05-26,+$8.03 / +6.21%,-$3.42 / -2.65%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-26,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.96,Stop Hit First,Stop,2026-05-26,-$1.16 / -1.16%,+$5.04 / +5.04%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-25,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,227.71,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$0.49 / +0.22%,+$4.54 / +1.99%,Review,,1,Top 3 Intraday scanner pick
+2026-05-25,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.38,Stop Hit First,Stop,2026-05-26,+$8.03 / +6.21%,-$3.42 / -2.65%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-05-25,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.96,Stop Hit First,Stop,2026-05-26,-$1.16 / -1.16%,+$5.04 / +5.04%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-05-24,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,227.71,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$0.49 / +0.22%,+$4.54 / +1.99%,Review,,2,Top 3 Intraday scanner pick
+2026-05-24,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.38,Stop Hit First,Stop,2026-05-26,+$8.03 / +6.21%,-$3.42 / -2.65%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-05-24,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.96,Stop Hit First,Stop,2026-05-26,-$1.16 / -1.16%,+$5.04 / +5.04%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-05-23,Intraday,1,Highest Priority,HON,BUY,94,228.9,227.22,232.25,2.0,227.71,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$0.49 / +0.22%,+$4.54 / +1.99%,Review,,3,Top 3 Intraday scanner pick
+2026-05-23,Intraday,2,Highest Priority,MRK,BUY,94,122.88,121.34,125.95,2.0,129.38,Stop Hit First,Stop,2026-05-26,+$8.03 / +6.21%,-$3.42 / -2.65%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-05-23,Intraday,3,Highest Priority,NOW,BUY,94,102.41,101.12,105.0,2.0,99.96,Stop Hit First,Stop,2026-05-26,-$1.16 / -1.16%,+$5.04 / +5.04%,Loss,-1,3,Top 3 Intraday scanner pick
+2026-05-22,Intraday,1,Highest Priority,INTC,BUY,94,118.95,116.78,123.28,2.0,131.71,Target Hit First,Target,2026-05-26,+$14.93 / +11.34%,-$8.43 / -6.40%,Win,2.0,4,Top 3 Intraday scanner pick
+2026-05-22,Intraday,2,Highest Priority,NKE,BUY,94,44.51,43.84,45.85,2.0,41.47,Target Hit First,Target,2026-05-27,-$2.37 / -5.71%,+$4.38 / +10.56%,Win,2.0,5,Top 3 Intraday scanner pick
+2026-05-21,Swing,2,Highest Priority,RTX,SELL,92,172.65,180.69,156.57,2.0,187.33,Stop Hit First,Stop,2026-06-05,-$6.64 / -3.54%,+$30.76 / +16.42%,Loss,-1,15,Top 3 Swing scanner pick
+2026-05-21,Swing,1,Highest Priority,SCHW,SELL,94,89.55,93.87,80.9,2.0,90.55,Stop Hit First,Stop,2026-06-17,+$3.32 / +3.67%,+$9.65 / +10.66%,Loss,-1,27,Top 3 Swing scanner pick
+2026-05-21,Intraday,1,Highest Priority,GE,BUY,94,301.05,297.63,307.9,2.0,373.55,Target Hit First,Target,2026-05-26,+$75.92 / +20.32%,-$65.65 / -17.57%,Win,2.0,5,Top 3 Intraday scanner pick
+2026-05-21,Intraday,2,Highest Priority,MS,BUY,94,198.28,196.75,201.33,2.0,211.76,Target Hit First,Target,2026-05-22,+$15.01 / +7.09%,-$10.43 / -4.93%,Win,2.0,1,Top 3 Intraday scanner pick
+2026-05-21,Intraday,3,Highest Priority,MSFT,BUY,94,422.92,417.57,433.64,2.0,368.5,Stop Hit First,Stop,2026-05-21,-$49.07 / -13.32%,+$65.14 / +17.68%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-20,Swing,1,Highest Priority,ISRG,SELL,94,435.52,464.98,376.6,2.0,405.97,Active After Trigger,,,+$59.01 / +14.54%,+$29.37 / +7.23%,,,41,Top 3 Swing scanner pick
+2026-05-20,Intraday,1,Highest Priority,AXP,SELL,94,307.84,310.99,301.55,2.0,340.79,Stop Hit First,Stop,2026-05-22,-$29.80 / -8.74%,+$39.24 / +11.51%,Loss,-1,2,Top 3 Intraday scanner pick
+2026-05-20,Intraday,2,Highest Priority,INTC,BUY,94,111.28,109.68,114.49,2.0,131.71,Ambiguous Entry Candle,Ambiguous,2026-05-20,+$22.03 / +16.73%,-$17.22 / -13.07%,Review,,0,Top 3 Intraday scanner pick
+2026-05-20,Intraday,3,Highest Priority,LLY,BUY,94,1023.7,1009.44,1052.23,2.0,1229.05,Stop Hit First,Stop,2026-05-20,+$219.61 / +17.87%,-$176.82 / -14.39%,Loss,-1,0,Top 3 Intraday scanner pick
+2026-05-19,Intraday,1,Highest Priority,CVX,BUY,94,196.59,194.33,201.12,2.0,168.42,Stop Hit First,Stop,2026-05-20,-$25.91 / -15.38%,+$32.70 / +19.42%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-05-19,Intraday,2,Highest Priority,GOOG,SELL,94,391.41,399.57,375.07,2.0,351.08,Target Hit First,Target,2026-05-29,+$48.49 / +13.81%,-$23.99 / -6.83%,Win,2.0,10,Top 3 Intraday scanner pick
+2026-05-19,Intraday,3,Highest Priority,GOOGL,SELL,94,395.12,403.12,379.11,2.0,353.47,Target Hit First,Target,2026-05-29,+$49.65 / +14.05%,-$25.64 / -7.25%,Win,2.0,10,Top 3 Intraday scanner pick
+2026-05-18,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,373.55,Pending Trigger,,,-$90.01 / -24.10%,+$98.21 / +26.29%,,,43,Top 3 Intraday scanner pick
+2026-05-18,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,405.89,Target Hit First,Target,2026-06-02,+$22.31 / +5.50%,+$2.96 / +0.73%,Win,2.0,15,Top 3 Intraday scanner pick
+2026-05-18,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1145.31,Target Hit First,Target,2026-05-18,-$397.89 / -34.74%,+$474.14 / +41.40%,Win,2.0,0,Top 3 Intraday scanner pick
+2026-05-17,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,373.55,Pending Trigger,,,-$90.01 / -24.10%,+$98.21 / +26.29%,,,44,Top 3 Intraday scanner pick
+2026-05-17,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,405.89,Target Hit First,Target,2026-06-02,+$22.31 / +5.50%,+$2.96 / +0.73%,Win,2.0,16,Top 3 Intraday scanner pick
+2026-05-17,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1145.31,Target Hit First,Target,2026-05-18,-$397.89 / -34.74%,+$474.14 / +41.40%,Win,2.0,1,Top 3 Intraday scanner pick
+2026-05-16,Intraday,1,Highest Priority,GE,SELL,94,280.81,283.54,275.34,2.0,373.55,Pending Trigger,,,-$90.01 / -24.10%,+$98.21 / +26.29%,,,45,Top 3 Intraday scanner pick
+2026-05-16,Intraday,2,Highest Priority,ISRG,SELL,94,419.78,428.2,402.93,2.0,405.89,Target Hit First,Target,2026-06-02,+$22.31 / +5.50%,+$2.96 / +0.73%,Win,2.0,17,Top 3 Intraday scanner pick
+2026-05-16,Intraday,3,Highest Priority,MU,SELL,94,722.0,747.42,671.17,2.0,1145.31,Target Hit First,Target,2026-05-18,-$397.89 / -34.74%,+$474.14 / +41.40%,Win,2.0,2,Top 3 Intraday scanner pick
+2026-05-15,Intraday,1,Highest Priority,CAT,BUY,94,922.19,909.44,947.69,2.0,1032.85,Stop Hit First,Stop,2026-06-04,+$123.41 / +11.95%,-$85.16 / -8.25%,Loss,-1,20,Top 3 Intraday scanner pick
+2026-05-15,Intraday,2,Highest Priority,COST,BUY,94,1043.85,1032.5,1066.56,2.0,946.3,Target Hit First,Target,2026-05-18,-$86.20 / -9.11%,+$120.26 / +12.71%,Win,2.0,3,Top 3 Intraday scanner pick
+2026-05-15,Intraday,3,Highest Priority,GOOGL,BUY,94,401.95,398.57,408.71,2.0,353.47,Ambiguous Entry Candle,Ambiguous,2026-05-18,-$45.10 / -12.76%,+$55.24 / +15.63%,Review,,3,Top 3 Intraday scanner pick
+2026-05-14,Swing,1,Highest Priority,AMZN,BUY,94,271.26,261.74,290.3,2.0,240.14,Stop Hit First,Stop,2026-06-01,-$21.60 / -8.99%,+$50.16 / +20.89%,Loss,-1,18,Top 3 Swing scanner pick · Fallback
+2026-05-14,Swing,2,Highest Priority,AVGO,BUY,94,419.47,401.52,455.36,2.0,372.45,Target Hit First,Target,2026-06-01,-$29.07 / -7.81%,+$82.91 / +22.26%,Win,2.0,18,Top 3 Swing scanner pick · Fallback
+2026-05-14,Swing,3,Highest Priority,LLY,BUY,94,1024.87,939.1,1196.39,2.0,1229.93,Target Hit First,Target,2026-06-26,+$290.83 / +23.65%,-$33.54 / -2.73%,Win,2.0,43,Top 3 Swing scanner pick · Fallback
+2026-05-14,Intraday,1,Highest Priority,AMZN,BUY,94,271.26,268.89,276.0,2.0,240.12,Stop Hit First,Stop,2026-05-28,-$28.77 / -11.98%,+$35.88 / +14.94%,Loss,-1,14,Top 3 Intraday scanner pick
+2026-05-14,Intraday,2,Highest Priority,GOOGL,BUY,94,404.16,400.7,411.06,2.0,353.47,Ambiguous Entry Candle,Ambiguous,2026-05-18,-$47.23 / -13.36%,+$57.59 / +16.29%,Review,,4,Top 3 Intraday scanner pick
+2026-05-14,Intraday,3,Highest Priority,LLY,BUY,94,1019.14,1008.99,1039.44,2.0,1229.05,Stop Hit First,Stop,2026-05-20,+$220.06 / +17.90%,-$189.61 / -15.43%,Loss,-1,6,Top 3 Intraday scanner pick
+2026-05-13,Intraday,1,Highest Priority,ADBE,SELL,94,240.22,242.85,234.96,2.0,206.45,Ambiguous Entry Candle,Ambiguous,2026-05-26,+$36.40 / +17.63%,-$28.51 / -13.81%,Review,,13,Top 3 Intraday scanner pick
+2026-05-13,Intraday,2,Highest Priority,DHR,SELL,94,165.92,167.39,162.96,2.0,192.83,Target Hit First,Target,2026-05-15,-$25.44 / -13.19%,+$29.87 / +15.49%,Win,2.0,2,Top 3 Intraday scanner pick
+2026-05-13,Intraday,3,Highest Priority,IBM,SELL,94,218.83,220.95,214.59,2.0,277.9,Stop Hit First,Stop,2026-05-18,-$56.95 / -20.49%,+$63.31 / +22.78%,Loss,-1,5,Top 3 Intraday scanner pick
+2026-05-13,Intraday,1,Highest Priority,MCD,SELL,94,274.56,278.54,266.6,2.0,267.2,Stop Hit First,Stop,2026-06-05,+$11.34 / +4.24%,+$0.60 / +0.22%,Loss,-1,23,Top 3 Intraday scanner pick
+2026-05-12,Intraday,1,Highest Priority,INTC,BUY,94,130.26,125.18,140.42,2.0,131.71,Stop Hit First,Stop,2026-06-16,+$6.53 / +4.96%,+$8.71 / +6.61%,Loss,-1,35,Top 3 Intraday scanner pick
+2026-05-12,Intraday,2,Highest Priority,TSLA,BUY,94,446.69,437.33,465.42,2.0,411.79,Pending Trigger,,,-$25.54 / -6.20%,+$53.63 / +13.02%,,,49,Top 3 Intraday scanner pick
+2026-05-11,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1145.31,Stop Hit First,Stop,2026-05-15,+$418.98 / +36.58%,-$351.85 / -30.72%,Loss,-1,4,Top 3 Intraday scanner pick
+2026-05-10,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1145.31,Stop Hit First,Stop,2026-05-15,+$418.98 / +36.58%,-$351.85 / -30.72%,Loss,-1,5,Top 3 Intraday scanner pick
+2026-05-09,Intraday,1,Highest Priority,MU,BUY,94,748.7,726.33,793.46,2.0,1145.31,Stop Hit First,Stop,2026-05-15,+$418.98 / +36.58%,-$351.85 / -30.72%,Loss,-1,6,Top 3 Intraday scanner pick
+2026-05-08,Intraday,1,Highest Priority,AVGO,SELL,94,411.49,418.42,397.61,2.0,372.44,Stop Hit First,Stop,2026-05-20,+$45.98 / +12.35%,-$25.17 / -6.76%,Loss,-1,12,Top 3 Intraday scanner pick
+2026-05-08,Intraday,2,Highest Priority,CAT,SELL,94,891.32,901.98,870.02,2.0,1032.85,Target Hit First,Target,2026-05-18,-$130.87 / -12.67%,+$162.83 / +15.77%,Win,2.0,10,Top 3 Intraday scanner pick
+2026-05-08,Intraday,3,Highest Priority,DHR,BUY,94,176.08,173.29,181.67,2.0,192.83,Stop Hit First,Stop,2026-05-27,+$19.54 / +10.13%,-$11.16 / -5.79%,Loss,-1,19,Top 3 Intraday scanner pick
+2026-05-08,Intraday,1,Highest Priority,CAT,SELL,94,891.32,901.98,870.02,2.0,1032.85,Target Hit First,Target,2026-05-18,-$130.87 / -12.67%,+$162.83 / +15.77%,Win,2.0,10,Top 3 Intraday scanner pick
+2026-05-08,Intraday,2,Highest Priority,TMO,BUY,94,475.63,467.92,491.04,2.0,506.24,Target Hit First,Target,2026-05-29,+$38.32 / +7.57%,-$15.20 / -3.00%,Win,2.0,21,Top 3 Intraday scanner pick
+2026-05-07,Swing,1,Highest Priority,MS,BUY,94,195.22,184.1,217.46,2.0,211.72,Target Hit First,Target,2026-06-04,+$27.62 / +13.05%,+$5.74 / +2.71%,Win,2.0,28,Top 3 Swing scanner pick
+2026-05-07,Swing,2,Highest Priority,NVDA,BUY,94,208.68,193.36,239.33,2.0,194.97,Stop Hit First,Stop,2026-06-25,+$1.61 / +0.83%,+$44.36 / +22.75%,Loss,-1,49,Top 3 Swing scanner pick
+2026-05-07,Intraday,2,Highest Priority,ORCL,BUY,94,194.68,190.91,202.22,2.0,147.79,Stop Hit First,Stop,2026-05-18,-$43.12 / -29.18%,+$54.43 / +36.83%,Loss,-1,11,Top 3 Intraday scanner pick
+2026-05-07,Swing,1,Highest Priority,NVDA,BUY,94,208.68,193.36,239.33,2.0,194.97,Stop Hit First,Stop,2026-06-25,+$1.61 / +0.83%,+$44.36 / +22.75%,Loss,-1,49,Top 3 Swing scanner pick
+2026-05-07,Intraday,1,Highest Priority,AMD,BUY,94,422.81,410.63,447.17,2.0,539.56,Stop Hit First,Stop,2026-05-19,+$128.93 / +23.90%,-$92.39 / -17.12%,Loss,-1,12,Top 3 Intraday scanner pick
+2026-05-07,Intraday,2,Highest Priority,NVDA,BUY,94,208.68,204.3,217.44,2.0,194.9,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$9.40 / -4.82%,+$22.54 / +11.56%,Review,,8,Top 3 Intraday scanner pick
+2026-05-07,Intraday,3,Highest Priority,ORCL,BUY,94,194.68,190.91,202.22,2.0,147.79,Stop Hit First,Stop,2026-05-18,-$43.12 / -29.18%,+$54.43 / +36.83%,Loss,-1,11,Top 3 Intraday scanner pick
+2026-05-06,Intraday,1,Highest Priority,AMD,BUY,94,357.06,352.31,366.57,2.0,539.56,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$187.25 / +34.70%,-$172.99 / -32.06%,Review,,9,Top 3 Intraday scanner pick
+2026-05-06,Intraday,2,Highest Priority,NOW,BUY,94,92.25,90.67,95.42,2.0,99.96,Target Hit First,Target,2026-05-15,+$9.29 / +9.30%,-$4.54 / -4.55%,Win,2.0,9,Top 3 Intraday scanner pick
+2026-05-06,Intraday,3,Highest Priority,ORCL,BUY,94,186.57,182.55,194.62,2.0,147.79,Target Hit First,Target,2026-05-15,-$34.76 / -23.52%,+$46.83 / +31.69%,Win,2.0,9,Top 3 Intraday scanner pick
+2026-05-06,Intraday,1,Highest Priority,NOW,BUY,94,92.25,90.67,95.42,2.0,99.96,Target Hit First,Target,2026-05-15,+$9.29 / +9.30%,-$4.54 / -4.55%,Win,2.0,9,Top 3 Intraday scanner pick
+2026-05-06,Intraday,2,Highest Priority,ORCL,BUY,92,186.57,182.55,194.62,2.0,147.79,Target Hit First,Target,2026-05-15,-$34.76 / -23.52%,+$46.83 / +31.69%,Win,2.0,9,Top 3 Intraday scanner pick
+2026-05-05,Intraday,1,Highest Priority,HD,SELL,94,311.64,315.21,304.49,2.0,350.65,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$35.44 / -10.11%,+$46.16 / +13.16%,Review,,10,Top 3 Intraday scanner pick
+2026-05-05,Intraday,2,Highest Priority,NKE,SELL,94,43.0,43.5,42.01,2.0,41.47,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$2.03 / +4.90%,-$0.54 / -1.30%,Review,,10,Top 3 Intraday scanner pick
+2026-05-05,Intraday,3,Highest Priority,TGT,SELL,94,127.12,128.77,123.81,2.0,133.91,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$5.14 / -3.84%,+$10.10 / +7.54%,Review,,10,Top 3 Intraday scanner pick
+2026-05-05,Intraday,1,Low Priority,ABT,SELL,80,87.2,87.48,86.49,2.5,92.7,Ambiguous Entry Candle,Ambiguous,2026-05-15,-$5.22 / -5.63%,+$6.21 / +6.70%,Review,,10,Top 3 Intraday scanner pick
+2026-05-05,Intraday,2,Low Priority,BA,SELL,80,220.6,221.53,218.27,2.5,214.64,Ambiguous Entry Candle,Ambiguous,2026-05-15,+$6.89 / +3.21%,-$3.63 / -1.69%,Review,,10,Top 3 Intraday scanner pick
+2026-05-05,Intraday,3,Low Priority,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,949.57,Ambiguous Entry Candle,Ambiguous,2026-05-19,+$103.42 / +10.89%,-$91.82 / -9.67%,Review,,14,Top 3 Intraday scanner pick
+2026-05-05,Swing,1,Highest Priority,ORCL,BUY,91,183.87,171.39,215.06,2.5,147.76,Target Hit First,Target,2026-05-29,-$23.63 / -15.99%,+$67.30 / +45.55%,Win,2.0,24,Top 3 Swing scanner pick
 2026-05-05,Legacy,1,Low Priority,ABT,SELL,80,87.2,87.48,86.49,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
 2026-05-05,Legacy,2,Low Priority,BA,SELL,80,220.6,221.53,218.27,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
 2026-05-05,Legacy,3,Low Priority,BLK,SELL,80,1049.68,1052.99,1041.39,2.5,,Pending Trigger,,,,,,,0,Top 3 scanner pick
