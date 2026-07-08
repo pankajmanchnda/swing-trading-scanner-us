@@ -1,4 +1,5 @@
 Date,Mode,Rank,Priority,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Price,Status,First Hit,Hit Date,Stop Away,Target Away,Result,R,Days,Notes
+2026-07-09,Swing,1,Highest Priority,V,BUY,94,352.25,325.48,405.8,2.0,347.53,Pending Trigger,,,+$22.05 / +6.34%,+$58.27 / +16.77%,,,0,Top 3 Swing scanner pick
 2026-07-09,Intraday,1,Highest Priority,ABBV,SELL,94,251.81,254.48,246.46,2.0,252.61,Pending Trigger,,,+$1.87 / +0.74%,+$6.15 / +2.43%,,,0,Top 3 Intraday scanner pick
 2026-07-09,Intraday,2,Highest Priority,AXP,SELL,94,334.14,338.81,324.81,2.0,336.35,Pending Trigger,,,+$2.46 / +0.73%,+$11.54 / +3.43%,,,0,Top 3 Intraday scanner pick
 2026-07-09,Intraday,3,Highest Priority,QCOM,BUY,94,187.48,184.34,193.78,2.0,186.54,Pending Trigger,,,+$2.20 / +1.18%,+$7.24 / +3.88%,,,0,Top 3 Intraday scanner pick
@@ -55,7 +56,7 @@ Date,Mode,Rank,Priority,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Pri
 2026-06-26,Intraday,3,Highest Priority,BLK,SELL,94,967.68,979.16,944.72,2.0,990.33,Stop Hit First,Stop,2026-06-26,-$11.17 / -1.13%,+$45.61 / +4.61%,Loss,-1,0,Top 3 Intraday scanner pick
 2026-06-25,Intraday,1,Highest Priority,GE,BUY,94,373.25,362.86,394.01,2.0,355.95,Stop Hit First,Stop,2026-07-08,-$6.91 / -1.94%,+$38.06 / +10.69%,Loss,-1,13,Top 3 Intraday scanner pick
 2026-06-25,Intraday,2,Highest Priority,JPM,BUY,94,337.07,331.67,347.88,2.0,330.52,Stop Hit First,Stop,2026-06-26,-$1.15 / -0.35%,+$17.36 / +5.25%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,393.87,Stop Hit First,Stop,2026-06-26,-$15.01 / -3.81%,+$32.13 / +8.16%,Loss,-1,1,Top 3 Intraday scanner pick
+2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,393.87,Ambiguous Entry Candle,Ambiguous,2026-06-25,-$15.01 / -3.81%,+$32.13 / +8.16%,Review,,0,Top 3 Intraday scanner pick
 2026-06-25,Intraday,1,Highest Priority,GOOG,SELL,94,342.5,349.27,328.97,2.0,358.6,Stop Hit First,Stop,2026-06-29,-$9.33 / -2.60%,+$29.63 / +8.26%,Loss,-1,4,Top 3 Intraday scanner pick
 2026-06-25,Intraday,2,Highest Priority,PFE,SELL,94,23.98,24.21,23.52,2.0,24.04,Stop Hit First,Stop,2026-06-26,+$0.17 / +0.71%,+$0.52 / +2.16%,Loss,-1,1,Top 3 Intraday scanner pick
 2026-06-24,Swing,1,Highest Priority,PFE,SELL,94,24.64,26.59,20.74,2.0,24.05,Active After Trigger,,,+$2.54 / +10.56%,+$3.31 / +13.76%,,,15,Top 3 Swing scanner pick
