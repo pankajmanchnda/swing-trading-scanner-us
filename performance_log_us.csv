@@ -64,7 +64,7 @@ Date,Mode,Rank,Priority,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Pri
 2026-06-26,Intraday,3,Highest Priority,BLK,SELL,94,967.68,979.16,944.72,2.0,1035.98,Stop Hit First,Stop,2026-06-26,-$56.82 / -5.48%,+$91.26 / +8.81%,Loss,-1,0,Top 3 Intraday scanner pick
 2026-06-25,Intraday,1,Highest Priority,GE,BUY,94,373.25,362.86,394.01,2.0,359.3,Stop Hit First,Stop,2026-07-08,-$3.56 / -0.99%,+$34.71 / +9.66%,Loss,-1,13,Top 3 Intraday scanner pick
 2026-06-25,Intraday,2,Highest Priority,JPM,BUY,94,337.07,331.67,347.88,2.0,336.47,Stop Hit First,Stop,2026-06-26,+$4.80 / +1.43%,+$11.41 / +3.39%,Loss,-1,1,Top 3 Intraday scanner pick
-2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,407.74,Ambiguous Entry Candle,Ambiguous,2026-06-25,-$28.88 / -7.08%,+$46.00 / +11.28%,Review,,0,Top 3 Intraday scanner pick
+2026-06-25,Intraday,3,Highest Priority,TSLA,SELL,94,373.15,378.86,361.74,2.0,407.74,Stop Hit First,Stop,2026-06-26,-$28.88 / -7.08%,+$46.00 / +11.28%,Loss,-1,1,Top 3 Intraday scanner pick
 2026-06-25,Intraday,1,Highest Priority,GOOG,SELL,94,342.5,349.27,328.97,2.0,355.04,Stop Hit First,Stop,2026-06-29,-$5.77 / -1.63%,+$26.07 / +7.34%,Loss,-1,4,Top 3 Intraday scanner pick
 2026-06-25,Intraday,2,Highest Priority,PFE,SELL,94,23.98,24.21,23.52,2.0,24.18,Stop Hit First,Stop,2026-06-26,+$0.03 / +0.10%,+$0.66 / +2.75%,Loss,-1,1,Top 3 Intraday scanner pick
 2026-06-24,Swing,1,Highest Priority,PFE,SELL,94,24.64,26.59,20.74,2.0,24.17,Active After Trigger,,,+$2.42 / +10.01%,+$3.43 / +14.19%,,,19,Top 3 Swing scanner pick
