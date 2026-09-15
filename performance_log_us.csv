@@ -311,7 +311,7 @@ Date,Mode,Rank,Priority,Stock,Signal,Conviction,Entry,Stop,Target,RR,Current Pri
 2026-07-03,Intraday,1,Highest Priority,AXP,BUY,94,352.74,348.58,361.07,2.0,327.78,Pending Trigger,,,-$20.80 / -6.35%,+$33.29 / +10.16%,,,74,Top 3 Intraday scanner pick
 2026-07-03,Intraday,2,Highest Priority,COST,BUY,94,954.55,944.89,973.87,2.0,918.81,Stop Hit First,Stop,2026-08-04,-$26.08 / -2.84%,+$55.06 / +5.99%,Loss,-1,32,Top 3 Intraday scanner pick
 2026-07-03,Intraday,3,Highest Priority,HD,BUY,94,358.91,353.86,368.99,2.0,310.87,Pending Trigger,,,-$42.99 / -13.83%,+$58.12 / +18.70%,,,74,Top 3 Intraday scanner pick
-2026-07-03,Intraday,1,Highest Priority,AAPL,BUY,94,310.04,306.65,316.82,2.0,333.05,Stop Hit First,Stop,2026-08-05,+$26.40 / +7.93%,-$16.23 / -4.87%,Loss,-1,33,Top 3 Intraday scanner pick
+2026-07-03,Intraday,1,Highest Priority,AAPL,BUY,94,310.04,306.65,316.82,2.0,333.05,Ambiguous Entry Candle,Ambiguous,2026-08-03,+$26.40 / +7.93%,-$16.23 / -4.87%,Review,,31,Top 3 Intraday scanner pick
 2026-07-03,Intraday,2,Highest Priority,AXP,BUY,94,352.46,348.59,360.2,2.0,327.78,Stop Hit First,Stop,2026-08-05,-$20.81 / -6.35%,+$32.42 / +9.89%,Loss,-1,33,Top 3 Intraday scanner pick
 2026-07-03,Intraday,3,Highest Priority,COST,BUY,94,954.31,944.89,973.17,2.0,918.81,Stop Hit First,Stop,2026-08-04,-$26.08 / -2.84%,+$54.36 / +5.92%,Loss,-1,32,Top 3 Intraday scanner pick
 2026-07-02,Intraday,1,Highest Priority,ABT,SELL,94,91.79,92.72,89.91,2.0,103.1,Pending Trigger,,,-$10.38 / -10.07%,+$13.19 / +12.79%,,,75,Top 3 Intraday scanner pick
