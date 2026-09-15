@@ -271,7 +271,7 @@ h2 {
 <div class="container">
   <h1>USA Swing Trading Scanner</h1>
   <div class="subtitle">
-    Generated on 16 Sep 2026, 12:55:57 AM IST · Build 20260916005557 · SPY benchmark · Swing vs Intraday scanner
+    Generated on 16 Sep 2026, 03:53:29 AM IST · Build 20260916035329 · SPY benchmark · Swing vs Intraday scanner
   </div>
 
   <div class="refresh-panel">
@@ -293,26 +293,54 @@ h2 {
       </div>
 
       <div class="stats">
-        <div class="stat"><span>Total Candidates</span><b>0</b></div>
-        <div class="stat"><span>Highest Priority</span><b>0</b></div>
+        <div class="stat"><span>Total Candidates</span><b>2</b></div>
+        <div class="stat"><span>Highest Priority</span><b>2</b></div>
         <div class="stat"><span>Medium Priority</span><b>0</b></div>
         <div class="stat"><span>Low Priority</span><b>0</b></div>
-        <div class="stat"><span>Best Conviction</span><b>0</b></div>
+        <div class="stat"><span>Best Conviction</span><b>94</b></div>
       </div>
 
       <div class="market">
         <h2>SPY Bias: Mixed</h2>
         <p>US market is mixed/constructive. Scanner will show qualified setups, but entries need stricter confirmation.</p>
         <div class="market-grid">
-          <div>SPY Close<br><b>756.95</b></div>
-          <div>EMA 20<br><b>763.89</b></div>
-          <div>EMA 50<br><b>758.41</b></div>
-          <div>5-Candle Change<br><b>-1.18%</b></div>
+          <div>SPY Close<br><b>757.39</b></div>
+          <div>EMA 20<br><b>763.93</b></div>
+          <div>EMA 50<br><b>758.43</b></div>
+          <div>5-Candle Change<br><b>-1.12%</b></div>
         </div>
       </div>
 
       <h2>Top 3 Setups</h2>
-      <div class="setup-wrap"><p>No fresh qualifying setups in this mode right now. Historical ideas below are from earlier runs and may no longer be valid.</p></div>
+      <div class="setup-wrap">
+        <div class="setup">
+          <h3>EOG — BUY</h3>
+          <p><b>Highest Priority</b> · Score 94</p>
+          <div class="grid">
+            <div>Entry<br><b>154.47</b></div>
+            <div>Stop<br><b>142.11</b></div>
+            <div>Target<br><b>179.18</b></div>
+            <div>Qty<br><b>80</b></div>
+            <div>Value<br><b>$12,357</b></div>
+            <div>RR<br><b>2.0</b></div>
+          </div>
+          <p>Enter only above trigger; prefer candle close confirmation · Confirmed uptrend · Strong relative strength · Healthy RSI · Good volume · Clean swing volatility · Close to trigger · Slightly extended</p>
+        </div>
+        
+        <div class="setup">
+          <h3>TMO — BUY</h3>
+          <p><b>Highest Priority</b> · Score 94</p>
+          <div class="grid">
+            <div>Entry<br><b>643.17</b></div>
+            <div>Stop<br><b>591.82</b></div>
+            <div>Target<br><b>745.89</b></div>
+            <div>Qty<br><b>19</b></div>
+            <div>Value<br><b>$12,220</b></div>
+            <div>RR<br><b>2.0</b></div>
+          </div>
+          <p>Enter only above trigger; prefer candle close confirmation · Confirmed uptrend · Strong relative strength · Healthy RSI · Institutional volume · Clean swing volatility · Close to trigger · Slightly extended</p>
+        </div>
+        </div>
 
       <div class="section">
         <h2>Suggested Investment Criteria</h2>
@@ -328,7 +356,90 @@ h2 {
 
       <div class="section">
         <h2>Scanner Table</h2>
-        <p>No qualifying setups in this mode right now.</p>
+        <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mode</th>
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Grade</th>
+      <th>Close</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>RSI</th>
+      <th>ATR%</th>
+      <th>Vol Ratio</th>
+      <th>RS vs SPY</th>
+      <th>Trigger Distance</th>
+      <th>Extension</th>
+      <th>Risk %</th>
+      <th>Earnings</th>
+      <th>Earnings Date</th>
+      <th>Qty</th>
+      <th>Trade Value</th>
+      <th>Entry Rule</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Swing</td>
+      <td>Highest Priority</td>
+      <td>EOG</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>153.74</td>
+      <td>154.47</td>
+      <td>142.11</td>
+      <td>179.18</td>
+      <td>2.0</td>
+      <td>66.0</td>
+      <td>2.3%</td>
+      <td>1.21</td>
+      <td>10.25</td>
+      <td>0.47%</td>
+      <td>4.58%</td>
+      <td>8.0%</td>
+      <td>Clear</td>
+      <td>2026-11-05</td>
+      <td>80</td>
+      <td>$12,357</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Strong relative strength · Healthy RSI · Good volume · Clean swing volatility · Close to trigger · Slightly extended</td>
+    </tr>
+    <tr>
+      <td>Swing</td>
+      <td>Highest Priority</td>
+      <td>TMO</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>641.39</td>
+      <td>643.17</td>
+      <td>591.82</td>
+      <td>745.89</td>
+      <td>2.0</td>
+      <td>55.7</td>
+      <td>2.34%</td>
+      <td>1.64</td>
+      <td>11.47</td>
+      <td>0.28%</td>
+      <td>5.03%</td>
+      <td>7.98%</td>
+      <td>Clear</td>
+      <td>2026-10-21</td>
+      <td>19</td>
+      <td>$12,220</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Strong relative strength · Healthy RSI · Institutional volume · Clean swing volatility · Close to trigger · Slightly extended</td>
+    </tr>
+  </tbody>
+</table>
       </div>
 
       <div class="section">
@@ -339,7 +450,7 @@ h2 {
     <div class="perf-summary">
       <h3>Highest Priority Performance</h3>
       <div class="perf-grid">
-        <div>Total Ideas<br><b>33</b></div>
+        <div>Total Ideas<br><b>35</b></div>
         <div>Closed Trades<br><b>2</b></div>
         <div>Wins<br><b>0</b></div>
         <div>Losses<br><b>2</b></div>
@@ -377,6 +488,52 @@ h2 {
   </thead>
   <tbody>
     <tr>
+      <td>2026-09-16</td>
+      <td>Swing</td>
+      <td>1</td>
+      <td>Highest Priority</td>
+      <td>EOG</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>154.47</td>
+      <td>142.11</td>
+      <td>179.18</td>
+      <td>2.0</td>
+      <td>153.74</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>+$11.63 / +7.56%</td>
+      <td>+$25.44 / +16.55%</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Swing scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-09-16</td>
+      <td>Swing</td>
+      <td>2</td>
+      <td>Highest Priority</td>
+      <td>TMO</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>643.17</td>
+      <td>591.82</td>
+      <td>745.89</td>
+      <td>2.0</td>
+      <td>641.39</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>+$49.57 / +7.73%</td>
+      <td>+$104.50 / +16.29%</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Swing scanner pick</td>
+    </tr>
+    <tr>
       <td>2026-09-15</td>
       <td>Swing</td>
       <td>1</td>
@@ -388,12 +545,12 @@ h2 {
       <td>1048.74</td>
       <td>833.43</td>
       <td>2.0</td>
-      <td>974.55</td>
+      <td>976.67</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$74.19 / +7.61%</td>
-      <td>+$141.12 / +14.48%</td>
+      <td>+$72.07 / +7.38%</td>
+      <td>+$143.24 / +14.67%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -411,12 +568,12 @@ h2 {
       <td>483.91</td>
       <td>565.04</td>
       <td>2.0</td>
-      <td>496.43</td>
+      <td>497.12</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$12.52 / +2.52%</td>
-      <td>+$68.61 / +13.82%</td>
+      <td>+$13.21 / +2.66%</td>
+      <td>+$67.92 / +13.66%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -434,12 +591,12 @@ h2 {
       <td>307.9</td>
       <td>366.39</td>
       <td>2.0</td>
-      <td>330.15</td>
+      <td>331.34</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$22.25 / +6.74%</td>
-      <td>+$36.24 / +10.98%</td>
+      <td>+$23.44 / +7.07%</td>
+      <td>+$35.05 / +10.58%</td>
       <td></td>
       <td></td>
       <td>4</td>
@@ -457,12 +614,12 @@ h2 {
       <td>967.77</td>
       <td>754.36</td>
       <td>2.0</td>
-      <td>903.48</td>
+      <td>901.35</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$64.29 / +7.12%</td>
-      <td>+$149.12 / +16.51%</td>
+      <td>+$66.42 / +7.37%</td>
+      <td>+$146.99 / +16.31%</td>
       <td></td>
       <td></td>
       <td>5</td>
@@ -480,12 +637,12 @@ h2 {
       <td>346.77</td>
       <td>281.39</td>
       <td>2.0</td>
-      <td>340.5</td>
+      <td>341.43</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$6.27 / +1.84%</td>
-      <td>+$59.11 / +17.36%</td>
+      <td>+$5.34 / +1.56%</td>
+      <td>+$60.04 / +17.58%</td>
       <td></td>
       <td></td>
       <td>5</td>
@@ -503,12 +660,12 @@ h2 {
       <td>350.55</td>
       <td>280.64</td>
       <td>2.0</td>
-      <td>343.93</td>
+      <td>344.98</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$6.62 / +1.92%</td>
-      <td>+$63.29 / +18.40%</td>
+      <td>+$5.57 / +1.61%</td>
+      <td>+$64.34 / +18.65%</td>
       <td></td>
       <td></td>
       <td>5</td>
@@ -526,12 +683,12 @@ h2 {
       <td>307.91</td>
       <td>363.17</td>
       <td>2.0</td>
-      <td>330.15</td>
+      <td>331.34</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$22.24 / +6.74%</td>
-      <td>+$33.02 / +10.00%</td>
+      <td>+$23.43 / +7.07%</td>
+      <td>+$31.83 / +9.61%</td>
       <td></td>
       <td></td>
       <td>5</td>
@@ -549,12 +706,12 @@ h2 {
       <td>339.88</td>
       <td>286.24</td>
       <td>2.0</td>
-      <td>324.86</td>
+      <td>324.43</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$15.02 / +4.62%</td>
-      <td>+$38.62 / +11.89%</td>
+      <td>+$15.45 / +4.76%</td>
+      <td>+$38.19 / +11.77%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -572,12 +729,12 @@ h2 {
       <td>972.53</td>
       <td>767.81</td>
       <td>2.0</td>
-      <td>903.48</td>
+      <td>901.35</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$69.05 / +7.64%</td>
-      <td>+$135.67 / +15.02%</td>
+      <td>+$71.18 / +7.90%</td>
+      <td>+$133.54 / +14.82%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -595,12 +752,12 @@ h2 {
       <td>40.08</td>
       <td>33.31</td>
       <td>2.0</td>
-      <td>36.38</td>
+      <td>36.22</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$3.70 / +10.16%</td>
-      <td>+$3.07 / +8.45%</td>
+      <td>+$3.86 / +10.66%</td>
+      <td>+$2.91 / +8.03%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -618,12 +775,12 @@ h2 {
       <td>967.77</td>
       <td>754.36</td>
       <td>2.0</td>
-      <td>903.48</td>
+      <td>901.35</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$64.29 / +7.12%</td>
-      <td>+$149.12 / +16.51%</td>
+      <td>+$66.42 / +7.37%</td>
+      <td>+$146.99 / +16.31%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -641,12 +798,12 @@ h2 {
       <td>346.77</td>
       <td>281.39</td>
       <td>2.0</td>
-      <td>340.5</td>
+      <td>341.43</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$6.27 / +1.84%</td>
-      <td>+$59.11 / +17.36%</td>
+      <td>+$5.34 / +1.56%</td>
+      <td>+$60.04 / +17.58%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -664,12 +821,12 @@ h2 {
       <td>350.55</td>
       <td>280.64</td>
       <td>2.0</td>
-      <td>343.93</td>
+      <td>344.98</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$6.62 / +1.92%</td>
-      <td>+$63.29 / +18.40%</td>
+      <td>+$5.57 / +1.61%</td>
+      <td>+$64.34 / +18.65%</td>
       <td></td>
       <td></td>
       <td>6</td>
@@ -687,12 +844,12 @@ h2 {
       <td>339.88</td>
       <td>286.24</td>
       <td>2.0</td>
-      <td>324.86</td>
+      <td>324.43</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$15.02 / +4.62%</td>
-      <td>+$38.62 / +11.89%</td>
+      <td>+$15.45 / +4.76%</td>
+      <td>+$38.19 / +11.77%</td>
       <td></td>
       <td></td>
       <td>7</td>
@@ -710,12 +867,12 @@ h2 {
       <td>972.53</td>
       <td>767.81</td>
       <td>2.0</td>
-      <td>903.48</td>
+      <td>901.35</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$69.05 / +7.64%</td>
-      <td>+$135.67 / +15.02%</td>
+      <td>+$71.18 / +7.90%</td>
+      <td>+$133.54 / +14.82%</td>
       <td></td>
       <td></td>
       <td>7</td>
@@ -733,12 +890,12 @@ h2 {
       <td>40.08</td>
       <td>33.31</td>
       <td>2.0</td>
-      <td>36.38</td>
+      <td>36.22</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$3.70 / +10.16%</td>
-      <td>+$3.07 / +8.45%</td>
+      <td>+$3.86 / +10.66%</td>
+      <td>+$2.91 / +8.03%</td>
       <td></td>
       <td></td>
       <td>7</td>
@@ -756,12 +913,12 @@ h2 {
       <td>142.12</td>
       <td>164.04</td>
       <td>2.0</td>
-      <td>153.47</td>
+      <td>153.74</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$11.35 / +7.40%</td>
-      <td>+$10.57 / +6.89%</td>
+      <td>+$11.62 / +7.56%</td>
+      <td>+$10.30 / +6.70%</td>
       <td></td>
       <td></td>
       <td>12</td>
@@ -779,12 +936,12 @@ h2 {
       <td>1068.19</td>
       <td>851.63</td>
       <td>2.0</td>
-      <td>974.55</td>
+      <td>976.67</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$93.64 / +9.61%</td>
-      <td>+$122.92 / +12.61%</td>
+      <td>+$91.52 / +9.37%</td>
+      <td>+$125.04 / +12.80%</td>
       <td></td>
       <td></td>
       <td>12</td>
@@ -802,12 +959,12 @@ h2 {
       <td>274.3</td>
       <td>230.37</td>
       <td>2.0</td>
-      <td>253.63</td>
+      <td>252.78</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$20.67 / +8.15%</td>
-      <td>+$23.26 / +9.17%</td>
+      <td>+$21.52 / +8.51%</td>
+      <td>+$22.41 / +8.87%</td>
       <td></td>
       <td></td>
       <td>12</td>
@@ -825,12 +982,12 @@ h2 {
       <td>596.1</td>
       <td>680.27</td>
       <td>2.0</td>
-      <td>638.77</td>
+      <td>641.39</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$42.67 / +6.68%</td>
-      <td>+$41.50 / +6.50%</td>
+      <td>+$45.29 / +7.06%</td>
+      <td>+$38.88 / +6.06%</td>
       <td></td>
       <td></td>
       <td>12</td>
@@ -848,12 +1005,12 @@ h2 {
       <td>982.17</td>
       <td>791.08</td>
       <td>2.0</td>
-      <td>903.48</td>
+      <td>901.35</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$78.69 / +8.71%</td>
-      <td>+$112.40 / +12.44%</td>
+      <td>+$80.82 / +8.97%</td>
+      <td>+$110.27 / +12.23%</td>
       <td></td>
       <td></td>
       <td>13</td>
@@ -871,12 +1028,12 @@ h2 {
       <td>142.13</td>
       <td>164.02</td>
       <td>2.0</td>
-      <td>153.47</td>
+      <td>153.74</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$11.34 / +7.39%</td>
-      <td>+$10.55 / +6.87%</td>
+      <td>+$11.61 / +7.55%</td>
+      <td>+$10.28 / +6.69%</td>
       <td></td>
       <td></td>
       <td>13</td>
@@ -894,12 +1051,12 @@ h2 {
       <td>1068.36</td>
       <td>851.3</td>
       <td>2.0</td>
-      <td>974.55</td>
+      <td>976.67</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$93.81 / +9.63%</td>
-      <td>+$123.25 / +12.65%</td>
+      <td>+$91.69 / +9.39%</td>
+      <td>+$125.37 / +12.84%</td>
       <td></td>
       <td></td>
       <td>13</td>
@@ -917,12 +1074,12 @@ h2 {
       <td>142.12</td>
       <td>162.95</td>
       <td>2.0</td>
-      <td>153.47</td>
+      <td>153.74</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$11.35 / +7.40%</td>
-      <td>+$9.48 / +6.18%</td>
+      <td>+$11.62 / +7.56%</td>
+      <td>+$9.21 / +5.99%</td>
       <td></td>
       <td></td>
       <td>14</td>
@@ -940,12 +1097,12 @@ h2 {
       <td>75.91</td>
       <td>93.87</td>
       <td>2.0</td>
-      <td>78.15</td>
+      <td>77.9</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>+$2.24 / +2.87%</td>
-      <td>+$15.72 / +20.11%</td>
+      <td>+$1.99 / +2.55%</td>
+      <td>+$15.97 / +20.50%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>8</td>
@@ -963,12 +1120,12 @@ h2 {
       <td>1134.83</td>
       <td>1212.48</td>
       <td>2.0</td>
-      <td>1058.38</td>
+      <td>1058.66</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$76.45 / -7.22%</td>
-      <td>+$154.10 / +14.56%</td>
+      <td>-$76.17 / -7.19%</td>
+      <td>+$153.82 / +14.53%</td>
       <td></td>
       <td></td>
       <td>15</td>
@@ -986,12 +1143,12 @@ h2 {
       <td>105.89</td>
       <td>121.92</td>
       <td>2.0</td>
-      <td>108.26</td>
+      <td>107.79</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$2.37 / +2.19%</td>
-      <td>+$13.66 / +12.62%</td>
+      <td>+$1.90 / +1.76%</td>
+      <td>+$14.13 / +13.11%</td>
       <td></td>
       <td></td>
       <td>16</td>
@@ -1009,12 +1166,12 @@ h2 {
       <td>105.89</td>
       <td>121.92</td>
       <td>2.0</td>
-      <td>108.26</td>
+      <td>107.79</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$2.37 / +2.19%</td>
-      <td>+$13.66 / +12.62%</td>
+      <td>+$1.90 / +1.76%</td>
+      <td>+$14.13 / +13.11%</td>
       <td></td>
       <td></td>
       <td>17</td>
@@ -1032,12 +1189,12 @@ h2 {
       <td>105.89</td>
       <td>121.89</td>
       <td>2.0</td>
-      <td>108.26</td>
+      <td>107.79</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$2.37 / +2.19%</td>
-      <td>+$13.63 / +12.59%</td>
+      <td>+$1.90 / +1.76%</td>
+      <td>+$14.10 / +13.08%</td>
       <td></td>
       <td></td>
       <td>18</td>
@@ -1055,12 +1212,12 @@ h2 {
       <td>1135.42</td>
       <td>1282.28</td>
       <td>2.0</td>
-      <td>1058.38</td>
+      <td>1058.66</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-01</td>
-      <td>-$77.04 / -7.28%</td>
-      <td>+$223.90 / +21.15%</td>
+      <td>-$76.76 / -7.25%</td>
+      <td>+$223.62 / +21.12%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>5</td>
@@ -1078,12 +1235,12 @@ h2 {
       <td>41.69</td>
       <td>33.47</td>
       <td>2.0</td>
-      <td>36.38</td>
+      <td>36.22</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$5.31 / +14.58%</td>
-      <td>+$2.91 / +8.01%</td>
+      <td>+$5.47 / +15.10%</td>
+      <td>+$2.75 / +7.59%</td>
       <td></td>
       <td></td>
       <td>21</td>
@@ -1101,12 +1258,12 @@ h2 {
       <td>41.69</td>
       <td>33.47</td>
       <td>2.0</td>
-      <td>36.38</td>
+      <td>36.22</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$5.31 / +14.58%</td>
-      <td>+$2.91 / +8.01%</td>
+      <td>+$5.47 / +15.10%</td>
+      <td>+$2.75 / +7.59%</td>
       <td></td>
       <td></td>
       <td>22</td>
@@ -1124,12 +1281,12 @@ h2 {
       <td>356.75</td>
       <td>439.08</td>
       <td>2.0</td>
-      <td>375.57</td>
+      <td>375.62</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$18.82 / +5.01%</td>
-      <td>+$63.51 / +16.91%</td>
+      <td>+$18.87 / +5.02%</td>
+      <td>+$63.46 / +16.89%</td>
       <td></td>
       <td></td>
       <td>22</td>
@@ -1159,26 +1316,68 @@ h2 {
       </div>
 
       <div class="stats">
-        <div class="stat"><span>Total Candidates</span><b>0</b></div>
-        <div class="stat"><span>Highest Priority</span><b>0</b></div>
-        <div class="stat"><span>Medium Priority</span><b>0</b></div>
+        <div class="stat"><span>Total Candidates</span><b>6</b></div>
+        <div class="stat"><span>Highest Priority</span><b>5</b></div>
+        <div class="stat"><span>Medium Priority</span><b>1</b></div>
         <div class="stat"><span>Low Priority</span><b>0</b></div>
-        <div class="stat"><span>Best Conviction</span><b>0</b></div>
+        <div class="stat"><span>Best Conviction</span><b>94</b></div>
       </div>
 
       <div class="market">
-        <h2>SPY Bias: Bearish</h2>
-        <p>US market trend is weak. Scanner will only show SELL setups.</p>
+        <h2>SPY Bias: Mixed</h2>
+        <p>US market is mixed/constructive. Scanner will show qualified setups, but entries need stricter confirmation.</p>
         <div class="market-grid">
-          <div>SPY Close<br><b>756.95</b></div>
-          <div>EMA 20<br><b>757.76</b></div>
-          <div>EMA 50<br><b>759.26</b></div>
-          <div>Recent Change<br><b>-0.13%</b></div>
+          <div>SPY Close<br><b>757.42</b></div>
+          <div>EMA 20<br><b>757.64</b></div>
+          <div>EMA 50<br><b>759.09</b></div>
+          <div>Recent Change<br><b>0.03%</b></div>
         </div>
       </div>
 
       <h2>Top 3 Setups</h2>
-      <div class="setup-wrap"><p>No fresh qualifying setups in this mode right now. Historical ideas below are from earlier runs and may no longer be valid.</p></div>
+      <div class="setup-wrap">
+        <div class="setup">
+          <h3>AVGO — SELL</h3>
+          <p><b>Highest Priority</b> · Score 94</p>
+          <div class="grid">
+            <div>Entry<br><b>337.97</b></div>
+            <div>Stop<br><b>340.61</b></div>
+            <div>Target<br><b>332.7</b></div>
+            <div>Qty<br><b>59</b></div>
+            <div>Value<br><b>$19,940</b></div>
+            <div>RR<br><b>2.0</b></div>
+          </div>
+          <p>Enter only below trigger; prefer candle close confirmation · Confirmed downtrend · Negative relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</p>
+        </div>
+        
+        <div class="setup">
+          <h3>COP — BUY</h3>
+          <p><b>Highest Priority</b> · Score 94</p>
+          <div class="grid">
+            <div>Entry<br><b>141.56</b></div>
+            <div>Stop<br><b>140.42</b></div>
+            <div>Target<br><b>143.84</b></div>
+            <div>Qty<br><b>141</b></div>
+            <div>Value<br><b>$19,960</b></div>
+            <div>RR<br><b>2.0</b></div>
+          </div>
+          <p>Enter only above trigger; prefer candle close confirmation · Confirmed uptrend · Strong relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</p>
+        </div>
+        
+        <div class="setup">
+          <h3>DHR — BUY</h3>
+          <p><b>Highest Priority</b> · Score 94</p>
+          <div class="grid">
+            <div>Entry<br><b>209.97</b></div>
+            <div>Stop<br><b>206.87</b></div>
+            <div>Target<br><b>216.17</b></div>
+            <div>Qty<br><b>95</b></div>
+            <div>Value<br><b>$19,947</b></div>
+            <div>RR<br><b>2.0</b></div>
+          </div>
+          <p>Enter only above trigger; prefer candle close confirmation · Confirmed uptrend · Positive relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</p>
+        </div>
+        </div>
 
       <div class="section">
         <h2>Suggested Investment Criteria</h2>
@@ -1194,7 +1393,194 @@ h2 {
 
       <div class="section">
         <h2>Scanner Table</h2>
-        <p>No qualifying setups in this mode right now.</p>
+        <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mode</th>
+      <th>Priority</th>
+      <th>Stock</th>
+      <th>Signal</th>
+      <th>Conviction</th>
+      <th>Grade</th>
+      <th>Close</th>
+      <th>Entry</th>
+      <th>Stop</th>
+      <th>Target</th>
+      <th>RR</th>
+      <th>RSI</th>
+      <th>ATR%</th>
+      <th>Vol Ratio</th>
+      <th>RS vs SPY</th>
+      <th>Trigger Distance</th>
+      <th>Extension</th>
+      <th>Risk %</th>
+      <th>Earnings</th>
+      <th>Earnings Date</th>
+      <th>Qty</th>
+      <th>Trade Value</th>
+      <th>Entry Rule</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intraday</td>
+      <td>Highest Priority</td>
+      <td>AVGO</td>
+      <td>SELL</td>
+      <td>94</td>
+      <td>A</td>
+      <td>339.25</td>
+      <td>337.97</td>
+      <td>340.61</td>
+      <td>332.70</td>
+      <td>2.0</td>
+      <td>43.6</td>
+      <td>0.25%</td>
+      <td>2.68</td>
+      <td>-0.84</td>
+      <td>0.38%</td>
+      <td>0.31%</td>
+      <td>0.78%</td>
+      <td>Clear</td>
+      <td>2026-12-09</td>
+      <td>59</td>
+      <td>$19,940</td>
+      <td>Enter only below trigger; prefer candle close confirmation</td>
+      <td>Confirmed downtrend · Negative relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</td>
+    </tr>
+    <tr>
+      <td>Intraday</td>
+      <td>Highest Priority</td>
+      <td>COP</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>141.23</td>
+      <td>141.56</td>
+      <td>140.42</td>
+      <td>143.84</td>
+      <td>2.0</td>
+      <td>64.4</td>
+      <td>0.27%</td>
+      <td>3.10</td>
+      <td>1.95</td>
+      <td>0.24%</td>
+      <td>0.54%</td>
+      <td>0.8%</td>
+      <td>Clear</td>
+      <td>2026-11-05</td>
+      <td>141</td>
+      <td>$19,960</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Strong relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</td>
+    </tr>
+    <tr>
+      <td>Intraday</td>
+      <td>Highest Priority</td>
+      <td>DHR</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>209.34</td>
+      <td>209.97</td>
+      <td>206.87</td>
+      <td>216.17</td>
+      <td>2.0</td>
+      <td>56.2</td>
+      <td>0.32%</td>
+      <td>4.26</td>
+      <td>1.29</td>
+      <td>0.3%</td>
+      <td>0.68%</td>
+      <td>1.48%</td>
+      <td>Clear</td>
+      <td>2026-10-20</td>
+      <td>95</td>
+      <td>$19,947</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Positive relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</td>
+    </tr>
+    <tr>
+      <td>Intraday</td>
+      <td>Highest Priority</td>
+      <td>META</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>670.49</td>
+      <td>672.99</td>
+      <td>663.96</td>
+      <td>691.05</td>
+      <td>2.0</td>
+      <td>63.5</td>
+      <td>0.37%</td>
+      <td>2.63</td>
+      <td>0.85</td>
+      <td>0.37%</td>
+      <td>0.29%</td>
+      <td>1.34%</td>
+      <td>Clear</td>
+      <td>2026-10-28</td>
+      <td>29</td>
+      <td>$19,517</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Positive relative strength · Healthy RSI · Institutional volume · Clean intraday volatility · Close to trigger · Not extended</td>
+    </tr>
+    <tr>
+      <td>Intraday</td>
+      <td>Highest Priority</td>
+      <td>TMO</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>A</td>
+      <td>641.38</td>
+      <td>643.25</td>
+      <td>634.52</td>
+      <td>660.72</td>
+      <td>2.0</td>
+      <td>66.2</td>
+      <td>0.34%</td>
+      <td>4.03</td>
+      <td>1.81</td>
+      <td>0.29%</td>
+      <td>0.95%</td>
+      <td>1.36%</td>
+      <td>Clear</td>
+      <td>2026-10-21</td>
+      <td>31</td>
+      <td>$19,941</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Strong relative strength · Acceptable RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</td>
+    </tr>
+    <tr>
+      <td>Intraday</td>
+      <td>Medium Priority</td>
+      <td>XOM</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>B+</td>
+      <td>169.29</td>
+      <td>169.70</td>
+      <td>168.40</td>
+      <td>172.29</td>
+      <td>2.0</td>
+      <td>59.2</td>
+      <td>0.28%</td>
+      <td>4.60</td>
+      <td>1.33</td>
+      <td>0.24%</td>
+      <td>0.39%</td>
+      <td>0.76%</td>
+      <td>Clear</td>
+      <td>2026-10-30</td>
+      <td>117</td>
+      <td>$19,855</td>
+      <td>Enter only above trigger; prefer candle close confirmation</td>
+      <td>Confirmed uptrend · Positive relative strength · Healthy RSI · Institutional volume · Acceptable volatility · Close to trigger · Not extended</td>
+    </tr>
+  </tbody>
+</table>
       </div>
 
       <div class="section">
@@ -1206,12 +1592,12 @@ h2 {
       <h3>Highest Priority Performance</h3>
       <div class="perf-grid">
         <div>Total Ideas<br><b>60</b></div>
-        <div>Closed Trades<br><b>36</b></div>
+        <div>Closed Trades<br><b>33</b></div>
         <div>Wins<br><b>17</b></div>
-        <div>Losses<br><b>19</b></div>
-        <div>Win Rate<br><b>47.2%</b></div>
-        <div>Total R<br><b>15.0</b></div>
-        <div>Avg R<br><b>0.42</b></div>
+        <div>Losses<br><b>16</b></div>
+        <div>Win Rate<br><b>51.5%</b></div>
+        <div>Total R<br><b>18.0</b></div>
+        <div>Avg R<br><b>0.55</b></div>
       </div>
     </div>
     
@@ -1243,6 +1629,75 @@ h2 {
   </thead>
   <tbody>
     <tr>
+      <td>2026-09-16</td>
+      <td>Intraday</td>
+      <td>1</td>
+      <td>Highest Priority</td>
+      <td>AVGO</td>
+      <td>SELL</td>
+      <td>94</td>
+      <td>337.97</td>
+      <td>340.61</td>
+      <td>332.7</td>
+      <td>2.0</td>
+      <td>339.25</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>+$1.36 / +0.40%</td>
+      <td>+$6.55 / +1.93%</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Intraday scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-09-16</td>
+      <td>Intraday</td>
+      <td>2</td>
+      <td>Highest Priority</td>
+      <td>COP</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>141.56</td>
+      <td>140.42</td>
+      <td>143.84</td>
+      <td>2.0</td>
+      <td>141.23</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>+$0.81 / +0.57%</td>
+      <td>+$2.61 / +1.85%</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Intraday scanner pick</td>
+    </tr>
+    <tr>
+      <td>2026-09-16</td>
+      <td>Intraday</td>
+      <td>3</td>
+      <td>Highest Priority</td>
+      <td>DHR</td>
+      <td>BUY</td>
+      <td>94</td>
+      <td>209.97</td>
+      <td>206.87</td>
+      <td>216.17</td>
+      <td>2.0</td>
+      <td>209.34</td>
+      <td>Pending Trigger</td>
+      <td></td>
+      <td></td>
+      <td>+$2.47 / +1.18%</td>
+      <td>+$6.83 / +3.26%</td>
+      <td></td>
+      <td></td>
+      <td>0</td>
+      <td>Top 3 Intraday scanner pick</td>
+    </tr>
+    <tr>
       <td>2026-09-15</td>
       <td>Intraday</td>
       <td>1</td>
@@ -1254,12 +1709,12 @@ h2 {
       <td>262.61</td>
       <td>274.67</td>
       <td>2.0</td>
-      <td>261.12</td>
+      <td>257.77</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$1.49 / -0.57%</td>
-      <td>+$13.55 / +5.19%</td>
+      <td>-$4.84 / -1.88%</td>
+      <td>+$16.90 / +6.56%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -1277,12 +1732,12 @@ h2 {
       <td>202.36</td>
       <td>207.21</td>
       <td>2.0</td>
-      <td>208.77</td>
+      <td>209.34</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-15</td>
-      <td>+$6.41 / +3.07%</td>
-      <td>-$1.56 / -0.75%</td>
+      <td>+$6.98 / +3.33%</td>
+      <td>-$2.13 / -1.02%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>0</td>
@@ -1300,12 +1755,12 @@ h2 {
       <td>342.96</td>
       <td>354.06</td>
       <td>2.0</td>
-      <td>340.5</td>
+      <td>341.44</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$2.46 / -0.72%</td>
-      <td>+$13.56 / +3.98%</td>
+      <td>-$1.52 / -0.45%</td>
+      <td>+$12.62 / +3.70%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -1323,12 +1778,12 @@ h2 {
       <td>1005.96</td>
       <td>932.33</td>
       <td>2.0</td>
-      <td>973.95</td>
+      <td>976.19</td>
       <td>Active After Trigger</td>
       <td></td>
       <td></td>
-      <td>+$32.01 / +3.29%</td>
-      <td>+$41.62 / +4.27%</td>
+      <td>+$29.77 / +3.05%</td>
+      <td>+$43.86 / +4.49%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -1346,12 +1801,12 @@ h2 {
       <td>373.74</td>
       <td>390.1</td>
       <td>2.0</td>
-      <td>376.32</td>
+      <td>377.35</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$2.58 / +0.68%</td>
-      <td>+$13.78 / +3.66%</td>
+      <td>+$3.61 / +0.96%</td>
+      <td>+$12.75 / +3.38%</td>
       <td></td>
       <td></td>
       <td>1</td>
@@ -1369,12 +1824,12 @@ h2 {
       <td>353.65</td>
       <td>337.09</td>
       <td>2.0</td>
-      <td>352.76</td>
+      <td>353.33</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-15</td>
-      <td>+$0.89 / +0.25%</td>
-      <td>+$15.67 / +4.44%</td>
+      <td>+$0.32 / +0.09%</td>
+      <td>+$16.24 / +4.60%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>0</td>
@@ -1392,12 +1847,12 @@ h2 {
       <td>209.97</td>
       <td>213.22</td>
       <td>2.0</td>
-      <td>209.22</td>
+      <td>209.68</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>-$0.75 / -0.36%</td>
-      <td>+$4.00 / +1.91%</td>
+      <td>-$0.29 / -0.14%</td>
+      <td>+$3.54 / +1.69%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>0</td>
@@ -1415,12 +1870,12 @@ h2 {
       <td>136.17</td>
       <td>140.8</td>
       <td>2.0</td>
-      <td>140.69</td>
+      <td>141.23</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>+$4.52 / +3.21%</td>
-      <td>+$0.11 / +0.08%</td>
+      <td>+$5.06 / +3.58%</td>
+      <td>-$0.43 / -0.30%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>0</td>
@@ -1438,12 +1893,12 @@ h2 {
       <td>153.31</td>
       <td>142.0</td>
       <td>2.0</td>
-      <td>140.46</td>
+      <td>140.34</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-14</td>
-      <td>+$12.85 / +9.15%</td>
-      <td>-$1.54 / -1.10%</td>
+      <td>+$12.97 / +9.24%</td>
+      <td>-$1.66 / -1.18%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -1461,12 +1916,12 @@ h2 {
       <td>209.97</td>
       <td>213.22</td>
       <td>2.0</td>
-      <td>209.22</td>
+      <td>209.68</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>-$0.75 / -0.36%</td>
-      <td>+$4.00 / +1.91%</td>
+      <td>-$0.29 / -0.14%</td>
+      <td>+$3.54 / +1.69%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>1</td>
@@ -1484,12 +1939,12 @@ h2 {
       <td>136.17</td>
       <td>140.8</td>
       <td>2.0</td>
-      <td>140.69</td>
+      <td>141.23</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>+$4.52 / +3.21%</td>
-      <td>+$0.11 / +0.08%</td>
+      <td>+$5.06 / +3.58%</td>
+      <td>-$0.43 / -0.30%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>1</td>
@@ -1507,12 +1962,12 @@ h2 {
       <td>153.31</td>
       <td>142.0</td>
       <td>2.0</td>
-      <td>140.46</td>
+      <td>140.34</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-14</td>
-      <td>+$12.85 / +9.15%</td>
-      <td>-$1.54 / -1.10%</td>
+      <td>+$12.97 / +9.24%</td>
+      <td>-$1.66 / -1.18%</td>
       <td>Review</td>
       <td></td>
       <td>1</td>
@@ -1530,12 +1985,12 @@ h2 {
       <td>209.97</td>
       <td>213.22</td>
       <td>2.0</td>
-      <td>209.22</td>
+      <td>209.68</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>-$0.75 / -0.36%</td>
-      <td>+$4.00 / +1.91%</td>
+      <td>-$0.29 / -0.14%</td>
+      <td>+$3.54 / +1.69%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>2</td>
@@ -1553,12 +2008,12 @@ h2 {
       <td>136.17</td>
       <td>140.8</td>
       <td>2.0</td>
-      <td>140.69</td>
+      <td>141.23</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-14</td>
-      <td>+$4.52 / +3.21%</td>
-      <td>+$0.11 / +0.08%</td>
+      <td>+$5.06 / +3.58%</td>
+      <td>-$0.43 / -0.30%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>2</td>
@@ -1576,12 +2031,12 @@ h2 {
       <td>153.31</td>
       <td>142.0</td>
       <td>2.0</td>
-      <td>140.46</td>
+      <td>140.34</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-14</td>
-      <td>+$12.85 / +9.15%</td>
-      <td>-$1.54 / -1.10%</td>
+      <td>+$12.97 / +9.24%</td>
+      <td>-$1.66 / -1.18%</td>
       <td>Review</td>
       <td></td>
       <td>2</td>
@@ -1599,12 +2054,12 @@ h2 {
       <td>250.91</td>
       <td>241.32</td>
       <td>2.0</td>
-      <td>261.12</td>
+      <td>257.77</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-11</td>
-      <td>-$10.21 / -3.91%</td>
-      <td>+$19.80 / +7.58%</td>
+      <td>-$6.86 / -2.66%</td>
+      <td>+$16.45 / +6.38%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>0</td>
@@ -1622,12 +2077,12 @@ h2 {
       <td>245.39</td>
       <td>235.57</td>
       <td>2.0</td>
-      <td>256.61</td>
+      <td>255.9</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-11</td>
-      <td>-$11.22 / -4.37%</td>
-      <td>+$21.04 / +8.20%</td>
+      <td>-$10.51 / -4.11%</td>
+      <td>+$20.33 / +7.94%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -1645,12 +2100,12 @@ h2 {
       <td>368.05</td>
       <td>350.03</td>
       <td>2.0</td>
-      <td>356.11</td>
+      <td>356.64</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-11</td>
-      <td>+$11.94 / +3.35%</td>
-      <td>+$6.08 / +1.71%</td>
+      <td>+$11.41 / +3.20%</td>
+      <td>+$6.61 / +1.85%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -1668,12 +2123,12 @@ h2 {
       <td>245.39</td>
       <td>235.57</td>
       <td>2.0</td>
-      <td>256.61</td>
+      <td>255.9</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-11</td>
-      <td>-$11.22 / -4.37%</td>
-      <td>+$21.04 / +8.20%</td>
+      <td>-$10.51 / -4.11%</td>
+      <td>+$20.33 / +7.94%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -1691,12 +2146,12 @@ h2 {
       <td>368.05</td>
       <td>350.03</td>
       <td>2.0</td>
-      <td>356.11</td>
+      <td>356.64</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-11</td>
-      <td>+$11.94 / +3.35%</td>
-      <td>+$6.08 / +1.71%</td>
+      <td>+$11.41 / +3.20%</td>
+      <td>+$6.61 / +1.85%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -1714,12 +2169,12 @@ h2 {
       <td>146.55</td>
       <td>141.81</td>
       <td>2.0</td>
-      <td>153.46</td>
+      <td>153.73</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-10</td>
-      <td>-$6.91 / -4.51%</td>
-      <td>+$11.65 / +7.59%</td>
+      <td>-$7.18 / -4.67%</td>
+      <td>+$11.92 / +7.75%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>1</td>
@@ -1737,12 +2192,12 @@ h2 {
       <td>470.71</td>
       <td>497.93</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-08</td>
-      <td>+$32.86 / +6.53%</td>
-      <td>-$5.64 / -1.12%</td>
+      <td>+$33.59 / +6.66%</td>
+      <td>-$6.37 / -1.26%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>0</td>
@@ -1760,12 +2215,12 @@ h2 {
       <td>607.8</td>
       <td>640.48</td>
       <td>2.0</td>
-      <td>671.61</td>
+      <td>670.49</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-09</td>
-      <td>+$63.81 / +9.50%</td>
-      <td>-$31.13 / -4.64%</td>
+      <td>+$62.69 / +9.35%</td>
+      <td>-$30.01 / -4.48%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>1</td>
@@ -1783,12 +2238,12 @@ h2 {
       <td>996.46</td>
       <td>1066.49</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>-$74.06 / -8.03%</td>
-      <td>+$144.09 / +15.62%</td>
+      <td>-$68.89 / -7.43%</td>
+      <td>+$138.92 / +14.98%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>1</td>
@@ -1806,12 +2261,12 @@ h2 {
       <td>470.71</td>
       <td>497.93</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-08</td>
-      <td>+$32.86 / +6.53%</td>
-      <td>-$5.64 / -1.12%</td>
+      <td>+$33.59 / +6.66%</td>
+      <td>-$6.37 / -1.26%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>1</td>
@@ -1829,12 +2284,12 @@ h2 {
       <td>607.8</td>
       <td>640.48</td>
       <td>2.0</td>
-      <td>671.61</td>
+      <td>670.49</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-09</td>
-      <td>+$63.81 / +9.50%</td>
-      <td>-$31.13 / -4.64%</td>
+      <td>+$62.69 / +9.35%</td>
+      <td>-$30.01 / -4.48%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>2</td>
@@ -1852,12 +2307,12 @@ h2 {
       <td>996.46</td>
       <td>1066.49</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>-$74.06 / -8.03%</td>
-      <td>+$144.09 / +15.62%</td>
+      <td>-$68.89 / -7.43%</td>
+      <td>+$138.92 / +14.98%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>2</td>
@@ -1875,12 +2330,12 @@ h2 {
       <td>470.71</td>
       <td>497.93</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-08</td>
-      <td>+$32.86 / +6.53%</td>
-      <td>-$5.64 / -1.12%</td>
+      <td>+$33.59 / +6.66%</td>
+      <td>-$6.37 / -1.26%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>2</td>
@@ -1898,12 +2353,12 @@ h2 {
       <td>607.8</td>
       <td>640.48</td>
       <td>2.0</td>
-      <td>671.61</td>
+      <td>670.49</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-09</td>
-      <td>+$63.81 / +9.50%</td>
-      <td>-$31.13 / -4.64%</td>
+      <td>+$62.69 / +9.35%</td>
+      <td>-$30.01 / -4.48%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>3</td>
@@ -1921,12 +2376,12 @@ h2 {
       <td>996.46</td>
       <td>1066.49</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>-$74.06 / -8.03%</td>
-      <td>+$144.09 / +15.62%</td>
+      <td>-$68.89 / -7.43%</td>
+      <td>+$138.92 / +14.98%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>3</td>
@@ -1944,12 +2399,12 @@ h2 {
       <td>470.71</td>
       <td>497.93</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-08</td>
-      <td>+$32.86 / +6.53%</td>
-      <td>-$5.64 / -1.12%</td>
+      <td>+$33.59 / +6.66%</td>
+      <td>-$6.37 / -1.26%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>3</td>
@@ -1967,12 +2422,12 @@ h2 {
       <td>607.8</td>
       <td>640.48</td>
       <td>2.0</td>
-      <td>671.61</td>
+      <td>670.49</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-09</td>
-      <td>+$63.81 / +9.50%</td>
-      <td>-$31.13 / -4.64%</td>
+      <td>+$62.69 / +9.35%</td>
+      <td>-$30.01 / -4.48%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>4</td>
@@ -1990,12 +2445,12 @@ h2 {
       <td>996.46</td>
       <td>1066.49</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>-$74.06 / -8.03%</td>
-      <td>+$144.09 / +15.62%</td>
+      <td>-$68.89 / -7.43%</td>
+      <td>+$138.92 / +14.98%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>4</td>
@@ -2013,12 +2468,12 @@ h2 {
       <td>996.49</td>
       <td>1042.4</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-09</td>
-      <td>-$74.09 / -8.03%</td>
-      <td>+$120.00 / +13.01%</td>
+      <td>-$68.92 / -7.43%</td>
+      <td>+$114.83 / +12.38%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>4</td>
@@ -2036,12 +2491,12 @@ h2 {
       <td>169.36</td>
       <td>161.39</td>
       <td>2.0</td>
-      <td>187.96</td>
+      <td>187.87</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$18.60 / -9.89%</td>
-      <td>+$26.57 / +14.13%</td>
+      <td>-$18.51 / -9.85%</td>
+      <td>+$26.48 / +14.09%</td>
       <td></td>
       <td></td>
       <td>11</td>
@@ -2059,12 +2514,12 @@ h2 {
       <td>90.45</td>
       <td>95.62</td>
       <td>2.0</td>
-      <td>97.12</td>
+      <td>97.11</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-04</td>
-      <td>+$6.67 / +6.87%</td>
-      <td>-$1.50 / -1.55%</td>
+      <td>+$6.66 / +6.86%</td>
+      <td>-$1.49 / -1.53%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>0</td>
@@ -2082,12 +2537,12 @@ h2 {
       <td>939.2</td>
       <td>1004.32</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-04</td>
-      <td>-$16.80 / -1.82%</td>
-      <td>+$81.92 / +8.88%</td>
+      <td>-$11.63 / -1.25%</td>
+      <td>+$76.75 / +8.27%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>0</td>
@@ -2105,12 +2560,12 @@ h2 {
       <td>225.53</td>
       <td>241.37</td>
       <td>2.0</td>
-      <td>211.99</td>
+      <td>212.17</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-08</td>
-      <td>-$13.54 / -6.38%</td>
-      <td>+$29.38 / +13.86%</td>
+      <td>-$13.36 / -6.30%</td>
+      <td>+$29.20 / +13.76%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>5</td>
@@ -2128,12 +2583,12 @@ h2 {
       <td>1118.76</td>
       <td>1075.03</td>
       <td>2.0</td>
-      <td>1058.46</td>
+      <td>1058.92</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-09</td>
-      <td>+$60.30 / +5.70%</td>
-      <td>-$16.57 / -1.57%</td>
+      <td>+$59.84 / +5.65%</td>
+      <td>-$16.11 / -1.52%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>6</td>
@@ -2151,12 +2606,12 @@ h2 {
       <td>148.13</td>
       <td>151.58</td>
       <td>2.0</td>
-      <td>153.46</td>
+      <td>153.73</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-14</td>
-      <td>+$5.33 / +3.48%</td>
-      <td>-$1.88 / -1.23%</td>
+      <td>+$5.60 / +3.64%</td>
+      <td>-$2.15 / -1.40%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>11</td>
@@ -2174,12 +2629,12 @@ h2 {
       <td>207.36</td>
       <td>200.75</td>
       <td>2.0</td>
-      <td>201.93</td>
+      <td>203.48</td>
       <td>Stop Hit First</td>
       <td>Stop</td>
       <td>2026-09-03</td>
-      <td>+$5.43 / +2.69%</td>
-      <td>+$1.18 / +0.59%</td>
+      <td>+$3.88 / +1.91%</td>
+      <td>+$2.73 / +1.34%</td>
       <td>Loss</td>
       <td>-1</td>
       <td>0</td>
@@ -2197,12 +2652,12 @@ h2 {
       <td>89.72</td>
       <td>82.53</td>
       <td>2.0</td>
-      <td>97.12</td>
+      <td>97.11</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$7.40 / -7.62%</td>
-      <td>+$14.59 / +15.02%</td>
+      <td>-$7.39 / -7.61%</td>
+      <td>+$14.58 / +15.01%</td>
       <td></td>
       <td></td>
       <td>14</td>
@@ -2220,12 +2675,12 @@ h2 {
       <td>360.93</td>
       <td>325.81</td>
       <td>2.0</td>
-      <td>356.11</td>
+      <td>356.64</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>+$4.82 / +1.35%</td>
-      <td>+$30.30 / +8.51%</td>
+      <td>+$4.29 / +1.20%</td>
+      <td>+$30.83 / +8.64%</td>
       <td></td>
       <td></td>
       <td>14</td>
@@ -2243,12 +2698,12 @@ h2 {
       <td>208.21</td>
       <td>201.99</td>
       <td>2.0</td>
-      <td>208.77</td>
+      <td>209.34</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-02</td>
-      <td>-$0.56 / -0.27%</td>
-      <td>+$6.78 / +3.25%</td>
+      <td>-$1.13 / -0.54%</td>
+      <td>+$7.35 / +3.51%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -2266,12 +2721,12 @@ h2 {
       <td>945.21</td>
       <td>892.52</td>
       <td>2.0</td>
-      <td>922.4</td>
+      <td>927.57</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-02</td>
-      <td>+$22.81 / +2.47%</td>
-      <td>+$29.88 / +3.24%</td>
+      <td>+$17.64 / +1.90%</td>
+      <td>+$35.05 / +3.78%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -2289,12 +2744,12 @@ h2 {
       <td>81.32</td>
       <td>78.94</td>
       <td>2.0</td>
-      <td>78.15</td>
+      <td>77.94</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-02</td>
-      <td>+$3.17 / +4.05%</td>
-      <td>-$0.79 / -1.01%</td>
+      <td>+$3.38 / +4.34%</td>
+      <td>-$1.00 / -1.28%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -2312,12 +2767,12 @@ h2 {
       <td>89.99</td>
       <td>87.09</td>
       <td>2.0</td>
-      <td>97.12</td>
+      <td>97.11</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-09-01</td>
-      <td>-$7.13 / -7.34%</td>
-      <td>+$10.03 / +10.33%</td>
+      <td>-$7.12 / -7.33%</td>
+      <td>+$10.02 / +10.32%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -2335,12 +2790,12 @@ h2 {
       <td>162.07</td>
       <td>155.5</td>
       <td>2.0</td>
-      <td>155.06</td>
+      <td>154.43</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-10</td>
-      <td>+$7.01 / +4.52%</td>
-      <td>-$0.44 / -0.28%</td>
+      <td>+$7.64 / +4.95%</td>
+      <td>-$1.07 / -0.69%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>9</td>
@@ -2358,12 +2813,12 @@ h2 {
       <td>473.78</td>
       <td>445.51</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-08-31</td>
-      <td>-$29.79 / -5.92%</td>
-      <td>+$58.06 / +11.53%</td>
+      <td>-$30.52 / -6.05%</td>
+      <td>+$58.79 / +11.66%</td>
       <td>Review</td>
       <td></td>
       <td>0</td>
@@ -2381,12 +2836,12 @@ h2 {
       <td>264.27</td>
       <td>273.25</td>
       <td>2.0</td>
-      <td>247.82</td>
+      <td>248.44</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$16.45 / -6.64%</td>
-      <td>+$25.43 / +10.26%</td>
+      <td>-$15.83 / -6.37%</td>
+      <td>+$24.81 / +9.99%</td>
       <td></td>
       <td></td>
       <td>16</td>
@@ -2404,12 +2859,12 @@ h2 {
       <td>1171.78</td>
       <td>1124.45</td>
       <td>2.0</td>
-      <td>1058.46</td>
+      <td>1058.92</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-01</td>
-      <td>+$113.32 / +10.71%</td>
-      <td>-$65.99 / -6.23%</td>
+      <td>+$112.86 / +10.66%</td>
+      <td>-$65.53 / -6.19%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>1</td>
@@ -2427,12 +2882,12 @@ h2 {
       <td>473.78</td>
       <td>445.51</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-08-31</td>
-      <td>-$29.79 / -5.92%</td>
-      <td>+$58.06 / +11.53%</td>
+      <td>-$30.52 / -6.05%</td>
+      <td>+$58.79 / +11.66%</td>
       <td>Review</td>
       <td></td>
       <td>1</td>
@@ -2450,12 +2905,12 @@ h2 {
       <td>264.27</td>
       <td>273.25</td>
       <td>2.0</td>
-      <td>247.82</td>
+      <td>248.44</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$16.45 / -6.64%</td>
-      <td>+$25.43 / +10.26%</td>
+      <td>-$15.83 / -6.37%</td>
+      <td>+$24.81 / +9.99%</td>
       <td></td>
       <td></td>
       <td>17</td>
@@ -2473,12 +2928,12 @@ h2 {
       <td>1171.78</td>
       <td>1124.45</td>
       <td>2.0</td>
-      <td>1058.46</td>
+      <td>1058.92</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-01</td>
-      <td>+$113.32 / +10.71%</td>
-      <td>-$65.99 / -6.23%</td>
+      <td>+$112.86 / +10.66%</td>
+      <td>-$65.53 / -6.19%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>2</td>
@@ -2496,12 +2951,12 @@ h2 {
       <td>473.78</td>
       <td>445.51</td>
       <td>2.0</td>
-      <td>503.57</td>
+      <td>504.3</td>
       <td>Ambiguous Entry Candle</td>
       <td>Ambiguous</td>
       <td>2026-08-31</td>
-      <td>-$29.79 / -5.92%</td>
-      <td>+$58.06 / +11.53%</td>
+      <td>-$30.52 / -6.05%</td>
+      <td>+$58.79 / +11.66%</td>
       <td>Review</td>
       <td></td>
       <td>2</td>
@@ -2519,12 +2974,12 @@ h2 {
       <td>264.27</td>
       <td>273.25</td>
       <td>2.0</td>
-      <td>247.82</td>
+      <td>248.44</td>
       <td>Pending Trigger</td>
       <td></td>
       <td></td>
-      <td>-$16.45 / -6.64%</td>
-      <td>+$25.43 / +10.26%</td>
+      <td>-$15.83 / -6.37%</td>
+      <td>+$24.81 / +9.99%</td>
       <td></td>
       <td></td>
       <td>18</td>
@@ -2542,84 +2997,15 @@ h2 {
       <td>1171.78</td>
       <td>1124.45</td>
       <td>2.0</td>
-      <td>1058.46</td>
+      <td>1058.92</td>
       <td>Target Hit First</td>
       <td>Target</td>
       <td>2026-09-01</td>
-      <td>+$113.32 / +10.71%</td>
-      <td>-$65.99 / -6.23%</td>
+      <td>+$112.86 / +10.66%</td>
+      <td>-$65.53 / -6.19%</td>
       <td>Win</td>
       <td>2.0</td>
       <td>3</td>
-      <td>Top 3 Intraday scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-08-28</td>
-      <td>Intraday</td>
-      <td>1</td>
-      <td>Highest Priority</td>
-      <td>AAPL</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>318.32</td>
-      <td>313.24</td>
-      <td>328.47</td>
-      <td>2.0</td>
-      <td>330.12</td>
-      <td>Stop Hit First</td>
-      <td>Stop</td>
-      <td>2026-08-31</td>
-      <td>+$16.88 / +5.11%</td>
-      <td>-$1.65 / -0.50%</td>
-      <td>Loss</td>
-      <td>-1</td>
-      <td>3</td>
-      <td>Top 3 Intraday scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-08-28</td>
-      <td>Intraday</td>
-      <td>2</td>
-      <td>Highest Priority</td>
-      <td>MSFT</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>509.38</td>
-      <td>501.09</td>
-      <td>525.95</td>
-      <td>2.0</td>
-      <td>496.58</td>
-      <td>Stop Hit First</td>
-      <td>Stop</td>
-      <td>2026-09-01</td>
-      <td>-$4.51 / -0.91%</td>
-      <td>+$29.37 / +5.91%</td>
-      <td>Loss</td>
-      <td>-1</td>
-      <td>4</td>
-      <td>Top 3 Intraday scanner pick</td>
-    </tr>
-    <tr>
-      <td>2026-08-27</td>
-      <td>Intraday</td>
-      <td>1</td>
-      <td>Highest Priority</td>
-      <td>ORCL</td>
-      <td>BUY</td>
-      <td>94</td>
-      <td>149.68</td>
-      <td>147.48</td>
-      <td>154.07</td>
-      <td>2.0</td>
-      <td>140.46</td>
-      <td>Stop Hit First</td>
-      <td>Stop</td>
-      <td>2026-09-01</td>
-      <td>-$7.02 / -5.00%</td>
-      <td>+$13.61 / +9.69%</td>
-      <td>Loss</td>
-      <td>-1</td>
-      <td>5</td>
       <td>Top 3 Intraday scanner pick</td>
     </tr>
   </tbody>
